@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WDD 231 Course Home Page</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <header>
+    <h1 id="course-title">WDD 231 Course Home Page</h1>
+  </header>
+  <nav aria-label="Main navigation">
+    <a href="#" class="active">Home</a>
+    <a href="#about">About</a>
+    <a href="#courses-section">Courses</a>
+  </nav>
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="profile">
+        <img src="https://picsum.photos/300/200" alt="Student profile picture" />
+      </div>
+      <p>
+        Welcome to my WDD 231 Course Home Page. This page demonstrates
+        responsive web design, JavaScript filtering, dynamic course display,
+        and accessibility best practices.
+      </p>
+    </section>
+
+    <aside id="courses-section">
+      <h2>Course List</h2>
+      <div class="buttons">
+        <button type="button" id="allBtn" class="active">All</button>
+        <button type="button" id="wddBtn">WDD</button>
+        <button type="button" id="cseBtn">CSE</button>
+      </div>
+      <div id="courses" aria-live="polite"></div>
+      <h3 style="margin-top: 1rem;">
+        Total Credits: <span id="credits">0</span>
+      </h3>
+    </aside>
+  </main>
+
+  <footer>
+    <p id="year"></p>
+    <p id="modified"></p>
+  </footer>
+  <script src="../scripts/index.js"></script>
+</body>
+</html>
