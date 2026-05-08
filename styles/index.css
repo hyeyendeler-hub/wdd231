@@ -12,7 +12,7 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    color: #222;
+    color: #0033cc;
 }
 
 header {
@@ -45,7 +45,7 @@ nav a {
 nav a:hover,
 nav a.active {
     background: #ffcc00;
-    color: black;
+    color: #0033cc;
     font-weight: bold;
 }
 
@@ -61,9 +61,12 @@ main {
 section,
 aside {
     background: white;
+    background-image: url('../images/imgbackground.jpg');
+    background-size: cover;
+    background-position: center;
     padding: 1.5rem;
     border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 6px rgba(88, 7, 218, 0.1);
 }
 
 h2 {
@@ -100,7 +103,7 @@ h2 {
 .buttons button:hover,
 .buttons button.active {
     background: #ffcc00;
-    color: black;
+    color: #0033cc;
     transform: translateY(-1px);
 }
 
@@ -119,7 +122,7 @@ footer {
     max-width: 1200px;
     margin: 1rem auto 2rem;
     padding: 0 1rem;
-    color: #333;
+    color: white;
     font-size: 0.95rem;
 }
 
