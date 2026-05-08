@@ -44,9 +44,14 @@ nav a {
 
 nav a:hover,
 nav a.active {
-    background: #ffcc00;
-    color: #0033cc;
+    background: white;
+    color: #003366;
     font-weight: bold;
+}
+
+nav a:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 2px;
 }
 
 main {
@@ -102,9 +107,14 @@ h2 {
 
 .buttons button:hover,
 .buttons button.active {
-    background: #ffcc00;
-    color: #0033cc;
+    background: white;
+    color: #003366;
     transform: translateY(-1px);
+}
+
+.buttons button:focus {
+    outline: 3px solid #ffd700;
+    outline-offset: 2px;
 }
 
 .course-card {
@@ -122,8 +132,23 @@ footer {
     max-width: 1200px;
     margin: 1rem auto 2rem;
     padding: 0 1rem;
-    color: white;
+    color: #333;
     font-size: 0.95rem;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: #000;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 100;
+}
+
+.skip-link:focus {
+    top: 0;
 }
 
 @media (max-width: 820px) {
