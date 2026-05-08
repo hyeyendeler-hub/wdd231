@@ -61,7 +61,7 @@ main {
 section,
 aside {
     background: white;
-    background-image: url('../images/imgbackground.jpg');
+    background-image: url('../images/img-background.jpg');
     background-size: cover;
     background-position: center;
     padding: 1.5rem;
