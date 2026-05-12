@@ -3,60 +3,64 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Course Home Page - WDD 231 Course Home Page">
-  <meta name="color-scheme" content="light dark">
-  <title>Course Home Page</title>
-  <link rel="stylesheet" href="styles/index.css">
+  <meta name="description" content="Home Page - WDD 231 Course Home Page">
+  <title>Home Page</title>
+  <link rel="stylesheet" href="styles/homepage.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
-  <header>
-    <div class="header-content">
-      <div class="logo">🟦</div>
-      <h1>Course Home Page</h1>
+  <header class="top-header">
+    <div class="brand-bar">
+      <div class="logo"></div>
+      <span class="site-title">Home Page</span>
     </div>
+    <nav aria-label="Main navigation">
+      <a href="#home" class="active">Home</a>
+      <a href="#chamber">Chamber Project</a>
+      <a href="#final">Final Project</a>
+    </nav>
   </header>
-  <nav aria-label="Main navigation">
-    <a href="#home" class="active">Home</a>
-    <a href="#chamber">Chamber Project</a>
-    <a href="#final">Final Project</a>
-  </nav>
+
   <main id="main">
-    <section id="home" class="home-section">
-      <div class="about-container">
-        <div class="about-content">
-          <h2>About Me</h2>
-          <p>
-            I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
-          </p>
+    <h1 class="page-heading">Home</h1>
+
+    <section class="hero-section" id="home">
+      <article class="about-box">
+        <div class="section-label">About Me</div>
+        <p>
+          I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
+        </p>
+      </article>
+      <aside class="photo-box">
+        <div class="section-label">Student Photo</div>
+        <div class="photo-placeholder">
+          <img src="https://picsum.photos/300/250" alt="Student profile picture">
         </div>
-        <div class="student-photo">
-          <img src="https://picsum.photos/300/250" alt="Student profile picture" />
-        </div>
-      </div>
+      </aside>
     </section>
 
-    <section id="courses-section">
-      <h2>Web Certificate Courses</h2>
-      <div class="buttons">
+    <section class="courses-section">
+      <div class="section-label section-label-dark">Web Certificate Courses</div>
+      <div class="filter-row">
         <button type="button" id="allBtn" class="active">All</button>
         <button type="button" id="cseBtn">CSE</button>
         <button type="button" id="wddBtn">WDD</button>
       </div>
-      <div id="courses" class="courses-grid" aria-live="polite"></div>
-      <p class="credits-info">The total credits for course listed above is <span id="credits">0</span></p>
+      <div id="courses" class="course-row" aria-live="polite"></div>
+      <p class="credits-text">The total credits for course listed above is <span id="credits">0</span></p>
     </section>
   </main>
 
   <footer>
-    <div class="social-links">
+    <div class="footer-links">
       <a href="#" aria-label="LinkedIn">in</a>
-      <a href="#" aria-label="GitHub">⚙️</a>
-      <a href="#" aria-label="X">𝕏</a>
+      <a href="#" aria-label="GitHub">GitHub</a>
+      <a href="#" aria-label="X">X</a>
     </div>
     <p id="year"></p>
     <p id="modified"></p>
   </footer>
-  <script src="scripts/index.js"></script>
+
+  <script src="scripts/homepage.js"></script>
 </body>
 </html>

@@ -1,78 +1,47 @@
 const courses = [
-  {
-    code: 'WDD 130',
-    credits: 3,
-    subject: 'WDD',
-    completed: true
-  },
-  {
-    code: 'WDD 131',
-    credits: 3,
-    subject: 'WDD',
-    completed: true
-  },
-  {
-    code: 'WDD 231',
-    credits: 3,
-    subject: 'WDD',
-    completed: false
-  },
-  {
-    code: 'CSE 110',
-    credits: 3,
-    subject: 'CSE',
-    completed: true
-  }
+  { code: 'WDD 130', credits: 2, subject: 'ALL' },
+  { code: 'WDD 131', credits: 2, subject: 'CSE' },
+  { code: 'WDD 231', credits: 2, subject: 'WDD' }
 ];
 
 const coursesContainer = document.getElementById('courses');
 const creditsDisplay = document.getElementById('credits');
+const filterButtons = document.querySelectorAll('.filter-row button');
 
 function displayCourses(courseList) {
   coursesContainer.innerHTML = '';
-
   courseList.forEach(course => {
     const card = document.createElement('div');
-    card.classList.add('course-card');
-    card.innerHTML = `<h4>${course.code}</h4>`;
+    card.className = 'course-card';
+    card.textContent = course.code;
     coursesContainer.appendChild(card);
   });
-
-  const totalCredits = courseList.reduce((total, course) => {
-    return total + course.credits;
-  }, 0);
-
+  const totalCredits = courseList.reduce((sum, course) => sum + course.credits, 0);
   creditsDisplay.textContent = totalCredits;
 }
 
-const filterButtons = document.querySelectorAll('.buttons button');
-
-function setActiveFilter(button) {
+function setActive(button) {
   filterButtons.forEach(btn => btn.classList.remove('active'));
   button.classList.add('active');
 }
 
 document.getElementById('allBtn').addEventListener('click', (event) => {
-  setActiveFilter(event.currentTarget);
+  setActive(event.currentTarget);
   displayCourses(courses);
 });
 
 document.getElementById('cseBtn').addEventListener('click', (event) => {
-  setActiveFilter(event.currentTarget);
-  const filtered = courses.filter(course => course.subject === 'CSE');
-  displayCourses(filtered);
+  setActive(event.currentTarget);
+  displayCourses(courses.filter(course => course.subject === 'CSE'));
 });
 
 document.getElementById('wddBtn').addEventListener('click', (event) => {
-  setActiveFilter(event.currentTarget);
-  const filtered = courses.filter(course => course.subject === 'WDD');
-  displayCourses(filtered);
+  setActive(event.currentTarget);
+  displayCourses(courses.filter(course => course.subject === 'WDD'));
 });
 
 displayCourses(courses);
 
-document.getElementById('year').textContent =
-  `© 2026 · Hyeyendele Rashidi · Uganda`;
+document.getElementById('year').textContent = '© 2026 · Hyeyendele Rashidi · Uganda';
 
-document.getElementById('modified').textContent =
-  `Last Modified: ${document.lastModified}`;
+document.getElementById('modified').textContent = `Last Modified: ${document.lastModified}`;

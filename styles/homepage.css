@@ -1,288 +1,256 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f5f5f5;
-    color: #333;
+  font-family: Arial, sans-serif;
+  background: #e6e6e6;
+  color: #222;
 }
 
-header {
-    background: #111;
-    padding: 1rem;
-    border-bottom: 1px solid #222;
+.top-header {
+  background: #111;
 }
 
-.header-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
+.brand-bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
 }
 
 .logo {
-    font-size: 1rem;
-    width: 40px;
-    height: 40px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    border: 1px solid #444;
-    border-radius: 4px;
-    background: #222;
+  width: 40px;
+  height: 40px;
+  background: #444;
+  border: 1px solid #666;
 }
 
-header h1 {
-    font-size: 1.5rem;
-    color: white;
-    margin: 0;
+.site-title {
+  color: white;
+  font-size: 1rem;
+  letter-spacing: 0.05rem;
 }
 
 nav {
-    display: flex;
-    justify-content: center;
-    background: #111;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #111;
+  border-top: 1px solid #222;
+  padding: 0.25rem 0;
 }
 
 nav a {
-    display: inline-block;
-    padding: 1rem 1.5rem;
-    color: white;
-    text-decoration: none;
-    transition: background 0.3s ease;
+  color: white;
+  text-decoration: none;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
 }
 
-nav a:hover,
-nav a.active {
-    background: #444;
-}
-
-nav a:focus {
-    outline: 3px solid #ffd700;
-    outline-offset: -3px;
+nav a.active,
+nav a:hover {
+  background: #333;
 }
 
 main {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1.5rem;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
 }
 
-section {
-    background: white;
-    padding: 1.5rem;
-    border-radius: 0;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.page-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #111;
 }
 
-h2 {
-    margin-bottom: 1rem;
-    color: #1a1a1a;
-    font-size: 1.25rem;
-    background: #333;
-    color: white;
-    padding: 1rem;
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
+.hero-section {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
 }
 
-.home-section {
-    padding: 0;
+.about-box,
+.photo-box,
+.courses-section {
+  background: white;
+  border: 1px solid #ccc;
 }
 
-.about-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 1.5rem;
+.section-label {
+  background: #111;
+  color: white;
+  padding: 0.85rem 1rem;
+  font-size: 0.95rem;
+  font-weight: bold;
 }
 
-.about-content h2 {
-    background: #333;
-    color: white;
-    padding: 0.75rem;
-    margin: -1.5rem -1.5rem 1rem -1.5rem;
-    font-size: 1rem;
+.section-label.section-label-dark {
+  background: #111;
+  color: white;
 }
 
-.about-content {
-    padding: 0;
+.about-box,
+.photo-box,
+.courses-section {
+  border: 1px solid #333;
 }
 
-.about-content h2 {
-    background: #333;
-    color: white;
-    padding: 0.5rem 0;
-    margin: 0 0 1rem 0;
-    font-size: 1rem;
+.about-box {
+  padding: 1rem;
 }
 
-.student-photo {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
+.about-box p {
+  margin-top: 1rem;
+  line-height: 1.7;
+  color: #333;
+  background: #e8e8e8;
+  padding: 1rem;
+  border: 1px solid #ccc;
 }
 
-.student-photo img {
-    width: 100%;
-    max-width: 200px;
-    height: 200px;
-    background-color: #ccc;
-    display: block;
-    object-fit: cover;
+.photo-box {
+  padding: 1rem;
 }
 
-.buttons {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+.photo-placeholder {
+  margin-top: 1rem;
+  background: #d4d4d4;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.buttons button {
-    flex: 1 1 auto;
-    min-width: 80px;
-    padding: 0.75rem 1rem;
-    background: #999;
-    color: white;
-    border: none;
-    border-radius: 0;
-    cursor: pointer;
-    transition: background 0.3s ease;
-    font-weight: bold;
+.photo-placeholder img {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
 }
 
-.buttons button:hover {
-    background: #777;
+.filter-row {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #f3f3f3;
 }
 
-.buttons button.active {
-    background: #666;
+.filter-row button {
+  flex: 1 1 0;
+  min-width: 0;
+  padding: 0.85rem;
+  border: 1px solid #999;
+  background: #d9d9d9;
+  color: #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
 }
 
-.buttons button:focus {
-    outline: 3px solid #ffd700;
-    outline-offset: -3px;
+.filter-row button.active,
+.filter-row button:hover {
+  background: #fff;
 }
 
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+.course-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  padding: 1rem;
 }
 
 .course-card {
-    background: #f9f9f9;
-    border: 1px solid #ddd;
-    padding: 1rem;
-    text-align: center;
-    min-height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background: #d4d4d4;
+  border: 1px solid #999;
+  padding: 0.75rem;
+  min-height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #111;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
 }
 
-.course-card h4 {
-    font-size: 1rem;
-    color: #333;
-}
-
-.credits-info {
-    text-align: center;
-    margin-top: 1rem;
-    font-weight: bold;
+.credits-text {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.95rem;
+  color: #111;
 }
 
 footer {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 1.5rem;
-    background: #1a1a1a;
-    color: white;
-    text-align: center;
-    border-radius: 0;
+  max-width: 1000px;
+  margin: 1.5rem auto 2rem;
+  padding: 1rem;
+  text-align: center;
 }
 
-.social-links {
-    margin-bottom: 1rem;
-    display: flex;
-    justify-content: center;
-    gap: 1.5rem;
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
-.social-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.5rem;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background: #333;
-    transition: background 0.3s ease;
-}
-
-.social-links a:hover {
-    background: #555;
+.footer-links a {
+  color: #111;
+  text-decoration: none;
+  font-size: 0.95rem;
+  padding: 0 0.3rem;
 }
 
 footer p {
-    font-size: 0.9rem;
-    margin: 0.5rem 0;
+  color: #333;
+  font-size: 0.9rem;
+  margin: 0.15rem 0;
 }
 
 .skip-link {
-    position: absolute;
-    top: -40px;
-    left: 0;
-    background: #000;
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    z-index: 100;
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
 }
 
 .skip-link:focus {
-    top: 0;
+  top: 0;
 }
 
-@media (max-width: 820px) {
-    .about-container {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 860px) {
+  .hero-section {
+    grid-template-columns: 1fr;
+  }
 
-    .courses-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    nav {
-        justify-content: space-around;
-    }
+  .course-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-@media (max-width: 560px) {
-    body {
-        font-size: 0.95rem;
-    }
+@media (max-width: 580px) {
+  nav {
+    flex-direction: column;
+    align-items: stretch;
+  }
 
-    .courses-grid {
-        grid-template-columns: 1fr;
-    }
+  .filter-row {
+    flex-direction: column;
+  }
 
-    nav a {
-        padding: 0.75rem 1rem;
-        font-size: 0.9rem;
-    }
+  .course-row {
+    grid-template-columns: 1fr;
+  }
 }
