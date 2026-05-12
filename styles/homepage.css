@@ -5,7 +5,7 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Inter', Arial, sans-serif;
   background: #e6e6e6;
   color: #222;
 }
@@ -62,6 +62,13 @@ main {
   max-width: 1000px;
   margin: 1.5rem auto;
   padding: 0 1rem;
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "about"
+    "photo"
+    "courses";
 }
 
 .page-heading {
@@ -71,10 +78,16 @@ main {
   color: #111;
 }
 
-.hero-section {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 1rem;
+#about {
+  grid-area: about;
+}
+
+#student-photo {
+  grid-area: photo;
+}
+
+#courses-section {
+  grid-area: courses;
 }
 
 .about-box,

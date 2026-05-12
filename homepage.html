@@ -3,8 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Home Page - WDD 231 Course Home Page">
+  <meta name="description" content="WDD 231 Course Home Page for Hyeyendele Rashidi showcasing about section, student photo, and web certificate course listings.">
+  <meta name="author" content="Hyeyendele Rashidi">
   <title>Home Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/homepage.css">
 </head>
 <body>
@@ -24,23 +29,26 @@
   <main id="main">
     <h1 class="page-heading">Home</h1>
 
-    <section class="hero-section" id="home">
-      <article class="about-box">
-        <div class="section-label">About Me</div>
+    <section id="about">
+      <h2>About Me</h2>
+      <div class="about-box">
         <p>
           I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
         </p>
-      </article>
-      <aside class="photo-box">
-        <div class="section-label">Student Photo</div>
+      </div>
+    </section>
+
+    <section id="student-photo">
+      <h2>Student Photo</h2>
+      <div class="photo-box">
         <div class="photo-placeholder">
           <img src="https://picsum.photos/300/250" alt="Student profile picture">
         </div>
-      </aside>
+      </div>
     </section>
 
-    <section class="courses-section">
-      <div class="section-label section-label-dark">Web Certificate Courses</div>
+    <section class="courses-section" id="courses-section">
+      <h2>Web Certificate Courses</h2>
       <div class="filter-row">
         <button type="button" id="allBtn" class="active">All</button>
         <button type="button" id="cseBtn">CSE</button>
@@ -61,6 +69,6 @@
     <p id="modified"></p>
   </footer>
 
-  <script src="scripts/homepage.js"></script>
+  <script src="scripts/homepage.js" defer></script>
 </body>
 </html>
