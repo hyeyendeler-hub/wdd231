@@ -42,6 +42,6 @@ document.getElementById('wddBtn').addEventListener('click', (event) => {
 
 displayCourses(courses);
 
-document.getElementById('year').textContent = '© 2026 · Hyeyendele Rashidi · Uganda';
+document.getElementById('year').textContent = '© 2026 · Hyeyendele Rashidi · Kampala, Uganda';
 
 document.getElementById('modified').textContent = `Last Modified: ${document.lastModified}`;
