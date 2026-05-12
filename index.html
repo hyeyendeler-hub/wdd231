@@ -3,93 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 231 Course Home Page - Demonstrates responsive web design, JavaScript filtering, dynamic course display, and accessibility best practices.">
+  <meta name="description" content="Course Home Page - WDD 231 Course Home Page">
   <meta name="color-scheme" content="light dark">
-  <title>WDD 231 Course Home Page</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Course Home Page</title>
+  <link rel="stylesheet" href="styles/index.css">
 </head>
 <body>
   <a href="#main" class="skip-link">Skip to main content</a>
   <header>
-    <h1 id="course-title">WDD 231 Course Home Page</h1>
+    <div class="header-content">
+      <div class="logo">🟦</div>
+      <h1>Course Home Page</h1>
+    </div>
   </header>
   <nav aria-label="Main navigation">
     <a href="#home" class="active">Home</a>
-    <a href="#about">About</a>
-    <a href="#courses-section">Courses</a>
+    <a href="#chamber">Chamber Project</a>
+    <a href="#final">Final Project</a>
   </nav>
   <main id="main">
-    <section id="home"></section>
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="profile">
-        <img src="https://picsum.photos/300/200" alt="Student profile picture" />
+    <section id="home" class="home-section">
+      <div class="about-container">
+        <div class="about-content">
+          <h2>About Me</h2>
+          <p>
+            I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
+          </p>
+        </div>
+        <div class="student-photo">
+          <img src="https://picsum.photos/300/250" alt="Student profile picture" />
+        </div>
       </div>
-      <p>
-        Welcome to my WDD 231 Course Home Page. This page demonstrates
-        responsive web design, JavaScript filtering, dynamic course display,
-        and accessibility best practices.
-      </p>
     </section>
 
-    <aside id="courses-section">
-      <h2>Course List</h2>
+    <section id="courses-section">
+      <h2>Web Certificate Courses</h2>
       <div class="buttons">
         <button type="button" id="allBtn" class="active">All</button>
-        <button type="button" id="wddBtn">WDD</button>
         <button type="button" id="cseBtn">CSE</button>
+        <button type="button" id="wddBtn">WDD</button>
       </div>
-      <div id="courses" aria-live="polite"></div>
-      <h3 style="margin-top: 1rem;">
-        Total Credits: <span id="credits">0</span>
-      </h3>
-      <section id="course-table">
-        <h2>Course Data Table</h2>
-        <table>
-          <caption>WDD and CSE course information in columns and rows</caption>
-          <thead>
-            <tr>
-              <th scope="col">Course</th>
-              <th scope="col">Credits</th>
-              <th scope="col">Subject</th>
-              <th scope="col">Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>WDD 230</td>
-              <td>3</td>
-              <td>WDD</td>
-              <td>Completed</td>
-            </tr>
-            <tr>
-              <td>WDD 231</td>
-              <td>3</td>
-              <td>WDD</td>
-              <td>In Progress</td>
-            </tr>
-            <tr>
-              <td>CSE 110</td>
-              <td>3</td>
-              <td>CSE</td>
-              <td>Completed</td>
-            </tr>
-            <tr>
-              <td>CSE 111</td>
-              <td>3</td>
-              <td>CSE</td>
-              <td>In Progress</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-    </aside>
+      <div id="courses" class="courses-grid" aria-live="polite"></div>
+      <p class="credits-info">The total credits for course listed above is <span id="credits">0</span></p>
+    </section>
   </main>
 
   <footer>
+    <div class="social-links">
+      <a href="#" aria-label="LinkedIn">in</a>
+      <a href="#" aria-label="GitHub">⚙️</a>
+      <a href="#" aria-label="X">𝕏</a>
+    </div>
     <p id="year"></p>
     <p id="modified"></p>
   </footer>
-  <script src="../scripts/index.js"></script>
+  <script src="scripts/index.js"></script>
 </body>
 </html>
