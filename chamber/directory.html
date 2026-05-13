@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chamber Directory | Timbuktu Chamber of Commerce</title>
+  <meta name="description" content="Timbuktu Chamber of Commerce directory featuring local business members and networking opportunities.">
+  <meta name="author" content="Hyeyendele Rashidi">
+
+  <meta property="og:title" content="Timbuktu Chamber of Commerce Directory">
+  <meta property="og:description" content="Connect with local Timbuktu business members and explore chamber opportunities.">
+  <meta property="og:image" content="https://example.com/chamber/images/favicon.svg">
+  <meta property="og:url" content="https://example.com/chamber/directory.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/directory.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <header class="page-header">
+    <div class="header-top">
+      <div class="header-brand">
+        <a class="brand-logo" href="directory.html" aria-label="Chamber Home">🏛</a>
+        <span class="chamber-name">Timbuktu Chamber of Commerce</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="directory.html">Home</a>
+        <a href="directory.html" class="active">Directory</a>
+        <a href="#join">Join</a>
+        <a href="#discover">Discover</a>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+
+  <div class="hero-banner">
+    <img src="images/hero-banner.svg" alt="Chamber hero banner image">
+    <button class="keynote-button">Keynote Tickets</button>
+  </div>
+
+  <main id="main">
+    <h1 class="main-heading">Home</h1>
+
+    <div class="directory-controls" aria-labelledby="directory-heading">
+      <h2 id="directory-heading" class="section-title">Member Directory</h2>
+      <p id="member-count" class="member-count">Loading members...</p>
+      <div class="view-buttons" role="group" aria-label="Directory display options">
+        <button type="button" data-view="grid" class="view-button active">Grid View</button>
+        <button type="button" data-view="list" class="view-button">List View</button>
+      </div>
+    </div>
+
+    <section id="directory" class="directory-grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 00000</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-section social-links">
+        <a href="#youtube" aria-label="YouTube">▶</a>
+        <a href="#twitter" aria-label="Twitter">𝕏</a>
+        <a href="#linkedin" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-info">WDD 231 Course Project</p>
+      <p class="footer-info" id="author">Hyeyendele Rashidi</p>
+      <p class="footer-info" id="modified"></p>
+    </div>
+  </footer>
+</body>
+</html>

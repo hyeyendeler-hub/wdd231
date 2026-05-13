@@ -1,0 +1,91 @@
+@media (min-width: 720px) {
+  .header-top {
+    position: relative;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .main-nav {
+    display: flex;
+    position: static;
+    background: transparent;
+    border: none;
+    flex-direction: row;
+    margin-left: auto;
+    gap: 0;
+  }
+
+  .main-nav a {
+    display: inline-block;
+    padding: 0.85rem 1.2rem;
+    background: transparent;
+    color: #111;
+    border: none;
+    border-bottom: 3px solid transparent;
+    text-decoration: none;
+  }
+
+  .main-nav a:hover,
+  .main-nav a.active {
+    background: transparent;
+    color: #111;
+    border-bottom-color: #111;
+  }
+
+  .hero-banner {
+    height: 200px;
+  }
+
+  .directory-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .directory-controls {
+    margin: 0 1rem;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+  }
+
+  .view-buttons {
+    justify-self: end;
+  }
+
+  .footer-top {
+    align-items: start;
+  }
+
+  .footer-bottom {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .footer-info:first-child {
+    flex: 0;
+  }
+}
+
+@media (min-width: 1000px) {
+  .directory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-top {
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+
+  .social-links {
+    margin-left: auto;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
