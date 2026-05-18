@@ -17,45 +17,53 @@
   <a href="#main" class="skip-link">Skip to main content</a>
   <header class="top-header">
     <div class="brand-bar">
-      <div class="logo"></div>
+      <div class="logo" aria-hidden="true"></div>
       <span class="site-title">Home Page</span>
-    </div>    <nav aria-label="Main navigation">
-      <a href="#home" class="active">Home</a>
-      <a href="#chamber">Chamber Project</a>
-      <a href="#final">Final Project</a>
+      <button type="button" class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
+        <span class="sr-only">Open main navigation</span>
+        <span aria-hidden="true">☰</span>
+      </button>
+    </div>
+    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation" data-visible="false">
+      <a href="#main" class="active" aria-current="page">Home</a>
+      <a href="#about">About</a>
+      <a href="#courses-section">Courses</a>
     </nav>
   </header>
 
   <main id="main">
     <h1 class="page-heading">Home</h1>
+    <p class="page-intro">A responsive course home page for my WDD certificate work, with filterable classes, completed course marking, and accessible mobile navigation.</p>
 
-    <section id="about">
-      <h2>About Me</h2>
-      <div class="about-box">
-        <p>
-          I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
-        </p>
-      </div>
-    </section>
-
-    <section id="student-photo">
-      <h2>Student Photo</h2>
-      <div class="photo-box">
-        <div class="photo-placeholder">
-          <img src="https://picsum.photos/300/250" alt="Student profile picture">
+    <section class="hero-grid">
+      <article id="about" class="about-panel">
+        <h2 class="section-heading">About Me</h2>
+        <div class="about-box">
+          <p>
+            I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
+          </p>
         </div>
-      </div>
+      </article>
+
+      <aside id="student-photo" class="photo-panel">
+        <h2 class="section-heading">Student Photo</h2>
+        <div class="photo-box">
+          <div class="photo-placeholder">
+            <img src="https://picsum.photos/300/250" alt="Student profile picture">
+          </div>
+        </div>
+      </aside>
     </section>
 
     <section class="courses-section" id="courses-section">
-      <h2>Web Certificate Courses</h2>
-      <div class="filter-row">
-        <button type="button" id="allBtn" class="active">All</button>
-        <button type="button" id="cseBtn">CSE</button>
-        <button type="button" id="wddBtn">WDD</button>
+      <h2 class="section-heading">Web Certificate Courses</h2>
+      <div class="filter-row" role="group" aria-label="Course filters">
+        <button type="button" id="allBtn" class="active" aria-pressed="true">All</button>
+        <button type="button" id="cseBtn" aria-pressed="false">CSE</button>
+        <button type="button" id="wddBtn" aria-pressed="false">WDD</button>
       </div>
       <div id="courses" class="course-row" aria-live="polite"></div>
-      <p class="credits-text">The total credits for course listed above is <span id="credits">0</span></p>
+      <p class="credits-text">The total credits for the courses listed above is <span id="credits">0</span></p>
     </section>
   </main>
 
