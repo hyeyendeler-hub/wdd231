@@ -1,4 +1,7 @@
+/* Larger-screen overrides (min-width: 720px) */
 @media (min-width: 720px) {
+
+  /* ── Navigation ──────────────────────────────────────────────── */
   .header-top {
     position: relative;
   }
@@ -34,10 +37,12 @@
     border-bottom-color: #111;
   }
 
+  /* ── Hero banner ─────────────────────────────────────────────── */
   .hero-banner {
     height: 200px;
   }
 
+  /* ── Directory grid ──────────────────────────────────────────── */
   .directory-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -52,8 +57,84 @@
     justify-self: end;
   }
 
-  .footer-top {
+  /* ── Home-page sections ──────────────────────────────────────── */
+  /* ── Weather: current temp (left) + 3-day forecast (right) ── */
+  .weather-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
     align-items: start;
+  }
+
+  /* ── Events: 2-column card layout ───────────────────────────── */
+  .events-list {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding: 0;
+  }
+
+  /* ── Spotlight: 3 cards side by side ────────────────────────── */
+  #spotlight-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .home-section--spotlight .spotlight-item {
+    grid-template-columns: 1fr;
+  }
+
+  /* ── Website planning highlights: 2-column ─────────────────── */
+  .about-highlights ul {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 2fr 1fr;
+  }
+}
+
+/* Large screens (min-width: 1000px) */
+@media (min-width: 1000px) {
+
+  /* ── Hero banner height ──────────────────────────────────────── */
+  .hero-banner {
+    height: 240px;
+  }
+
+  /* ── Weather: slightly more room for current conditions ─────── */
+  .weather-content {
+    grid-template-columns: 2fr 3fr;
+  }
+
+  .current-temp {
+    font-size: 4.8rem;
+  }
+
+  /* ── Events: 3-column card layout ───────────────────────────── */
+  .events-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ── Directory: 3-column member layout ──────────────────────── */
+  .directory-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* ── Join CTA section ────────────────────────────────────────── */
+  .home-section--join {
+    padding: 3.5rem 2.5rem;
+  }
+
+  /* ── Footer layout ──────────────────────────────────────────── */
+  .footer-top {
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 4rem;
+  }
+
+  .social-links {
+    margin-left: auto;
   }
 
   .footer-bottom {
@@ -66,21 +147,7 @@
   }
 }
 
-@media (min-width: 1000px) {
-  .directory-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-
-  .footer-top {
-    justify-content: flex-start;
-    gap: 4rem;
-  }
-
-  .social-links {
-    margin-left: auto;
-  }
-}
-
+/* Reduced motion preference */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;
