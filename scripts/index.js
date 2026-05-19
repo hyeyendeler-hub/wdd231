@@ -1,6 +1,6 @@
 const courses = [
-  { code: 'WDD 130', name: 'Foundations of Web Design', credits: 2, subject: 'ALL', completed: true },
-  { code: 'WDD 131', name: 'Web Development I', credits: 2, subject: 'CSE', completed: false },
+  { code: 'WDD 130', name: 'Foundations of Web Design', credits: 2, subject: 'WDD', completed: true },
+  { code: 'WDD 131', name: 'Web Development I', credits: 2, subject: 'WDD', completed: false },
   { code: 'WDD 231', name: 'Web Development II', credits: 2, subject: 'WDD', completed: false }
 ];
 
@@ -96,6 +96,11 @@ document.getElementById('wddBtn').addEventListener('click', (event) => {
 
 displayCourses(courses);
 
-document.getElementById('year').textContent = `© ${new Date().getFullYear()} · Hyeyendele Rashidi · Kampala, Uganda`;
+const currentYear = new Date().getFullYear();
+['year', 'copyright-year'].forEach(function(id) {
+  var el = document.getElementById(id);
+  if (el) el.textContent = '© ' + currentYear;
+});
 
-document.getElementById('modified').textContent = `Last Modified: ${document.lastModified}`;
+var modifiedEl = document.getElementById('modified');
+if (modifiedEl) modifiedEl.textContent = 'Last Modified: ' + document.lastModified;
