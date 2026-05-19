@@ -73,7 +73,7 @@ body {
 }
 
 .site-title {
-  color: white;
+  color: #0d1b4b;
   font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0.03rem;
@@ -113,7 +113,7 @@ body {
 }
 
 .primary-navigation a {
-  color: rgba(255, 255, 255, 0.85);
+  color: #0d1b4b;
   text-decoration: none;
   padding: 0.85rem 1.75rem;
   font-size: 0.97rem;
@@ -124,8 +124,8 @@ body {
 
 .primary-navigation a:hover,
 .primary-navigation a:focus-visible {
-  background: rgba(255, 193, 7, 0.15);
-  color: #ffc107;
+  background: rgba(255, 193, 7, 0.25);
+  color: #003366;
   border-bottom-color: #ffc107;
 }
 
@@ -373,7 +373,6 @@ main,
   letter-spacing: 0.04rem;
 }
 
-.filter-row button.active,
 .filter-row button:hover,
 .filter-row button:focus-visible {
   background: #0d1b4b;
@@ -385,6 +384,7 @@ main,
 .filter-row button.active {
   background: linear-gradient(135deg, #1a3e8a, #0d1b4b);
   border-color: #ffc107;
+  color: white;
   box-shadow: 0 2px 8px rgba(13, 27, 75, 0.18);
 }
 
@@ -550,14 +550,16 @@ footer {
 
   .primary-navigation a.active {
     border-left-color: #ffc107;
-    background: rgba(255, 193, 7, 0.15);
-    color: white;
+    background: #ffc107;
+    color: #0d1b4b;
   }
 
   .primary-navigation a:hover,
   .primary-navigation a:focus-visible {
     border-left-color: #ffc107;
     border-bottom-color: transparent;
+    background: rgba(255, 193, 7, 0.4);
+    color: #0d1b4b;
   }
 
   .filter-row {
