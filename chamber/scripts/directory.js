@@ -12,7 +12,7 @@ const membershipLabel = {
 
 async function fetchMembers() {
   try {
-    const response = await fetch('data/members.json');
+    const response = await fetch('../data/members.json');
     if (!response.ok) {
       throw new Error(`Unable to load members: ${response.status}`);
     }

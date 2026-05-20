@@ -120,7 +120,7 @@ async function initSpotlight() {
   const target = document.getElementById('spotlight-list');
 
   try {
-    const res      = await fetch('data/members.json');
+    const res      = await fetch('../data/members.json');
     const json     = await res.json();
     const members  = json.members || [];
 
