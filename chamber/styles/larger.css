@@ -147,7 +147,9 @@
   }
 }
 
-/* Reduced motion preference */
+/* ═══════════════════════════════════════════════════════════════════
+   Reduced motion preference
+   ═══════════════════════════════════════════════════════════════════ */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {
     animation-duration: 0.01ms !important;

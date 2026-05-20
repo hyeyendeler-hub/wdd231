@@ -32,7 +32,7 @@
         <a class="brand-logo" href="directory.html" aria-label="Chamber Home">🏛</a>
         <span class="chamber-name">Timbuktu Chamber of Commerce</span>
       </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
       <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="directory.html" class="active">Directory</a>
@@ -49,9 +49,9 @@
   </div>
 
   <main id="main">
-    <h1 class="main-heading">Home</h1>
+    <h1 class="main-heading">Member Directory</h1>
 
-    <div class="directory-controls" aria-labelledby="directory-heading">
+    <div class="directory-controls">
       <h2 id="directory-heading" class="section-title">Member Directory</h2>
       <p id="member-count" class="member-count">Loading members...</p>
       <div class="view-buttons" role="group" aria-label="Directory display options">
@@ -60,7 +60,7 @@
       </div>
     </div>
 
-    <section id="directory" class="directory-grid" aria-live="polite"></section>
+    <section id="directory" class="directory-grid" aria-label="Member directory" aria-live="polite"></section>
   </main>
 
   <footer class="page-footer">
