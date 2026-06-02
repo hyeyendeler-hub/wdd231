@@ -118,9 +118,12 @@ async function initWeather() {
 // ── Company Spotlight ─────────────────────────────────────────
 async function initSpotlight() {
   const target = document.getElementById('spotlight-list');
+  const membersPath = location.pathname.includes('/chamber/')
+    ? '../data/members.json'
+    : 'data/members.json';
 
   try {
-    const res      = await fetch('../data/members.json');
+    const res      = await fetch(membersPath);
     const json     = await res.json();
     const members  = json.members || [];
 

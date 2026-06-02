@@ -3,87 +3,146 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hyeyendele's Directory - WDD 231</title>
-   <meta name="description" content="WDD 231 Course Home Page for Hyeyendele Rashidi showcasing about section, student photo, and web certificate course listings.">
-   <meta name="author" content="Hyeyendele Rashidi">
+  <title>Timbuktu Chamber of Commerce - Home</title>
+  <meta name="description" content="Timbuktu Chamber of Commerce – welcoming visitors with local events, live weather, and member spotlights.">
+  <meta name="author" content="Hyeyendele Rashidi">
 
-   <link rel="preconnect" href="https://fonts.googleapis.com">
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <meta property="og:title" content="Timbuktu Chamber of Commerce - Home">
+  <meta property="og:description" content="Connect with local Timbuktu businesses, explore current events, and discover chamber membership opportunities.">
+  <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/chamber/images/hero-banner.svg">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/index.html">
+  <meta property="og:type" content="website">
 
-    <meta property="og:title" content="Hyeyendele's WDD 231 Course Home Page | Responsive Web Design">
-    <meta property="og:description" content="Discover Hyeyendele Rashidi's WDD 231 course home page featuring responsive design, accessible navigation, and a showcase of completed web certificate courses.">
-    <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/images/backgroundimage.jpg">
-    <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/index.html">
-   <meta property="og:type" content="website">
-  <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/index.css">
-  <script src="scripts/index.js" defer></script>
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="chamber/styles/reset.css">
+  <link rel="stylesheet" href="chamber/styles/small.css">
+  <link rel="stylesheet" href="chamber/styles/larger.css">
+  <script src="chamber/scripts/home.js" defer></script>
 </head>
 <body>
-  <a href="#main" class="skip-link">Skip to main content</a>
-  <header class="top-header">
-    <div class="brand-bar">
-      <div class="logo" aria-hidden="true"></div>
-      <span class="site-title">Home Page</span>
-      <button type="button" class="menu-toggle" aria-controls="primary-navigation" aria-expanded="false">
-        <span class="sr-only">Open main navigation</span>
-        <span aria-hidden="true">☰</span>
-      </button>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="page-header">
+    <div class="header-top">
+      <div class="header-brand">
+        <a class="brand-logo" href="chamber/directory.html" aria-label="Timbuktu Chamber directory">&#127970;</a>
+        <span class="chamber-name">Timbuktu Chamber of Commerce</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="chamber/directory.html">Directory</a>
+        <a href="#join">Join</a>
+        <a href="#discover">Discover</a>
+      </nav>
     </div>
-    <nav id="primary-navigation" class="primary-navigation" aria-label="Main navigation" data-visible="false">
-      <a href="#main" class="active" aria-current="page">Home</a>
-      <a href="#about">About</a>
-      <a href="#courses-section">Courses</a>
-    </nav>
   </header>
 
+  <div class="hero-banner" role="img" aria-label="Timbuktu Chamber of Commerce hero banner">
+    <img src="chamber/images/hero-banner.svg" alt="" aria-hidden="true">
+    <a href="#join" class="cta-button">Join the Chamber</a>
+  </div>
+
   <main id="main">
-    <h1 class="page-heading">Home</h1>
-    <p class="page-intro">A responsive course home page for my WDD certificate work, with filterable classes, completed course marking, and accessible mobile navigation.</p>
-
-    <div class="hero-grid">
-      <section id="about" class="about-panel">
-        <h2 class="section-heading">About Me</h2>
-        <div class="about-box">
-          <p>
-            I study responsive web design, user experience, and modern interface development. I enjoy building accessible layouts, learning new coding techniques, and solving website design challenges with clean structure. I am based in Uganda, and I am committed to creating practical web solutions that support local students and communities.
-          </p>
-        </div>
-      </section>
-
-      <section id="student-photo" class="photo-panel">
-        <h2 class="section-heading">Student Photo</h2>
-        <div class="photo-box">
-          <div class="photo-placeholder">
-            <img src="https://picsum.photos/300/250" alt="Student profile picture">
-          </div>
-        </div>
-      </section>
+    <div class="home-intro" id="discover">
+      <h1 class="main-heading">Welcome to the&nbsp;Timbuktu&nbsp;Chamber&nbsp;of&nbsp;Commerce</h1>
+      <p>We empower local businesses to thrive through networking, advocacy, and community-driven initiatives that make Timbuktu a better place to live, work, and grow.</p>
     </div>
 
-    <section class="courses-section" id="courses-section">
-      <h2 class="section-heading">Web Certificate Courses</h2>
-      <div class="filter-row" role="group" aria-label="Course filters">
-        <button type="button" id="allBtn" class="active" aria-pressed="true">All</button>
-        <button type="button" id="cseBtn" aria-pressed="false">CSE</button>
-        <button type="button" id="wddBtn" aria-pressed="false">WDD</button>
+    <div class="home-section" id="weather">
+      <h2 class="section-title" id="weather-heading">Weather in Timbuktu</h2>
+      <p class="weather-loading" id="weather-loading">Loading weather data&hellip;</p>
+      <div class="weather-content" id="weather-content" aria-live="polite" hidden>
+        <div class="current-weather">
+          <div class="current-temp">
+            <span class="temp-value" id="current-temp">&ndash;</span>&#160;<span class="temp-unit" aria-hidden="true">&deg;F</span>
+          </div>
+          <p class="weather-desc" id="weather-desc">&ndash;</p>
+        </div>
+        <div class="forecast-block">
+          <h3 class="forecast-title">3-Day Forecast</h3>
+          <ul class="forecast-list" id="forecast-list" role="list"></ul>
+        </div>
       </div>
-      <div id="courses" class="course-row" aria-live="polite"></div>
-      <p class="credits-text">The total credits for the courses listed above is <span id="credits">0</span></p>
-    </section>
+      <p class="weather-msg" id="weather-msg" hidden>
+        Weather information is currently unavailable. Please try again later.
+      </p>
+    </div>
+
+    <div class="home-section home-section--striped" id="events">
+      <h2 class="section-title">Current Events</h2>
+      <ul class="events-list" role="list">
+        <li class="event-item" id="event-1">
+          <div class="event-day-box">
+            <span class="evt-month">Jun</span>
+            <span class="evt-day">21</span>
+          </div>
+          <div class="evt-body">
+            <h3 class="evt-name">Annual Business Expo</h3>
+            <p class="evt-text">Showcase your products and connect with over 200 regional businesses at our flagship expo.</p>
+          </div>
+        </li>
+        <li class="event-item" id="event-2">
+          <div class="event-day-box">
+            <span class="evt-month">Jul</span>
+            <span class="evt-day">08</span>
+          </div>
+          <div class="evt-body">
+            <h3 class="evt-name">Networking Breakfast</h3>
+            <p class="evt-text">Start your morning with new connections &mdash; monthly breakfast mixer for all members.</p>
+          </div>
+        </li>
+        <li class="event-item" id="event-3">
+          <div class="event-day-box">
+            <span class="evt-month">Aug</span>
+            <span class="evt-day">15</span>
+          </div>
+          <div class="evt-body">
+            <h3 class="evt-name">Tech &amp; Innovation Summit</h3>
+            <p class="evt-text">A full day of talks, demos, and panels led by industry innovators across West Africa.</p>
+          </div>
+        </li>
+      </ul>
+      <p class="evt-updated" id="evt-updated"></p>
+    </div>
+
+    <div class="home-section home-section--spotlight" id="spotlight">
+      <h2 class="section-title">Company Spotlight</h2>
+      <div class="spotlight-list" id="spotlight-list" aria-live="polite">
+        <p class="spotlight-loading">Loading members&hellip;</p>
+      </div>
+    </div>
+
+    <div class="home-section home-section--join" id="join">
+      <h2 class="section-title section-title--light">Become a Member</h2>
+      <p class="join-text">Join the Timbuktu Chamber of Commerce and unlock networking events, exclusive resources, and a powerful community of business leaders.</p>
+      <a href="chamber/directory.html" class="cta-link">Explore Membership</a>
+    </div>
   </main>
 
-  <footer>
-    <div class="footer-links">
-      <a href="#" aria-label="LinkedIn">in</a>
-      <a href="#" aria-label="GitHub">GitHub</a>
-      <a href="#" aria-label="X">X</a>
+  <footer class="page-footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 00000</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-section footer-section--social social-links">
+        <a href="#youtube" aria-label="YouTube">&#9654;</a>
+        <a href="#twitter" aria-label="X / Twitter">&#120143;</a>
+        <a href="#linkedin" aria-label="LinkedIn">in</a>
+      </div>
     </div>
-    <p id="year"></p>
-    <p id="modified"></p>
+    <div class="footer-bottom">
+      <p class="footer-info">WDD 231 Course Project</p>
+      <p class="footer-info" id="author">Hyeyendele Rashidi</p>
+      <p class="footer-info" id="modified"></p>
+    </div>
   </footer>
 </body>
 </html>
