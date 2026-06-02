@@ -391,7 +391,7 @@ main {
   gap: 1rem;
   text-align: center;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
-  font-size: 0.85rem;
+  font-size: 0.82rem;
 }
 
 .footer-info {
@@ -401,10 +401,6 @@ main {
 
 .footer-info:first-child {
   flex: 1;
-}
-
-.footer-bottom {
-  font-size: 0.82rem;
 }
 
 .page-title   { font-size: clamp(1.4rem, 4vw, 2rem); }
