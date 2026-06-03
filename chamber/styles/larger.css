@@ -145,6 +145,72 @@
   .footer-info:first-child {
     flex: 0;
   }
+
+  /* ── Join Page: Form + Membership Cards Layout ─────────────── */
+  .join-container {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start;
+  }
+
+  .join-form-section {
+    grid-column: 1;
+  }
+
+  .membership-cards-section {
+    grid-column: 2;
+  }
+
+  .membership-cards {
+    grid-template-columns: 1fr;
+    position: sticky;
+    top: 5rem;
+  }
+
+  /* ── Thank You Page ─────────────────────────────────────────── */
+  .thankyou-container {
+    max-width: 700px;
+    padding: 3rem;
+  }
+
+  .details-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .detail-item {
+    grid-template-columns: 1fr;
+    border-bottom: none;
+    border-right: 1px solid #e0e0e0;
+    padding-right: 1.5rem;
+  }
+
+  .detail-item:nth-child(odd) {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  .detail-item:nth-child(even) {
+    border-right: none;
+    padding-right: 0;
+    padding-left: 1.5rem;
+  }
+
+  .detail-item:nth-last-child(-n+2) {
+    border-right: none;
+  }
+
+  .detail-label {
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+
+  .action-buttons {
+    flex-direction: row;
+  }
+
+  .btn-primary,
+  .btn-secondary {
+    flex: 1;
+  }
 }
 
 /* ═══════════════════════════════════════════════════════════════════

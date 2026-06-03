@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join - Timbuktu Chamber of Commerce</title>
+  <meta name="description" content="Apply for Timbuktu Chamber of Commerce membership. Choose from NP, Bronze, Silver, or Gold membership levels.">
+  <meta name="author" content="Hyeyendele Rashidi">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <meta property="og:title" content="Join Timbuktu Chamber of Commerce">
+  <meta property="og:description" content="Apply for membership to join Timbuktu Chamber of Commerce and network with local businesses.">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/chamber/join.html">
+  <meta property="og:type" content="website">
+
+  <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/small.css">
+  <link rel="stylesheet" href="styles/larger.css">
+  <script src="scripts/join.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="page-header">
+    <div class="header-top">
+      <div class="header-brand">
+        <a class="brand-logo" href="index.html" aria-label="Chamber Home">&#127970;</a>
+        <span class="chamber-name">Timbuktu Chamber of Commerce</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="directory.html">Directory</a>
+        <a href="join.html" aria-current="page">Join</a>
+        <a href="#discover">Discover</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="join-container">
+      <!-- Membership Application Form -->
+      <section class="join-form-section">
+        <h1 class="form-title">Membership Application</h1>
+        
+        <form method="get" action="thankyou.html" class="membership-form" id="membershipForm">
+          
+          <div class="form-group">
+            <label for="firstName">
+              First Name <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="firstName" 
+              name="firstName" 
+              title="Applicant's first name" 
+              autocomplete="given-name" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="lastName">
+              Last Name <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="lastName" 
+              name="lastName" 
+              title="Applicant's last name" 
+              autocomplete="family-name" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="orgTitle">
+              Organizational Title
+            </label>
+            <input 
+              type="text" 
+              id="orgTitle" 
+              name="orgTitle" 
+              title="Your organizational title within your organization" 
+              autocomplete="organization-title" 
+              pattern="[a-zA-Z\s\-]{7,}"
+              placeholder="e.g., Marketing Director"
+            >
+            <small class="form-hint">Minimum 7 characters (letters, hyphens, spaces only)</small>
+          </div>
+
+          <div class="form-group">
+            <label for="email">
+              Email Address <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="email" 
+              id="email" 
+              name="email" 
+              title="Your email address" 
+              autocomplete="email" 
+              placeholder="example@company.com"
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="phone">
+              Mobile Phone Number <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              title="Your mobile phone number" 
+              autocomplete="tel" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="businessName">
+              Business/Organization Name <span class="required" aria-label="required">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="businessName" 
+              name="businessName" 
+              title="Your business or organization name" 
+              autocomplete="organization" 
+              required
+            >
+          </div>
+
+          <div class="form-group">
+            <label for="membershipLevel">
+              Membership Level <span class="required" aria-label="required">*</span>
+            </label>
+            <select 
+              id="membershipLevel" 
+              name="membershipLevel" 
+              title="Select your desired membership level" 
+              required
+            >
+              <option value="">-- Select Membership Level --</option>
+              <option value="np">NP Membership (Non-profit)</option>
+              <option value="bronze">Bronze Membership</option>
+              <option value="silver">Silver Membership</option>
+              <option value="gold">Gold Membership</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="description">
+              Business/Organization Description
+            </label>
+            <textarea 
+              id="description" 
+              name="description" 
+              title="Describe your business or organization" 
+              rows="5"
+              placeholder="Tell us about your organization..."
+            ></textarea>
+          </div>
+
+          <input 
+            type="hidden" 
+            id="timestamp" 
+            name="timestamp" 
+          >
+
+          <button type="submit" class="submit-btn">Submit Application</button>
+        </form>
+      </section>
+
+      <!-- Membership Level Cards -->
+      <section class="membership-cards-section">
+        <h2 class="cards-title">Membership Levels</h2>
+        <div class="membership-cards">
+          
+          <!-- NP Membership Card -->
+          <div class="membership-card card-np">
+            <h3 class="card-title">NP Membership</h3>
+            <p class="card-description">For non-profit organizations</p>
+            <p class="card-price">Free</p>
+            <button class="card-link" type="button" data-modal="modal-np" aria-label="Learn more about NP Membership">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Bronze Membership Card -->
+          <div class="membership-card card-bronze">
+            <h3 class="card-title">Bronze Membership</h3>
+            <p class="card-description">Perfect for growing businesses</p>
+            <p class="card-price">$99/year</p>
+            <button class="card-link" type="button" data-modal="modal-bronze" aria-label="Learn more about Bronze Membership">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Silver Membership Card -->
+          <div class="membership-card card-silver">
+            <h3 class="card-title">Silver Membership</h3>
+            <p class="card-description">Enhanced networking opportunities</p>
+            <p class="card-price">$199/year</p>
+            <button class="card-link" type="button" data-modal="modal-silver" aria-label="Learn more about Silver Membership">
+              Learn More
+            </button>
+          </div>
+
+          <!-- Gold Membership Card -->
+          <div class="membership-card card-gold">
+            <h3 class="card-title">Gold Membership</h3>
+            <p class="card-description">Premium benefits and visibility</p>
+            <p class="card-price">$299/year</p>
+            <button class="card-link" type="button" data-modal="modal-gold" aria-label="Learn more about Gold Membership">
+              Learn More
+            </button>
+          </div>
+
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Modals for Membership Benefits -->
+
+  <!-- NP Membership Modal -->
+  <dialog id="modal-np" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close dialog">✕</button>
+      <h2>NP Membership Benefits</h2>
+      <ul>
+        <li>Access to member directory</li>
+        <li>Networking events and conferences</li>
+        <li>Chamber newsletter and updates</li>
+        <li>Community resource sharing</li>
+        <li>Volunteer opportunities</li>
+      </ul>
+      <button class="modal-close-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Bronze Membership Modal -->
+  <dialog id="modal-bronze" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close dialog">✕</button>
+      <h2>Bronze Membership Benefits</h2>
+      <ul>
+        <li>Everything in NP Membership, plus:</li>
+        <li>Business listing in directory</li>
+        <li>Social media promotion</li>
+        <li>Email marketing campaigns</li>
+        <li>Quarterly business roundtable</li>
+        <li>10% discount on event sponsorships</li>
+      </ul>
+      <button class="modal-close-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Silver Membership Modal -->
+  <dialog id="modal-silver" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close dialog">✕</button>
+      <h2>Silver Membership Benefits</h2>
+      <ul>
+        <li>Everything in Bronze Membership, plus:</li>
+        <li>Premium directory listing with logo</li>
+        <li>Monthly feature article</li>
+        <li>Priority event registration</li>
+        <li>Training and professional development seminars</li>
+        <li>Monthly networking breakfast</li>
+        <li>Business spotlight on website</li>
+        <li>15% discount on event sponsorships</li>
+      </ul>
+      <button class="modal-close-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <!-- Gold Membership Modal -->
+  <dialog id="modal-gold" class="modal">
+    <div class="modal-content">
+      <button class="modal-close" type="button" aria-label="Close dialog">✕</button>
+      <h2>Gold Membership Benefits</h2>
+      <ul>
+        <li>Everything in Silver Membership, plus:</li>
+        <li>Premier homepage spotlight (rotating 3 businesses)</li>
+        <li>Dedicated account manager</li>
+        <li>Weekly business coaching sessions</li>
+        <li>Exclusive leadership committee membership</li>
+        <li>VIP access to all chamber events</li>
+        <li>Custom marketing support package</li>
+        <li>Quarterly print advertising in chamber publication</li>
+        <li>25% discount on all sponsorships</li>
+        <li>Ribbon cutting ceremony for business expansion</li>
+      </ul>
+      <button class="modal-close-btn" type="button">Close</button>
+    </div>
+  </dialog>
+
+  <footer class="page-footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 00000</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-section footer-section--social social-links">
+        <a href="#youtube" aria-label="YouTube">&#9654;</a>
+        <a href="#twitter" aria-label="X / Twitter">&#120143;</a>
+        <a href="#linkedin" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-info">WDD 231 Course Project</p>
+      <p class="footer-info" id="author">Hyeyendele Rashidi</p>
+      <p class="footer-info" id="modified"></p>
+    </div>
+  </footer>
+</body>
+</html>

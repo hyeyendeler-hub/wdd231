@@ -202,9 +202,20 @@ function initNav() {
   });
 }
 
+// ── CTA Button navigation ──────────────────────────────────────
+function initCTAButton() {
+  const ctaButton = document.querySelector('.cta-button');
+  if (ctaButton) {
+    ctaButton.addEventListener('click', () => {
+      window.location.href = 'join.html';
+    });
+  }
+}
+
 // ── Bootstrap ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
+  initCTAButton();
   initWeather();
   initSpotlight();
   initFooterDates();
