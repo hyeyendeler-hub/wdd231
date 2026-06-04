@@ -39,6 +39,16 @@ const OWM_KEY = (() => {
   catch { return ''; }
 })();
 
+// Mock weather data for fallback when API key is not available
+const MOCK_WEATHER = {
+  current: { temp: 87, desc: 'Sunny' },
+  forecast: [
+    { day: 'Mon, Jun 22', desc: 'Sunny', high: 92, low: 74 },
+    { day: 'Tue, Jun 23', desc: 'Partly Cloudy', high: 89, low: 72 },
+    { day: 'Wed, Jun 24', desc: 'Thunderstorms', high: 85, low: 70 }
+  ]
+};
+
 const OWM_BASE  = 'https://api.openweathermap.org/data/2.5';
 const OWM_CITY  = 'Timbuktu,Mali';   // matching the chamber footer address
 
@@ -54,6 +64,13 @@ async function initWeather() {
 
   // Show loading state
   if (loading) loading.style.display = 'block';
+
+  // If no API key, use mock data immediately
+  if (!OWM_KEY) {
+    console.info('[home.js] No OpenWeatherMap key found, using mock data');
+    displayMockWeather();
+    return;
+  }
 
   try {
     const base = owmUrl('/weather') + `&q=${encodeURIComponent(OWM_CITY)}`;
@@ -111,8 +128,32 @@ async function initWeather() {
   } catch (err) {
     console.warn('[home.js] weather unavailable:', err.message);
     if (loading) loading.style.display = 'none';
-    msg.hidden = false;
+    displayMockWeather();
   }
+}
+
+function displayMockWeather() {
+  const loading  = document.getElementById('weather-loading');
+  const content  = document.getElementById('weather-content');
+  const msg      = document.getElementById('weather-msg');
+
+  document.getElementById('current-temp').textContent = MOCK_WEATHER.current.temp;
+  document.getElementById('weather-desc').textContent = MOCK_WEATHER.current.desc;
+
+  const ul = document.getElementById('forecast-list');
+  ul.innerHTML = '';
+  MOCK_WEATHER.forecast.forEach(day => {
+    const li = document.createElement('li');
+    li.className = 'forecast-item';
+    li.innerHTML = `<span class="f-day">${day.day}</span>`
+                 + `<span class="f-desc">${day.desc}</span>`
+                 + `<span class="f-temp">${day.high}${DEG_SYMBOL}\u2009/\u2009${day.low}${DEG_SYMBOL}</span>`;
+    ul.appendChild(li);
+  });
+
+  if (loading) loading.style.display = 'none';
+  content.hidden = false;
+  msg.hidden = true;
 }
 
 // ── Company Spotlight ─────────────────────────────────────────

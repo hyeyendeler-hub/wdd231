@@ -4,6 +4,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body, h1, h2, h3, p, figure, blockquote, dl, dd, ul, ol, li {
   margin: 0;

@@ -136,7 +136,8 @@ body, button, input, textarea {
 }
 
 .main-nav a:hover,
-.main-nav a.active {
+.main-nav a.active,
+.main-nav a[aria-current="page"] {
   background: #f3f3f3;
   color: #111;
   font-weight: 600;
