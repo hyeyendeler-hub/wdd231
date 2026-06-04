@@ -366,16 +366,22 @@ main {
 }
 
 .social-links a {
-  width: 36px;
-  height: 36px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 4px;
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
+   width: 36px;
+   height: 36px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: transparent;
+   border-radius: 4px;
+   color: var(--accent);
+   text-decoration: none;
+   font-size: 1.2rem;
+}
+
+.social-links a:hover,
+.social-links a:focus-visible {
+   background: var(--accent);
+   color: white;
 }
 
 .social-links a:hover {
