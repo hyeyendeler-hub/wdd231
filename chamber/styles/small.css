@@ -431,6 +431,75 @@ main {
   color: #0d1b4b;
 }
 
+.home-section--spotlight .spotlight-list {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem 1rem;
+}
+
+.home-section--spotlight .spotlight-item {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.spotlight-logo {
+  width: 100%;
+  height: 148px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: #f7f7f7;
+}
+
+.spotlight-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.spotlight-level {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+}
+
+.spotlight-level--gold {
+  color: var(--gold);
+}
+
+.spotlight-level--silver {
+  color: var(--silver);
+}
+
+.spotlight-category,
+.spotlight-address,
+.spotlight-phone {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.spotlight-link {
+  display: inline-block;
+  padding: 0.65rem 0.95rem;
+  background: var(--accent);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.spotlight-link:hover,
+.spotlight-link:focus-visible {
+  background: #004999;
+}
+
 /* ── [hidden] utility ───────────────────────────────────────────── */
 [hidden] { display: none !important; }
 

@@ -137,6 +137,10 @@ async function initSpotlight() {
       return;
     }
 
+    const imagesBase = location.pathname.includes('/chamber/')
+      ? 'images/'
+      : 'chamber/images/';
+
     // pick 3 random members
     const picked = [...pool]
       .sort(() => Math.random() - 0.5)
@@ -148,6 +152,7 @@ async function initSpotlight() {
         const levelClass = m.membershipLevel === 3 ? 'spotlight-level--gold' : 'spotlight-level--silver';
         return `
           <article class="spotlight-item">
+            <img class="spotlight-logo" src="${imagesBase}${m.image}" alt="${m.name} logo">
             <h3 class="spotlight-name">${m.name}</h3>
             <p class="spotlight-level ${levelClass}">${levelLabel}</p>
             <p class="spotlight-category">${m.category}</p>
