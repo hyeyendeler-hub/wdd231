@@ -1,7 +1,7 @@
 -- Query 1: Insert Johannes Vermeer into the artist table
 USE art;
-INSERT INTO artist (first_name, last_name, country, birth_year, death_year, is_local)
-VALUES ('Johannes', 'Vermeer', 'Netherlands', 1632, 1674, false);
+INSERT INTO artist (first_name, last_name, birth_year, death_year, country, location)
+VALUES ('Johannes', 'Vermeer', 1632, 1674, 'Netherlands', 'Netherlands');
 
 -- Query 2: List all artist records sorted alphabetically by last name
 SELECT * FROM artist
