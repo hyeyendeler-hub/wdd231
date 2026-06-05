@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timbuktu Chamber of Commerce - Site Plan</title>
+  <style>
+    :root {
+      --navy: #0d1b4b;
+      --gold: #ffc107;
+      --gray: #f4f5f7;
+      --text: #1c1c2e;
+      --muted: #555;
+      --white: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', 'Open Sans', Arial, sans-serif;
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 2rem 1rem;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      background: var(--white);
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(13, 27, 75, 0.08);
+      border: 1px solid #e1e4ec;
+      overflow: hidden;
+    }
+
+    header {
+      background: linear-gradient(135deg, var(--navy) 0%, #1a3e8a 100%);
+      color: var(--white);
+      padding: 2.5rem 2rem;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1rem;
+    }
+
+    section {
+      padding: 2rem;
+      border-bottom: 1px solid #e1e4ec;
+    }
+
+    section:last-child {
+      border-bottom: none;
+    }
+
+    h2 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 3px solid var(--gold);
+      display: inline-block;
+    }
+
+    h3 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    p, li {
+      margin-bottom: 0.75rem;
+      color: var(--text);
+    }
+
+    ul, ol {
+      margin-left: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .color-swatch {
+      display: inline-block;
+      width: 1.2rem;
+      height: 1.2rem;
+      border-radius: 4px;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .swatch-navy { background: var(--navy); }
+    .swatch-gold { background: var(--gold); }
+    .swatch-gray { background: var(--gray); border: 1px solid #ccc; }
+
+    pre {
+      background: #f8f9fc;
+      border: 1px solid #e1e4ec;
+      border-radius: 8px;
+      padding: 1.5rem;
+      overflow-x: auto;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.85rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 1rem 0.5rem;
+      }
+      section {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Timbuktu Chamber of Commerce</h1>
+      <p>Individual Project Site Plan</p>
+    </header>
+
+    <section>
+      <h2>Site Name</h2>
+      <p><strong>Timbuktu Chamber of Commerce</strong></p>
+      <p>This name was selected because it clearly identifies the organization as the official chamber serving Timbuktu, Mali, and the surrounding region. It conveys authority, local focus, and economic development, making it instantly recognizable to businesses and visitors seeking networking opportunities, event information, and member resources.</p>
+    </section>
+
+    <section>
+      <h2>Site Purpose</h2>
+      <p>The site provides a comprehensive digital hub for the Timbuktu business community by delivering the following services and information:</p>
+      <ul>
+        <li>Chamber membership information, including tier options (Non-Profit, Bronze, Silver, Gold) and associated benefits</li>
+        <li>A searchable business directory allowing visitors to discover local member companies and services</li>
+        <li>Up-to-date listings of chamber events, networking opportunities, and the annual Business Expo</li>
+        <li>Company spotlight features highlighting member achievements and categories</li>
+        <li>Contact information, location details, and social media links for engagement</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Scenarios</h2>
+      <p>The following scenarios represent questions asked by target audience members—local business owners, entrepreneurs, and community members interested in the Timbuktu business ecosystem:</p>
+      <ol>
+        <li>What membership benefits and cost tiers are available for a new small business owner, and how do I join the chamber?</li>
+        <li>How can I find contact information and business categories for specific member companies in the chamber's online directory?</li>
+      </ol>
+    </section>
+
+    <section>
+      <h2>Color Scheme</h2>
+      <p>The following carefully selected colors reflect the professional yet culturally rich identity of Timbuktu:</p>
+      <ul>
+        <li><span class="color-swatch swatch-navy" aria-hidden="true"></span><strong>Deep Navy Blue (#0d1b4b):</strong> Primary brand color representing stability and trust. Used for page headings, the navigation and footer backgrounds, primary buttons, and key UI elements.</li>
+        <li><span class="color-swatch swatch-gold" aria-hidden="true"></span><strong>Amber Gold (#ffc107):</strong> Accent color evoking the historic desert trade. Used for section title underlines, call-to-action buttons, hover states, border accents, and interactive highlights to draw visitor attention.</li>
+        <li><span class="color-swatch swatch-gray" aria-hidden="true"></span><strong>Light Gray (#f4f5f7):</strong> Neutral background color. Used for the main page background and section dividers to ensure readability and provide visual breathing room.</li>
+      </ul>
+      <p><em>Color contrast ratios meet WCAG AA standards for accessibility.</em></p>
+    </section>
+
+    <section>
+      <h2>Typography</h2>
+      <p>The following typefaces ensure clear hierarchy and excellent readability across all devices:</p>
+      <ul>
+        <li><strong>Inter:</strong> The primary typeface used for all headings, body paragraphs, navigation links, and form labels. Its modern, clean design provides superb legibility at both large and small sizes.</li>
+        <li><strong>Open Sans:</strong> Used as a robust fallback font if Inter cannot be loaded, and may be used for secondary captions or supporting text. It maintains visual harmony with Inter.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Wireframe</h2>
+      <p>The following diagrams represent the planned layout for the home page. The mobile wireframe shows a single-column stacked layout, while the desktop wireframe demonstrates the multi-column grid layout with expanded components.</p>
+
+      <h3>Mobile View (320px &ndash; 767px)</h3>
+      <pre>
+┌─────────────────────────────┐
+│  [Logo] Timbuktu Chamber ☰  │
+├─────────────────────────────┤
+│                             │
+│       Hero Image/Banner     │
+│                             │
+├─────────────────────────────┤
+│ Welcome to the Chamber      │
+│ [intro text paragraph...]   │
+├─────────────────────────────┤
+│ Weather in Timbuktu         │
+│ ┌───────┐ ┌───────────────┐ │
+│ │  82°F │ │ 3-Day Forecast│ │
+│ │ Sunny │ │ • 85°F Sun    │ │
+│ └───────┘ │ • 80°F Mon    │ │
+│           │ • 78°F Tue    │ │
+│           └───────────────┘ │
+├─────────────────────────────┤
+│ Current Events              │
+│ ┌─────────────────────────┐ │
+│ │ Jun 21  Annual Expo     │ │
+│ └─────────────────────────┘ │
+│ ┌─────────────────────────┐ │
+│ │ Jul 08  Networking      │ │
+│ └─────────────────────────┘ │
+│ ┌─────────────────────────┐ │
+│ │ Aug 15  Tech Summit     │ │
+│ └─────────────────────────┘ │
+├─────────────────────────────┤
+│ Company Spotlight           │
+│ ┌─────────────────────────┐ │
+│ │ [Logo]  Member Name     │ │
+│ │ Gold    Category        │ │
+│ │         [View Profile]  │ │
+│ └─────────────────────────┘ │
+├─────────────────────────────┤
+│ Become a Member             │
+│ Join text...                │
+│ [Explore Membership →]      │
+├─────────────────────────────┤
+│ Footer / Contact Info       │
+└─────────────────────────────┘
+      </pre>
+
+      <h3>Desktop / Tablet View (768px+)</h3>
+      <pre>
+┌─────────────────────────────────────────────────────────────┐
+│ [Logo] Timbuktu Chamber    Home  Directory  Join  Discover │
+├─────────────────────────────────────────────────────────────┤
+│                                                             │
+│                    Hero Image / Banner                      │
+│                                                             │
+├─────────────────────────────────────┬───────────────────────┤
+│ Welcome to the Chamber              │                       │
+│ [intro text paragraph...]           │  [Side CTA / Quick    │
+│                                     │   Join Box]           │
+├─────────────────────────────────────┴───────────────────────┤
+│ Weather in Timbuktu                                        │
+│ ┌─────────────┐  ┌──────────────────────────────────────┐  │
+│ │   82°F      │  │  3-Day Forecast                     │  │
+│ │   Sunny     │  │  • 85°F Sun  • 80°F Mon  • 78°F Tue│  │
+│ └─────────────┘  └──────────────────────────────────────┘  │
+├─────────────────────────────────────────────────────────────┤
+│ Current Events                                             │
+│ ┌────────────┐  ┌────────────┐  ┌────────────┐            │
+│ │ Jun 21     │  │ Jul 08     │  │ Aug 15     │            │
+│ │ Annual     │  │ Networking │  │ Tech       │            │
+│ │ Expo       │  │ Breakfast  │  │ Summit     │            │
+│ └────────────┘  └────────────┘  └────────────┘            │
+├─────────────────────────────────────────────────────────────┤
+│ Company Spotlight                                          │
+│ ┌────────────┐  ┌────────────┐  ┌────────────┐            │
+│ │ [Logo]     │  │ [Logo]     │  │ [Logo]     │            │
+│ │ Member A   │  │ Member B   │  │ Member C   │            │
+│ │ Gold       │  │ Silver     │  │ Bronze     │            │
+│ │ [Profile]  │  │ [Profile]  │  │ [Profile]  │            │
+│ └────────────┘  └────────────┘  └────────────┘            │
+├─────────────────────────────────────────────────────────────┤
+│ Footer: Address │ Social Links │ © 2026 Chamber            │
+└─────────────────────────────────────────────────────────────┘
+      </pre>
+    </section>
+  </div>
+</body>
+</html>
