@@ -1,5 +1,5 @@
 -- Query 1: Insert Johannes Vermeer into the artist table
-USE v_art;
+USE art;
 INSERT INTO artist (first_name, last_name, country, birth_year, death_year, is_local)
 VALUES ('Johannes', 'Vermeer', 'Netherlands', 1632, 1674, false);
 
