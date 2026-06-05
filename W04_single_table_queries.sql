@@ -1,20 +1,36 @@
+-- ============================================================
+-- W04 Single Table Queries
+-- Databases: art, bike, magazine
+-- ============================================================
+
+-- ------------------------------------------------------------
+-- VIRTUAL ART GALLERY (art database)
+-- ------------------------------------------------------------
+
 -- Query 1: Insert Johannes Vermeer into the artist table
 USE art;
-INSERT INTO artist (first_name, last_name, birth_year, death_year, country, location)
-VALUES ('Johannes', 'Vermeer', 1632, 1674, 'Netherlands', 'Netherlands');
+INSERT INTO artist (first_name, last_name, birth_year, death_year, country, local_artist)
+VALUES ('Johannes', 'Vermeer', 1632, 1674, 'Netherlands', false);
 
 -- Query 2: List all artist records sorted alphabetically by last name
+USE art;
 SELECT * FROM artist
 ORDER BY last_name;
 
 -- Query 3: Update Johannes Vermeer's death year to 1675
+USE art;
 UPDATE artist
 SET death_year = 1675
 WHERE last_name = 'Vermeer';
 
 -- Query 4: Delete Johannes Vermeer from the artist table
+USE art;
 DELETE FROM artist
 WHERE last_name = 'Vermeer';
+
+-- ------------------------------------------------------------
+-- BIKE SHOP (bike database)
+-- ------------------------------------------------------------
 
 -- Query 5: List first name, last name, and phone of customers from Houston, Texas
 USE bike;
@@ -73,6 +89,10 @@ SELECT
   CONCAT('$', FORMAT(list_price / 3, 2)) AS `One of 3 payments`
 FROM products
 WHERE model_year = 2025;
+
+-- ------------------------------------------------------------
+-- MAGAZINE DATABASE (magazine database)
+-- ------------------------------------------------------------
 
 -- Query 13: Magazine name with 3% off the price, rounded to 2 decimal places
 USE magazine;
