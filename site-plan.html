@@ -3,286 +3,624 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Timbuktu Chamber of Commerce - Site Plan</title>
+  <title>Jinja City Guide - Website Plan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --navy: #0d1b4b;
-      --gold: #ffc107;
-      --gray: #f4f5f7;
-      --text: #1c1c2e;
-      --muted: #555;
+      --teal: #006d77;
+      --teal-light: #e0f2f1;
+      --coral: #e29578;
+      --coral-light: #fbe9e7;
+      --cream: #fdf6e3;
+      --dark: #1a1a2e;
+      --muted: #666;
       --white: #ffffff;
+      --border: #e0e0e0;
     }
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
       font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-      background: var(--gray);
-      color: var(--text);
+      background: var(--cream);
+      color: var(--dark);
       line-height: 1.6;
       padding: 2rem 1rem;
     }
 
-    .container {
-      max-width: 900px;
+    .plan-board {
+      max-width: 1100px;
       margin: 0 auto;
-      background: var(--white);
-      border-radius: 12px;
-      box-shadow: 0 4px 24px rgba(13, 27, 75, 0.08);
-      border: 1px solid #e1e4ec;
+    }
+
+    .board-header {
+      background: linear-gradient(135deg, var(--teal) 0%, #005f69 100%);
+      color: white;
+      padding: 2.5rem 2rem;
+      border-radius: 16px;
+      margin-bottom: 1.5rem;
+      text-align: center;
+      position: relative;
       overflow: hidden;
     }
 
-    header {
-      background: linear-gradient(135deg, var(--navy) 0%, #1a3e8a 100%);
-      color: var(--white);
-      padding: 2.5rem 2rem;
+    .board-header::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .board-header h1 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      position: relative;
+    }
+
+    .board-header p {
+      font-size: 1rem;
+      opacity: 0.9;
+      position: relative;
+    }
+
+    .board-header .logo-mark {
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      border: 1px solid var(--border);
+      position: relative;
+      transition: transform 0.2s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+
+    .card--wide {
+      grid-column: 1 / -1;
+    }
+
+    .card-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--teal);
+      background: var(--teal-light);
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      margin-bottom: 0.75rem;
+    }
+
+    .card--coral .card-label {
+      color: #a85d3e;
+      background: var(--coral-light);
+    }
+
+    .card h2 {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .card h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--teal);
+      margin: 1rem 0 0.4rem;
+    }
+
+    .card p, .card li {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 0.5rem;
+    }
+
+    .card ul, .card ol {
+      margin-left: 1.25rem;
+    }
+
+    .card strong {
+      color: var(--dark);
+    }
+
+    .color-swatch-lg {
+      display: inline-block;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 8px;
+      margin-right: 0.75rem;
+      vertical-align: middle;
+      border: 2px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+
+    .swatch-teal { background: var(--teal); }
+    .swatch-coral { background: var(--coral); }
+    .swatch-cream { background: var(--cream); border: 1px solid #ddd; }
+
+    .color-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      padding: 0.5rem;
+      background: #fafafa;
+      border-radius: 8px;
+    }
+
+    .persona-card {
+      display: flex;
+      gap: 1rem;
+      align-items: flex-start;
+    }
+
+    .persona-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--teal), var(--coral));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: white;
+      flex-shrink: 0;
+    }
+
+    .persona-info h4 {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--dark);
+      margin-bottom: 0.2rem;
+    }
+
+    .persona-info p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .mood-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .mood-item {
+      aspect-ratio: 1;
+      border-radius: 10px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .mood-item::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border: 3px solid transparent;
+      border-radius: 10px;
+      transition: border-color 0.2s;
+    }
+
+    .mood-item:hover::after {
+      border-color: var(--teal);
+    }
+
+    .mood-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0,0,0,0.6);
+      color: white;
+      font-size: 0.7rem;
+      padding: 0.3rem 0.5rem;
       text-align: center;
     }
 
-    header h1 {
-      font-size: clamp(1.5rem, 4vw, 2rem);
-      font-weight: 700;
-      margin-bottom: 0.5rem;
+    .sitemap-visual {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      justify-content: center;
+      align-items: center;
+      padding: 1rem 0;
     }
 
-    header p {
-      color: rgba(255, 255, 255, 0.85);
-      font-size: 1rem;
+    .sitemap-node {
+      background: var(--teal);
+      color: white;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      font-weight: 600;
     }
 
-    section {
-      padding: 2rem;
-      border-bottom: 1px solid #e1e4ec;
+    .sitemap-node--accent {
+      background: var(--coral);
     }
 
-    section:last-child {
-      border-bottom: none;
+    .sitemap-arrow {
+      color: var(--muted);
+      font-size: 1.2rem;
     }
 
-    h2 {
-      font-size: 1.25rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin-bottom: 1rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 3px solid var(--gold);
-      display: inline-block;
-    }
-
-    h3 {
-      font-size: 1rem;
-      font-weight: 700;
-      color: var(--navy);
-      margin: 1.5rem 0 0.5rem;
-    }
-
-    p, li {
-      margin-bottom: 0.75rem;
-      color: var(--text);
-    }
-
-    ul, ol {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    li {
-      margin-bottom: 0.5rem;
-    }
-
-    strong {
-      color: var(--navy);
-      font-weight: 700;
-    }
-
-    .color-swatch {
-      display: inline-block;
-      width: 1.2rem;
-      height: 1.2rem;
-      border-radius: 4px;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-      border: 1px solid rgba(0,0,0,0.1);
-    }
-
-    .swatch-navy { background: var(--navy); }
-    .swatch-gold { background: var(--gold); }
-    .swatch-gray { background: var(--gray); border: 1px solid #ccc; }
-
-    pre {
+    .wireframe-box {
       background: #f8f9fc;
-      border: 1px solid #e1e4ec;
+      border: 1px solid var(--border);
       border-radius: 8px;
-      padding: 1.5rem;
-      overflow-x: auto;
+      padding: 1rem;
       font-family: 'Courier New', Courier, monospace;
-      font-size: 0.85rem;
-      line-height: 1.5;
+      font-size: 0.75rem;
+      line-height: 1.4;
       color: #333;
+      overflow-x: auto;
+      white-space: pre;
+    }
+
+    .preview-frame {
+      background: linear-gradient(135deg, var(--coral-light) 0%, var(--teal-light) 100%);
+      border-radius: 10px;
+      padding: 1rem;
+      border: 1px solid var(--border);
+    }
+
+    .preview-browser {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .preview-bar {
+      background: var(--teal);
+      padding: 0.5rem 0.75rem;
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+    }
+
+    .preview-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.5);
+    }
+
+    .preview-body {
+      padding: 1rem;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 0.75rem;
+    }
+
+    .preview-hero {
+      background: linear-gradient(135deg, var(--teal), #268b94);
+      border-radius: 6px;
+      padding: 1.5rem;
+      color: white;
+      text-align: center;
+    }
+
+    .preview-hero h4 {
+      font-size: 0.85rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .preview-btn {
+      display: inline-block;
+      background: var(--coral);
+      color: white;
+      padding: 0.3rem 0.75rem;
+      border-radius: 4px;
+      font-size: 0.7rem;
+      margin-top: 0.4rem;
+    }
+
+    .preview-side {
+      background: var(--teal-light);
+      border-radius: 6px;
+      padding: 0.75rem;
+    }
+
+    .preview-side h5 {
+      font-size: 0.7rem;
+      color: var(--teal);
+      margin-bottom: 0.4rem;
+    }
+
+    .preview-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-top: 0.75rem;
+    }
+
+    .preview-card {
+      background: white;
+      border-radius: 4px;
+      padding: 0.5rem;
+      border: 1px solid var(--border);
+    }
+
+    .preview-card-icon {
+      width: 100%;
+      height: 20px;
+      background: var(--teal-light);
+      border-radius: 3px;
+      margin-bottom: 0.3rem;
+    }
+
+    .preview-card-line {
+      height: 3px;
+      background: #e0e0e0;
+      border-radius: 2px;
+      margin-bottom: 0.2rem;
     }
 
     @media (max-width: 600px) {
-      body {
-        padding: 1rem 0.5rem;
-      }
-      section {
-        padding: 1.5rem;
-      }
+      .card-grid { grid-template-columns: 1fr; }
+      .preview-body { grid-template-columns: 1fr; }
+      .sitemap-visual { gap: 0.4rem; }
+      .sitemap-node { padding: 0.4rem 0.75rem; font-size: 0.75rem; }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <h1>Uganda Chamber of Commerce</h1>
-      <p>Site Name: Uganda Chamber of Commerce</p>
+  <div class="plan-board">
+    <header class="board-header">
+      <div class="logo-mark">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));">
+          <circle cx="45" cy="45" r="45" fill="white" opacity="0.15"/>
+          <circle cx="45" cy="45" r="38" fill="var(--teal)"/>
+          <path d="M25 62 C25 62 35 38 45 38 C55 38 65 62 65 62" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/>
+          <path d="M36 32 L45 18 L54 32" stroke="var(--coral)" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <path d="M33 27 L45 10 L57 27" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+          <circle cx="45" cy="38" r="3" fill="var(--coral)"/>
+        </svg>
+      </div>
+      <h1>Jinja City Guide</h1>
+      <img src="../images/img-background.jpg" alt="Hyeyendele Rashidi" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--coral); margin: 0.75rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
+      <p style="font-size: 1.1rem; font-weight: 600; margin: 0.25rem 0;">Hyeyendele Rashidi</p>
+      <p>Website Planning Board &mdash; Local Discovery Platform</p>
     </header>
 
-    <section>
-      <h2>Site Name</h2>
-      <p><strong>Uganda Chamber of Commerce</strong></p>
-      <p>This name was selected because it clearly identifies the organization as the official chamber serving Uganda and the surrounding East African region. It conveys authority, local focus, and economic development, making it instantly recognizable to businesses and visitors seeking networking opportunities, event information, and member resources across Uganda and neighboring Kenya.</p>
-    </section>
+    <div class="card-grid">
+      <div class="card">
+        <span class="card-label">Identity</span>
+        <h2>Site Name</h2>
+        <p><strong>Jinja City Guide</strong></p>
+        <p>Chosen because it instantly communicates the location (Jinja, Uganda) and purpose (a helpful guide). Ideal for travelers, ex-pats, and explorers seeking adventure, dining, and culture in East Africa's adventure capital.</p>
+      </div>
 
-    <section>
-      <h2>Site Purpose</h2>
-      <p>The site provides a comprehensive digital hub for the Uganda business community by delivering the following services and information:</p>
-      <ul>
-        <li>Chamber membership information, including tier options (Non-Profit, Bronze, Silver, Gold) and associated benefits</li>
-        <li>A searchable business directory allowing visitors to discover local member companies and services</li>
-        <li>Up-to-date listings of chamber events, networking opportunities, and the annual Business Expo</li>
-        <li>Company spotlight features highlighting member achievements and categories</li>
-        <li>Contact information, location details, and social media links for engagement</li>
-      </ul>
-    </section>
+      <div class="card">
+        <span class="card-label">Goals</span>
+        <h2>Site Purpose</h2>
+        <p>A local discovery hub for Jinja. Core offerings:</p>
+        <ul>
+          <li>Curated adventure listings (rafting, bungee, quad)</li>
+          <li>Restaurant &amp; lodging reviews with prices</li>
+          <li>Event calendar (festivals, marathons, fairs)</li>
+          <li>Travel tips: transport, safety, weather</li>
+          <li>Photo stories from visitor experiences</li>
+        </ul>
+      </div>
 
-    <section>
-      <h2>Scenarios</h2>
-      <p>The following scenarios represent questions asked by target audience members—local business owners, entrepreneurs, and community members interested in the Uganda and Kenya business ecosystem:</p>
-      <ol>
-        <li>What membership benefits and cost tiers are available for a new small business owner, and how do I join the chamber?</li>
-        <li>How can I find contact information and business categories for specific member companies in the chamber's online directory?</li>
-      </ol>
-    </section>
+      <div class="card">
+        <span class="card-label">Audience</span>
+        <h2>Target Users</h2>
+        <div class="persona-card">
+          <div class="persona-avatar">&#127757;</div>
+          <div class="persona-info">
+            <h4>Adventure seekers</h4>
+            <p>Backpackers &amp; solo travelers, 22&ndash;35, looking for thrill activities and budget tips.</p>
+          </div>
+        </div>
+        <div class="persona-card" style="margin-top: 0.75rem;">
+          <div class="persona-avatar">&#127869;</div>
+          <div class="persona-info">
+            <h4>Family tourists</h4>
+            <p>Parents 30&ndash;45 seeking safe dining, kid-friendly spots, and relaxed itineraries.</p>
+          </div>
+        </div>
+        <div class="persona-card" style="margin-top: 0.75rem;">
+          <div class="persona-avatar">&#128188;</div>
+          <div class="persona-info">
+            <h4>Local entrepreneurs</h4>
+            <p>Small business owners promoting guesthouses, tours, and cultural experiences.</p>
+          </div>
+        </div>
+      </div>
 
-    <section>
-      <h2>Color Scheme</h2>
-      <p>The following carefully selected colors reflect the professional yet culturally rich identity of Uganda and East Africa:</p>
-      <ul>
-        <li><span class="color-swatch swatch-navy" aria-hidden="true"></span><strong>Deep Navy Blue (#0d1b4b):</strong> Primary brand color representing stability and trust. Used for page headings, the navigation and footer backgrounds, primary buttons, and key UI elements.</li>
-        <li><span class="color-swatch swatch-gold" aria-hidden="true"></span><strong>Amber Gold (#ffc107):</strong> Accent color evoking the historic desert trade. Used for section title underlines, call-to-action buttons, hover states, border accents, and interactive highlights to draw visitor attention.</li>
-        <li><span class="color-swatch swatch-gray" aria-hidden="true"></span><strong>Light Gray (#f4f5f7):</strong> Neutral background color. Used for the main page background and section dividers to ensure readability and provide visual breathing room.</li>
-      </ul>
-      <p><em>Color contrast ratios meet WCAG AA standards for accessibility.</em></p>
-    </section>
+      <div class="card">
+        <span class="card-label">Research</span>
+        <h2>Scenarios</h2>
+        <p>Questions real users ask:</p>
+        <ol>
+          <li>As a backpacker with two days in Jinja, which rafting companies give the best beginner packages and what is the average cost?</li>
+          <li>Where can my family eat dinner near the Nile with outdoor seating, vegetarian options, and kid-friendly prices?</li>
+          <li>What is the best month to visit for dry weather and which cultural festivals are happening this year?</li>
+        </ol>
+      </div>
 
-    <section>
-      <h2>Typography</h2>
-      <p>The following typefaces ensure clear hierarchy and excellent readability across all devices:</p>
-      <ul>
-        <li><strong>Inter:</strong> The primary typeface used for all headings, body paragraphs, navigation links, and form labels. Its modern, clean design provides superb legibility at both large and small sizes.</li>
-        <li><strong>Open Sans:</strong> Used as a robust fallback font if Inter cannot be loaded, and may be used for secondary captions or supporting text. It maintains visual harmony with Inter.</li>
-      </ul>
-    </section>
+      <div class="card card--coral">
+        <span class="card-label">Visuals</span>
+        <h2>Color Scheme</h2>
+        <div class="color-row">
+          <span class="color-swatch-lg swatch-teal"></span>
+          <div>
+            <strong>Deep Teal #006d77</strong><br>
+            <small>River depth &amp; trust</small>
+          </div>
+        </div>
+        <div class="color-row">
+          <span class="color-swatch-lg swatch-coral"></span>
+          <div>
+            <strong>Warm Coral #e29578</strong><br>
+            <small>Sunsets &amp; energy</small>
+          </div>
+        </div>
+        <div class="color-row">
+          <span class="color-swatch-lg swatch-cream"></span>
+          <div>
+            <strong>Soft Cream #fdf6e3</strong><br>
+            <small>Background &amp; light</small>
+          </div>
+        </div>
+        <p>Deep Teal is used for the header, navigation labels, and strong accent elements. Warm Coral highlights buttons, call-to-action links, and selected icon accents. Soft Cream serves as the main page background and card surface color.</p>
+      </div>
 
-    <section>
-      <h2>Wireframe</h2>
-      <p>The following diagrams represent the planned layout for the home page. The mobile wireframe shows a single-column stacked layout, while the desktop wireframe demonstrates the multi-column grid layout with expanded components.</p>
+      <div class="card card--coral">
+        <span class="card-label">Type</span>
+        <h2>Typography</h2>
+        <p style="font-family: 'Inter', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--teal); margin: 0.5rem 0;">Aa Bb Cc 123</p>
+        <p><strong>Inter</strong> &mdash; Primary font for all headings, body text, navigation, and UI. Clean geometric forms with excellent screen legibility. This site plan document uses Inter for headings, labels, and paragraphs.</p>
+        <p><strong>Open Sans</strong> &mdash; Fallback and secondary captions. Warm and readable, harmonizes with Inter.</p>
+      </div>
 
-      <h3>Mobile View (320px &ndash; 767px)</h3>
-      <pre>
-┌─────────────────────────────┐
-│  [Logo] Uganda Chamber ☰  │
-├─────────────────────────────┤
-│                             │
-│       Hero Image/Banner     │
-│                             │
-├─────────────────────────────┤
-│ Welcome to the Chamber      │
-│ [intro text paragraph...]   │
-├─────────────────────────────┤
-│ Weather in Uganda         │
-│ ┌───────┐ ┌───────────────┐ │
-│ │  82°F │ │ 3-Day Forecast│ │
-│ │ Sunny │ │ • 85°F Sun    │ │
-│ └───────┘ │ • 80°F Mon    │ │
-│           │ • 78°F Tue    │ │
-│           └───────────────┘ │
-├─────────────────────────────┤
-│ Current Events              │
-│ ┌─────────────────────────┐ │
-│ │ Jun 21  Annual Expo     │ │
-│ └─────────────────────────┘ │
-│ ┌─────────────────────────┐ │
-│ │ Jul 08  Networking      │ │
-│ └─────────────────────────┘ │
-│ ┌─────────────────────────┐ │
-│ │ Aug 15  Tech Summit     │ │
-│ └─────────────────────────┘ │
-├─────────────────────────────┤
-│ Company Spotlight           │
-│ ┌─────────────────────────┐ │
-│ │ [Logo]  Member Name     │ │
-│ │ Gold    Category        │ │
-│ │         [View Profile]  │ │
-│ └─────────────────────────┘ │
-├─────────────────────────────┤
-│ Become a Member             │
-│ Join text...                │
-│ [Explore Membership →]      │
-├─────────────────────────────┤
-│ Footer / Contact Info       │
-└─────────────────────────────┘
-      </pre>
+      <div class="card card--wide">
+        <span class="card-label">Inspiration</span>
+        <h2>Moodboard</h2>
+        <div class="mood-grid">
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=400&fit=crop');" role="img" aria-label="Nile river with rafting boat">
+            <div class="mood-caption">Nile rafting</div>
+          </div>
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&h=400&fit=crop');" role="img" aria-label="African sunset landscape">
+            <div class="mood-caption">Uganda sunset</div>
+          </div>
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop');" role="img" aria-label="Restaurant table with food">
+            <div class="mood-caption">Local dining</div>
+          </div>
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=400&fit=crop');" role="img" aria-label="Bungee jumping cord">
+            <div class="mood-caption">Adventure</div>
+          </div>
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&h=400&fit=crop');" role="img" aria-label="Green nature path">
+            <div class="mood-caption">Nature trails</div>
+          </div>
+          <div class="mood-item" style="background-image: url('https://images.unsplash.com/photo-1517457373958-b7ebdd18099d?w=400&h=400&fit=crop');" role="img" aria-label="Group of travelers">
+            <div class="mood-caption">Community</div>
+          </div>
+        </div>
+      </div>
 
-      <h3>Desktop / Tablet View (768px+)</h3>
-      <pre>
-┌─────────────────────────────────────────────────────────────┐
-│ [Logo] Uganda Chamber    Home  Directory  Join  Discover │
-├─────────────────────────────────────────────────────────────┤
-│                                                             │
-│                    Hero Image / Banner                      │
-│                                                             │
-├─────────────────────────────────────┬───────────────────────┤
-│ Welcome to the Chamber              │                       │
-│ [intro text paragraph...]           │  [Side CTA / Quick    │
-│                                     │   Join Box]           │
-├─────────────────────────────────────┴───────────────────────┤
-│ Weather in Uganda                                        │
-│ ┌─────────────┐  ┌──────────────────────────────────────┐  │
-│ │   82°F      │  │  3-Day Forecast                     │  │
-│ │   Sunny     │  │  • 85°F Sun  • 80°F Mon  • 78°F Tue│  │
-│ └─────────────┘  └──────────────────────────────────────┘  │
-├─────────────────────────────────────────────────────────────┤
-│ Current Events                                             │
-│ ┌────────────┐  ┌────────────┐  ┌────────────┐            │
-│ │ Jun 21     │  │ Jul 08     │  │ Aug 15     │            │
-│ │ Annual     │  │ Networking │  │ Tech       │            │
-│ │ Expo       │  │ Breakfast  │  │ Summit     │            │
-│ └────────────┘  └────────────┘  └────────────┘            │
-├─────────────────────────────────────────────────────────────┤
-│ Company Spotlight                                          │
-│ ┌────────────┐  ┌────────────┐  ┌────────────┐            │
-│ │ [Logo]     │  │ [Logo]     │  │ [Logo]     │            │
-│ │ Member A   │  │ Member B   │  │ Member C   │            │
-│ │ Gold       │  │ Silver     │  │ Bronze     │            │
-│ │ [Profile]  │  │ [Profile]  │  │ [Profile]  │            │
-│ └────────────┘  └────────────┘  └────────────┘            │
-├─────────────────────────────────────────────────────────────┤
-│ Footer: Address │ Social Links │ © 2026 Chamber            │
-└─────────────────────────────────────────────────────────────┘
-      </pre>
-    </section>
+      <div class="card card--wide">
+        <span class="card-label">Structure</span>
+        <h2>Sitemap</h2>
+        <div class="sitemap-visual">
+          <div class="sitemap-node">Home</div>
+          <span class="sitemap-arrow">&#8594;</span>
+          <div class="sitemap-node">Adventures</div>
+          <span class="sitemap-arrow">&#8594;</span>
+          <div class="sitemap-node--accent">Dining</div>
+          <span class="sitemap-arrow">&#8594;</span>
+          <div class="sitemap-node">Events</div>
+          <span class="sitemap-arrow">&#8594;</span>
+          <div class="sitemap-node">About</div>
+          <span class="sitemap-arrow">&#8594;</span>
+          <div class="sitemap-node--accent">Contact</div>
+        </div>
+      </div>
+
+      <div class="card card--wide">
+        <span class="card-label">Layout</span>
+        <h2>Wireframes</h2>
+        <p>Visual layout plans for the home page on mobile and desktop.</p>
+
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div>
+            <h3>Desktop Wireframe (768px+)</h3>
+            <div class="preview-frame">
+              <div class="preview-browser">
+                <div class="preview-bar">
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                  <div class="preview-dot"></div>
+                </div>
+                <div class="preview-body">
+                  <div>
+                    <div class="preview-hero">
+                      <h4>Discover Jinja</h4>
+                      <p style="font-size: 0.65rem; opacity: 0.9;">Adventures by the Nile</p>
+                      <span class="preview-btn">Explore Now</span>
+                    </div>
+                    <div class="preview-cards">
+                      <div class="preview-card">
+                        <div class="preview-card-icon"></div>
+                        <div class="preview-card-line" style="width: 80%;"></div>
+                      </div>
+                      <div class="preview-card">
+                        <div class="preview-card-icon"></div>
+                        <div class="preview-card-line" style="width: 70%;"></div>
+                      </div>
+                      <div class="preview-card">
+                        <div class="preview-card-icon"></div>
+                        <div class="preview-card-line" style="width: 90%;"></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="preview-side">
+                    <h5>Quick Info</h5>
+                    <div class="preview-card-line" style="width: 100%;"></div>
+                    <div class="preview-card-line" style="width: 80%; margin-top: 0.3rem;"></div>
+                    <div class="preview-card-line" style="width: 90%; margin-top: 0.3rem;"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3>Mobile Wireframe (narrow screens)</h3>
+            <div class="wireframe-box">┌─────────────────────────┐
+│ [Logo] Jinja Guide  ☰   │
+├─────────────────────────┤
+│  Hero: "Discover Jinja"  │
+│    [Explore Now →]       │
+├─────────────────────────┤
+│ Top Adventures           │
+│ ┌────┐ ┌────┐ ┌────┐    │
+│ │Raft │ │Bunge│ │Quad │    │
+│ │$45 │ │$75 │ │$30 │    │
+│ └────┘ └────┘ └────┘    │
+├─────────────────────────┤
+│ Eat & Stay               │
+│ ┌────┐ ┌────┐           │
+│ │Café│ │Lodge│           │
+│ └────┘ └────┘           │
+├─────────────────────────┤
+│ Events / Footer          │
+└─────────────────────────┘</div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 </html>

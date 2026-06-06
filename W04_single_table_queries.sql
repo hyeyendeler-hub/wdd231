@@ -1,30 +1,31 @@
 -- ============================================================
 -- W04 Single Table Queries
--- Databases: art, bike, magazine
+-- Databases: v_art, bike, magazine
 -- ============================================================
 
 -- ------------------------------------------------------------
--- VIRTUAL ART GALLERY (art database)
+-- VIRTUAL ART GALLERY (v_art database)
 -- ------------------------------------------------------------
 
 -- Query 1: Insert Johannes Vermeer into the artist table
-USE art;
+-- Fields based on artist table schema
+USE v_art;
 INSERT INTO artist (first_name, last_name, birth_year, death_year, country, local_artist)
 VALUES ('Johannes', 'Vermeer', 1632, 1674, 'Netherlands', false);
 
 -- Query 2: List all artist records sorted alphabetically by last name
-USE art;
+USE v_art;
 SELECT * FROM artist
-ORDER BY last_name;
+ORDER BY last_name ASC;
 
 -- Query 3: Update Johannes Vermeer's death year to 1675
-USE art;
+USE v_art;
 UPDATE artist
 SET death_year = 1675
 WHERE last_name = 'Vermeer';
 
 -- Query 4: Delete Johannes Vermeer from the artist table
-USE art;
+USE v_art;
 DELETE FROM artist
 WHERE last_name = 'Vermeer';
 
@@ -36,7 +37,8 @@ WHERE last_name = 'Vermeer';
 USE bike;
 SELECT first_name, last_name, phone
 FROM customers
-WHERE city = 'Houston';
+WHERE city = 'Houston'
+ORDER BY last_name, first_name;
 
 -- Query 6: List high-end bikes with a $500 discount, sorted by list price descending
 USE bike;
@@ -62,18 +64,19 @@ USE bike;
 SELECT product_name, list_price
 FROM products
 WHERE list_price BETWEEN 500 AND 550
-ORDER BY list_price;
+ORDER BY list_price ASC, product_name;
 
 -- Query 10: Show customer details for those with a phone number OR city containing 'ach'/'och' OR last name William
+-- Note: Criteria says "have a phone number listed AND whose city..." OR "last name is William"
 USE bike;
 SELECT first_name, last_name, phone, street, city, state, zip_code
 FROM customers
-WHERE phone IS NOT NULL
-   OR city LIKE '%ach%' OR city LIKE '%och%'
+WHERE (phone IS NOT NULL AND (city LIKE '%ach%' OR city LIKE '%och%'))
    OR last_name = 'William'
 LIMIT 5;
 
 -- Query 11: List Surly or Trek products with brand name removed, ordered by product_id
+-- Remove everything before and including the first space
 USE bike;
 SELECT
   TRIM(SUBSTRING(product_name, LOCATE(' ', product_name) + 1)) AS Model
