@@ -1,0 +1,169 @@
+{
+  "adventures": [
+    {
+      "id": 1,
+      "name": "White Water Rafting",
+      "category": "Water Sports",
+      "description": "Experience the thrill of navigating the mighty Nile River rapids with expert guides.",
+      "price": "$45",
+      "duration": "Half day",
+      "rating": 4.8,
+      "image": "rafting.jpg",
+      "location": "Nile River, Jinja"
+    },
+    {
+      "id": 2,
+      "name": "Bungee Jumping",
+      "category": "Adventure",
+      "description": "Take the leap from the iconic 44m bridge overlooking the Nile for an adrenaline rush.",
+      "price": "$75",
+      "duration": "1 hour",
+      "rating": 4.9,
+      "image": "bungee.jpg",
+      "location": "Jinja Bridge"
+    },
+    {
+      "id": 3,
+      "name": "Quad Biking Safari",
+      "category": "Land Tour",
+      "description": "Explore the savannah trails and rural villages on guided quad bike tours.",
+      "price": "$35",
+      "duration": "2 hours",
+      "rating": 4.6,
+      "image": "quad.jpg",
+      "location": "Near Owen Falls"
+    },
+    {
+      "id": 4,
+      "name": "Sunset Nile Cruise",
+      "category": "Relaxation",
+      "description": "Enjoy a peaceful evening cruise with stunning views of the Nile at sunset.",
+      "price": "$25",
+      "duration": "2 hours",
+      "rating": 4.7,
+      "image": "cruise.jpg",
+      "location": "Lake Victoria outlet"
+    },
+    {
+      "id": 5,
+      "name": "Kayaking Adventure",
+      "category": "Water Sports",
+      "description": "Paddle through calm waters and discover hidden coves along the river.",
+      "price": "$30",
+      "duration": "3 hours",
+      "rating": 4.5,
+      "image": "kayak.jpg",
+      "location": "Nile River"
+    },
+    {
+      "id": 6,
+      "name": "Horseback Riding",
+      "category": "Equestrian",
+      "description": "Gentle horseback rides along scenic river trails suitable for all ages.",
+      "price": "$40",
+      "duration": "1.5 hours",
+      "rating": 4.4,
+      "image": "horse.jpg",
+      "location": "Riverbanks"
+    },
+    {
+      "id": 7,
+      "name": "Zip Line Canopy Tour",
+      "category": "Adventure",
+      "description": "Fly through the treetops with 5 zip lines offering panoramic views.",
+      "price": "$55",
+      "duration": "2 hours",
+      "rating": 4.8,
+      "image": "zipline.jpg",
+      "location": "Forest canopy"
+    },
+    {
+      "id": 8,
+      "name": "Rock Climbing",
+      "category": "Adventure",
+      "description": "Challenge yourself on natural rock formations with guided instruction.",
+      "price": "$50",
+      "duration": "4 hours",
+      "rating": 4.6,
+      "image": "climb.jpg",
+      "location": "Jinja Rocks"
+    },
+    {
+      "id": 9,
+      "name": "Riverboarding",
+      "category": "Water Sports",
+      "description": "Bodyboarding on the Nile - a unique way to experience the rapids up close.",
+      "price": "$60",
+      "duration": "Half day",
+      "rating": 4.7,
+      "image": "riverboard.jpg",
+      "location": "Nile Rapids"
+    },
+    {
+      "id": 10,
+      "name": "Bird Watching Tour",
+      "category": "Nature",
+      "description": "Spot over 100 bird species in their natural habitat with expert guides.",
+      "price": "$20",
+      "duration": "2 hours",
+      "rating": 4.5,
+      "image": "birdwatch.jpg",
+      "location": "Wetlands"
+    },
+    {
+      "id": 11,
+      "name": "Mountain Biking",
+      "category": "Land Tour",
+      "description": "Ride through diverse terrain from forests to rural villages.",
+      "price": "$35",
+      "duration": "3 hours",
+      "rating": 4.6,
+      "image": "mtb.jpg",
+      "location": "Countryside trails"
+    },
+    {
+      "id": 12,
+      "name": "Fishing Expedition",
+      "category": "Relaxation",
+      "description": "Cast your line for Nile perch and enjoy a peaceful morning on the water.",
+      "price": "$45",
+      "duration": "4 hours",
+      "rating": 4.4,
+      "image": "fishing.jpg",
+      "location": "Lake Victoria"
+    },
+    {
+      "id": 13,
+      "name": "Cultural Village Tour",
+      "category": "Culture",
+      "description": "Visit local villages and learn about traditional crafts and customs.",
+      "price": "$25",
+      "duration": "Half day",
+      "rating": 4.7,
+      "image": "village.jpg",
+      "location": "Local communities"
+    },
+    {
+      "id": 14,
+      "name": "Sunrise Yoga by Nile",
+      "category": "Wellness",
+      "description": "Start your day with yoga overlooking the calming waters of the river.",
+      "price": "$15",
+      "duration": "1 hour",
+      "rating": 4.8,
+      "image": "yoga.jpg",
+      "location": "Riverbank platforms"
+    },
+    {
+      "id": 15,
+      "name": "Helicopter Tour",
+      "category": "Premium",
+      "description": "See Jinja from above with a breathtaking aerial tour over the Nile.",
+      "price": "$150",
+      "duration": "15 minutes",
+      "rating": 4.9,
+      "image": "helicopter.jpg",
+      "location": "Jinja Airport"
+    }
+  ]
+}

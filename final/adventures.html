@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinja City Guide - Adventure Activities</title>
+  <meta name="description" content="Browse all adventure activities in Jinja, Uganda - from white water rafting to cultural tours. Filter by category and price.">
+  <meta name="author" content="Hyeyendele Rashidi">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jinja City Guide - Adventure Activities">
+  <meta property="og:description" content="Browse all adventure activities in Jinja, Uganda - from white water rafting to cultural tours.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/final/adventures.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+  
+  <script type="module" src="scripts/main.mjs" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <header class="page-header">
+    <div class="header-top">
+      <a href="index.html" class="brand-logo" aria-label="Jinja City Guide Home">
+        <span class="logo-icon">🏙️</span>
+        <span>Jinja City Guide</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="adventures.html" aria-current="page">Adventures</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <h1 class="section-title">Adventure Activities</h1>
+    
+    <section class="filter-section" style="padding: 1rem; max-width: 600px; margin: 0 auto 1rem;">
+      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+        <label>
+          Category:
+          <select id="category-filter" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border);">
+            <option value="all">All Categories</option>
+            <option value="Water Sports">Water Sports</option>
+            <option value="Adventure">Adventure</option>
+            <option value="Land Tour">Land Tour</option>
+            <option value="Relaxation">Relaxation</option>
+            <option value="Culture">Culture</option>
+            <option value="Wellness">Wellness</option>
+            <option value="Premium">Premium</option>
+          </select>
+        </label>
+        
+        <label>
+          Sort By:
+          <select id="sort-select" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border);">
+            <option value="default">Default</option>
+            <option value="price-low">Price Low to High</option>
+            <option value="price-high">Price High to Low</option>
+            <option value="rating">Highest Rated</option>
+          </select>
+        </label>
+      </div>
+    </section>
+    
+    <section class="stats-section" style="padding: 1rem; margin-bottom: 1rem;">
+      <p style="text-align: center; color: var(--muted);">
+        Average Rating: <strong id="avg-rating">4.6</strong> ⭐ | 
+        Total Adventures: <strong id="total-adventures">15</strong>
+      </p>
+    </section>
+    
+    <section id="adventures-container" class="cards-grid"></section>
+    
+    <!-- Modal Dialog -->
+    <dialog id="adventure-modal" class="modal">
+      <div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+        <button id="modal-close" class="modal-close" aria-label="Close dialog">&times;</button>
+        <div id="modal-content"></div>
+      </div>
+    </dialog>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Jinja City Guide</h4>
+        <p>Jinja, Uganda</p>
+      </div>
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-here" id="video-link">Video Demo</a>
+      </div>
+    </div>
+    <p id="modified" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6);"></p>
+  </footer>
+</body>
+</html>

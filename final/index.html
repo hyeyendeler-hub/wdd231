@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinja City Guide - Discover Adventures in Uganda</title>
+  <meta name="description" content="Discover Jinja, Uganda - your guide to white water rafting, bungee jumping, dining, and cultural experiences along the Nile River.">
+  <meta name="author" content="Hyeyendele Rashidi">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jinja City Guide - Discover Adventures in Uganda">
+  <meta property="og:description" content="Your ultimate guide to Jinja, Uganda - adventures, dining, and cultural experiences along the Nile River.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/final/">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+  
+  <script type="module" src="scripts/main.mjs" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <header class="page-header">
+    <div class="header-top">
+      <a href="index.html" class="brand-logo" aria-label="Jinja City Guide Home">
+        <span class="logo-icon">🏙️</span>
+        <span>Jinja City Guide</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="adventures.html">Adventures</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Discover Jinja's Adventures</h1>
+      <p>Experience the thrill of Uganda's adventure capital - white water rafting, bungee jumping, and more along the mighty Nile River.</p>
+      <a href="adventures.html" class="cta-button">Explore Adventures</a>
+    </div>
+  </section>
+  
+  <main id="main">
+    <h2 class="section-title">Why Visit Jinja?</h2>
+    
+    <div class="cards-grid">
+      <article class="card">
+        <h3>White Water Rafting</h3>
+        <p>Tackle Grade 5 rapids on the Nile with professional guides. Perfect for beginners and experienced rafters alike.</p>
+        <p><strong>From $45</strong></p>
+      </article>
+      
+      <article class="card">
+        <h3>Bungee Jumping</h3>
+        <p>Take the leap from East Africa's only bungee platform, soaring 44 meters over the Nile River.</p>
+        <p><strong>From $75</strong></p>
+      </article>
+      
+      <article class="card">
+        <h3>Lake Victoria Views</h3>
+        <p>Enjoy scenic cruises and waterfront dining with stunning views of the source of the Nile.</p>
+        <p><strong>From $25</strong></p>
+      </article>
+    </div>
+    
+    <h2 class="section-title">Quick Facts</h2>
+    <div class="cards-grid">
+      <article class="card" style="grid-column: 1 / -1;">
+        <p><strong>Average Adventure Rating:</strong> <span id="avg-rating">4.6</span> ⭐</p>
+        <p><strong>Total Adventures:</strong> <span id="total-adventures">15+</span></p>
+      </article>
+    </div>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Jinja City Guide</h4>
+        <p>Jinja, Uganda</p>
+        <p>East Africa's Adventure Capital</p>
+      </div>
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-here" id="video-link">Video Demo</a>
+      </div>
+    </div>
+    <p id="modified" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6);"></p>
+  </footer>
+</body>
+</html>

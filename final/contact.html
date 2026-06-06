@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinja City Guide - Contact Us</title>
+  <meta name="description" content="Contact Jinja City Guide for travel inquiries, booking assistance, or questions about activities in Jinja, Uganda.">
+  <meta name="author" content="Hyeyendele Rashidi">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Jinja City Guide - Contact Us">
+  <meta property="og:description" content="Get in touch with Jinja City Guide for travel inquiries and booking assistance.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/final/contact.html">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+  
+  <script type="module" src="scripts/main.mjs" defer></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      const form = document.getElementById('inquiry-form');
+      if (form) {
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const formData = new FormData(form);
+          const params = new URLSearchParams();
+          for (const [key, value] of formData) {
+            params.append(key, value);
+          }
+          window.location.href = `form-action.html?${params.toString()}`;
+        });
+      }
+    });
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <header class="page-header">
+    <div class="header-top">
+      <a href="index.html" class="brand-logo" aria-label="Jinja City Guide Home">
+        <span class="logo-icon">🏙️</span>
+        <span>Jinja City Guide</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="adventures.html">Adventures</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <h1 class="section-title">Plan Your Jinja Adventure</h1>
+    
+    <section class="form-section">
+      <h2 class="form-title">Adventure Inquiry Form</h2>
+      <form id="inquiry-form">
+        <div class="form-group">
+          <label for="name">Full Name <span class="required">*</span></label>
+          <input type="text" id="name" name="name" required placeholder="Enter your name">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address <span class="required">*</span></label>
+          <input type="email" id="email" name="email" required placeholder="your@email.com">
+        </div>
+        
+        <div class="form-group">
+          <label for="adventure-type">Adventure Type</label>
+          <select id="adventure-type" name="adventureType">
+            <option value="">Select an adventure</option>
+            <option value="rafting">White Water Rafting</option>
+            <option value="bungee">Bungee Jumping</option>
+            <option value="quad">Quad Biking</option>
+            <option value="cruise">Nile Cruise</option>
+            <option value="kayak">Kayaking</option>
+            <option value="other">Other Inquiry</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="travelers">Number of Travelers</label>
+          <input type="number" id="travelers" name="travelers" min="1" max="20" value="2">
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Questions or Special Requests</label>
+          <textarea id="message" name="message" rows="4" placeholder="Tell us about your travel plans..."></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Submit Inquiry</button>
+      </form>
+    </section>
+    
+    <section class="form-section" style="margin-top: 2rem;">
+      <h2>Contact Information</h2>
+      <p><strong>Email:</strong> info@jinjacity.guide</p>
+      <p><strong>Phone:</strong> +256 434 123456</p>
+      <p><strong>Location:</strong> Jinja, Uganda - Source of the Nile</p>
+    </section>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Jinja City Guide</h4>
+        <p>Jinja, Uganda</p>
+      </div>
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-here" id="video-link">Video Demo</a>
+      </div>
+    </div>
+    <p id="modified" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6);"></p>
+  </footer>
+</body>
+</html>

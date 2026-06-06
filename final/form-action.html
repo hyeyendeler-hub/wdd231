@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jinja City Guide - Form Submission</title>
+  <meta name="description" content="Thank you for your inquiry. Your adventure planning request has been received.">
+  <meta name="author" content="Hyeyendele Rashidi">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles/reset.css">
+  <link rel="stylesheet" href="styles/index.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  
+  <header class="page-header">
+    <div class="header-top">
+      <a href="index.html" class="brand-logo" aria-label="Jinja City Guide Home">
+        <span class="logo-icon">🏙️</span>
+        <span>Jinja City Guide</span>
+      </a>
+      <nav class="main-nav" aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="adventures.html">Adventures</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+  
+  <main id="main">
+    <section class="form-section" style="max-width: 600px; margin: 2rem auto;">
+      <h1 class="form-title">Thank You for Your Inquiry!</h1>
+      <p style="margin-bottom: 1.5rem;">We've received your adventure planning request. Here are your submitted details:</p>
+      
+      <div class="submission-details" style="background: var(--teal-light); border-left: 4px solid var(--teal); padding: 1.5rem; border-radius: 4px;">
+        <h3 style="margin: 0 0 1rem; color: var(--dark);">Submission Details</h3>
+        <div id="form-data" class="details-grid"></div>
+      </div>
+      
+      <div style="margin-top: 2rem;">
+        <a href="adventures.html" class="submit-btn" style="display: inline-block; text-decoration: none; background: var(--coral);">View Adventures</a>
+        <a href="contact.html" class="submit-btn" style="display: inline-block; text-decoration: none; background: var(--teal); margin-left: 0.5rem;">Make Another Inquiry</a>
+      </div>
+    </section>
+  </main>
+  
+  <footer class="page-footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Jinja City Guide</h4>
+        <p>Jinja, Uganda</p>
+      </div>
+      <div class="footer-links">
+        <a href="attributions.html">Attributions</a>
+        <a href="https://youtu.be/your-video-here">Video Demo</a>
+      </div>
+    </div>
+    <p id="modified" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6);"></p>
+  </footer>
+  
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const formData = document.getElementById('form-data');
+      
+      const labels = {
+        name: 'Full Name',
+        email: 'Email Address',
+        adventureType: 'Adventure Type',
+        travelers: 'Number of Travelers',
+        message: 'Special Requests'
+      };
+      
+      const adventureLabels = {
+        rafting: 'White Water Rafting',
+        bungee: 'Bungee Jumping',
+        quad: 'Quad Biking',
+        cruise: 'Nile Cruise',
+        kayak: 'Kayaking',
+        other: 'Other Inquiry'
+      };
+      
+      let html = '';
+      for (const [key, value] of params) {
+        if (key === 'adventureType' && value) {
+          html += `<div class="detail-item"><span class="detail-label">${labels[key]}:</span> <span>${adventureLabels[value] || value}</span></div>`;
+        } else {
+          html += `<div class="detail-item"><span class="detail-label">${labels[key] || key}:</span> <span>${value || 'Not provided'}</span></div>`;
+        }
+      }
+      
+      formData.innerHTML = html || '<p>No data received. Please submit the form from the contact page.</p>';
+      
+      // Set last modified
+      document.getElementById('modified').textContent = 'Last Modified: ' + new Date(document.lastModified).toLocaleDateString();
+    });
+  </script>
+</body>
+</html>
