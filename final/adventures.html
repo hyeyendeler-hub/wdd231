@@ -12,6 +12,7 @@
   <meta property="og:description" content="Browse all adventure activities in Jinja, Uganda - from white water rafting to cultural tours.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/final/adventures.html">
+  <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/final/images/favicon.svg">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,36 +45,32 @@
   <main id="main">
     <h1 class="section-title">Adventure Activities</h1>
     
-    <section class="filter-section" style="padding: 1rem; max-width: 600px; margin: 0 auto 1rem;">
-      <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-        <label>
-          Category:
-          <select id="category-filter" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border);">
-            <option value="all">All Categories</option>
-            <option value="Water Sports">Water Sports</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Land Tour">Land Tour</option>
-            <option value="Relaxation">Relaxation</option>
-            <option value="Culture">Culture</option>
-            <option value="Wellness">Wellness</option>
-            <option value="Premium">Premium</option>
-          </select>
-        </label>
+    <section class="filter-section" id="filter-section">
+      <div class="filter-controls">
+        <label for="category-filter">Category:</label>
+        <select id="category-filter">
+          <option value="all">All Categories</option>
+          <option value="Water Sports">Water Sports</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Land Tour">Land Tour</option>
+          <option value="Relaxation">Relaxation</option>
+          <option value="Culture">Culture</option>
+          <option value="Wellness">Wellness</option>
+          <option value="Premium">Premium</option>
+        </select>
         
-        <label>
-          Sort By:
-          <select id="sort-select" style="padding: 0.5rem; border-radius: 4px; border: 1px solid var(--border);">
-            <option value="default">Default</option>
-            <option value="price-low">Price Low to High</option>
-            <option value="price-high">Price High to Low</option>
-            <option value="rating">Highest Rated</option>
-          </select>
-        </label>
+        <label for="sort-select">Sort By:</label>
+        <select id="sort-select">
+          <option value="default">Default</option>
+          <option value="price-low">Price Low to High</option>
+          <option value="price-high">Price High to Low</option>
+          <option value="rating">Highest Rated</option>
+        </select>
       </div>
     </section>
     
-    <section class="stats-section" style="padding: 1rem; margin-bottom: 1rem;">
-      <p style="text-align: center; color: var(--muted);">
+    <section class="stats-section" id="stats-section">
+      <p class="stats-text">
         Average Rating: <strong id="avg-rating">4.6</strong> ⭐ | 
         Total Adventures: <strong id="total-adventures">15</strong>
       </p>
@@ -83,7 +80,7 @@
     
     <!-- Modal Dialog -->
     <dialog id="adventure-modal" class="modal">
-      <div class="modal-content" role="dialog" aria-labelledby="modal-title" aria-modal="true">
+      <div class="modal-content" role="dialog" aria-modal="true">
         <button id="modal-close" class="modal-close" aria-label="Close dialog">&times;</button>
         <div id="modal-content"></div>
       </div>
@@ -101,7 +98,7 @@
         <a href="https://youtu.be/your-video-here" id="video-link">Video Demo</a>
       </div>
     </div>
-    <p id="modified" style="text-align: center; margin-top: 1rem; font-size: 0.85rem; color: rgba(255,255,255,0.6);"></p>
+    <p id="modified" class="footer-modified"></p>
   </footer>
 </body>
 </html>
