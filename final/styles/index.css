@@ -299,7 +299,7 @@ dialog.modal {
 }
 
 .modal[open],
-dialog.modal:modal {
+dialog.modal[open] {
   display: flex;
   position: fixed;
   top: 0;
