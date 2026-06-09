@@ -5,11 +5,11 @@
   --surface: #ffffff;
   --header-bg: #333333;
   --text: #222222;
-  --muted: #666666;
+  --muted: #444444;
   --accent: #0066cc;
   --border: #cccccc;
-  --gold: #d4a524;
-  --silver: #888888;
+  --gold: #b8860b;
+  --silver: #5a5a5a;
   --member: #0066cc;
 }
 
@@ -163,12 +163,117 @@ body, button, input, textarea {
   bottom: 1rem;
   right: 1rem;
   padding: 0.6rem 1.2rem;
-  background: #666666;
-  color: white;
+  background: #222222;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   font-size: 0.9rem;
   cursor: pointer;
+}
+
+/* ── Discover Page ─────────────────────────────────────────────── */
+.discover-page {
+  padding: 1rem;
+}
+
+#visit-message {
+  margin: 1rem;
+  padding: 1rem;
+  background: var(--surface);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.discover-intro {
+  padding: 0 1rem 1rem 1rem;
+  font-size: 1.1rem;
+  color: var(--muted);
+}
+
+.cards-grid {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1rem 1rem 1rem;
+  grid-template-areas:
+    "m1" "m2" "m3"
+    "m4" "m5" "m6"
+    "m7" "m8";
+  grid-template-columns: 1fr;
+}
+
+.discover-card {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 1rem;
+  align-items: center;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.discover-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 4px;
+  background: var(--bg);
+  transition: none;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .discover-card:hover img {
+    transform: none;
+    filter: none;
+  }
+}
+
+.card-body {
+  grid-area: body;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.card-body h2 {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.spot-address {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--muted);
+}
+
+.card-body p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.learn-more-btn {
+  margin-top: 0.5rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+.learn-more-btn:hover,
+.learn-more-btn:focus-visible {
+  background: #0052a3;
 }
 
 .main-heading {

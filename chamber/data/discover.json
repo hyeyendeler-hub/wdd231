@@ -1,0 +1,60 @@
+{
+  "spots": [
+    {
+      "name": "Sankore Manuscript House",
+      "category": "Heritage",
+      "address": "Rue de l'Ancienne Bibliothèque, Timbuktu",
+      "description": "A living museum of manuscript preservation, scholarly tradition, and local storytelling.",
+      "image": "discover-1.webp"
+    },
+    {
+      "name": "Djinguereber Mosque",
+      "category": "Landmark",
+      "address": "Old Town Quarter, Timbuktu",
+      "description": "An iconic adobe mosque that reflects the city's historic Islamic architecture and culture.",
+      "image": "discover-2.webp"
+    },
+    {
+      "name": "Timbuktu Market Square",
+      "category": "Culture",
+      "address": "Central Market, Timbuktu",
+      "description": "Browse artisan crafts, textiles, spices, and daily community life in the heart of the city.",
+      "image": "discover-3.webp"
+    },
+    {
+      "name": "Desert Caravan Trail",
+      "category": "Adventure",
+      "address": "Northern Edge Road, Timbuktu",
+      "description": "Explore the dunes and historic caravan routes that shaped Timbuktu's trade legacy.",
+      "image": "discover-4.webp"
+    },
+    {
+      "name": "River of the Niger Viewpoint",
+      "category": "Scenery",
+      "address": "Niger Riverside, Timbuktu",
+      "description": "A panoramic stop for sunrise walks, birdwatching, and river views across the floodplain.",
+      "image": "discover-5.webp"
+    },
+    {
+      "name": "Traditional Craft Courtyard",
+      "category": "Crafts",
+      "address": "Kori Market Lane, Timbuktu",
+      "description": "Meet local artisans keeping leatherwork, pottery, and textile traditions alive.",
+      "image": "discover-6.webp"
+    },
+    {
+      "name": "Festival Plaza",
+      "category": "Events",
+      "address": "Place du Festival, Timbuktu",
+      "description": "A lively gathering space where music, dance, and community celebrations highlight local identity.",
+      "image": "discover-7.webp"
+    },
+    {
+      "name": "Desert Night Camp",
+      "category": "Experience",
+      "address": "Dune Camp Road, Timbuktu",
+      "description": "End the day with stargazing, storytelling, and the quiet beauty of the Sahara horizon.",
+      "image": "discover-8.webp"
+    }
+  ]
+}
