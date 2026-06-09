@@ -254,6 +254,12 @@ body, button, input, textarea {
     transform: none;
     filter: none;
   }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .card-body {
@@ -1148,51 +1154,45 @@ main {
   margin-top: 2rem;
 }
 
-.btn-primary,
- .btn-secondary {
-   display: inline-block;
-   padding: 0.75rem 1.5rem;
-   border-radius: 4px;
-   text-decoration: none;
-   font-weight: 600;
-   text-align: center;
-   transition: all 0.3s;
-   cursor: pointer;
- }
- 
- .btn-primary {
-   background: var(--accent);
-   color: var(--white);
-   border: 2px solid var(--accent);
- }
- 
- .btn-primary:hover {
-   background: var(--accent-dark);
-   border-color: #0052a3;
-   transform: translateY(-2px);
- }
- 
- .btn-secondary {
-   background: transparent;
-   color: var(--accent);
-   border: 2px solid var(--accent);
- }
- 
- .btn-secondary:hover {
+.btn-primary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: var(--accent);
+  color: var(--white);
+  border: 2px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  text-align: center;
+  transition: all 0.3s;
+  cursor: pointer;
+  background: transparent;
+  color: var(--accent);
+  border: 2px solid var(--accent);
+}
+
+.btn-secondary:hover {
   background: var(--accent);
   color: var(--white);
   transform: translateY(-2px);
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   Reduced motion – keep last in file so it wins the cascade
-   ═══════════════════════════════════════════════════════════════════ */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+
 

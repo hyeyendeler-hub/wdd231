@@ -217,12 +217,7 @@
     padding-right: 1.5rem;
   }
 
-  .detail-item:nth-child(odd) {
-    border-right: none;
-  }
-
-  .detail-item:nth-child(odd) {
-    border-right: none; {
+  .detail-item:nth-child(even) {
     border-right: none;
     padding-right: 0;
     padding-left: 1.5rem;
