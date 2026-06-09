@@ -47,7 +47,7 @@
     display: inline-block;
     padding: 0.85rem 1.2rem;
     background: transparent;
-    color: #111;
+    color: var(--dark);
     border: none;
     border-bottom: 3px solid transparent;
     text-decoration: none;
@@ -57,8 +57,8 @@
   .main-nav a.active,
   .main-nav a[aria-current="page"] {
     background: transparent;
-    color: #111;
-    border-bottom-color: #111;
+    color: var(--dark);
+    border-bottom-color: var(--dark);
   }
 
   /* ── Hero banner ─────────────────────────────────────────────── */
@@ -213,15 +213,16 @@
   .detail-item {
     grid-template-columns: 1fr;
     border-bottom: none;
-    border-right: 1px solid #e0e0e0;
+    border-right: var(--separator);
     padding-right: 1.5rem;
   }
 
   .detail-item:nth-child(odd) {
-    border-right: 1px solid #e0e0e0;
+    border-right: none;
   }
 
-  .detail-item:nth-child(even) {
+  .detail-item:nth-child(odd) {
+    border-right: none; {
     border-right: none;
     padding-right: 0;
     padding-left: 1.5rem;
@@ -246,14 +247,4 @@
   }
 }
 
-/* ═══════════════════════════════════════════════════════════════════
-   Reduced motion preference
-   ═══════════════════════════════════════════════════════════════════ */
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
-    scroll-behavior: auto !important;
-  }
-}
+

@@ -3,6 +3,7 @@
   font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   --bg: #f0f0f0;
   --surface: #ffffff;
+  --white: #ffffff;
   --header-bg: #333333;
   --text: #222222;
   --muted: #444444;
@@ -11,6 +12,30 @@
   --gold: #b8860b;
   --silver: #5a5a5a;
   --member: #0066cc;
+  --dark: #111111;
+  --accent-dark: #0052a3;
+  --dark-blue: #0d1b4b;
+  --amber: #ffc107;
+  --success: #27ae60;
+  --error: #e74c3c;
+  --border-light: #e0e0e0;
+  --header-light: #e8e8e8;
+  --border-light-alt: #c8c8c8;
+  --border-subtle: #ddd;
+  --surface-hover: #f3f3f3;
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 1px 4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --overlay: rgba(0, 0, 0, 0.6);
+  --gold-tint: rgba(212, 165, 36, 0.15);
+  --silver-tint: rgba(136, 136, 136, 0.15);
+  --focus-ring: rgba(0, 102, 204, 0.1);
+  --accent-tint: rgba(0, 102, 204, 0.05);
+  --shimmer: rgba(255, 255, 255, 0.3);
+  --text-muted-footer: rgba(255, 255, 255, 0.8);
+  --separator: 1px solid rgba(255, 255, 255, 0.1);
+  --text-footer: rgba(255, 255, 255, 0.7);
 }
 
 body {
@@ -39,7 +64,7 @@ body, button, input, textarea {
 }
 
 .page-header {
-  background: #e8e8e8;
+  background: var(--header-light);
   border-bottom: 1px solid #c8c8c8;
   position: sticky;
   top: 0;
@@ -66,17 +91,17 @@ body, button, input, textarea {
 .brand-logo {
   width: 40px;
   height: 40px;
-  background: #111;
+  background: var(--dark);
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
+  color: var(--white);
   font-weight: bold;
 }
 
 .chamber-name {
-  color: #111;
+  color: var(--dark);
   font-size: 0.95rem;
   font-weight: 600;
 }
@@ -86,10 +111,10 @@ body, button, input, textarea {
   align-items: center;
   justify-content: center;
   padding: 0.5rem 1rem;
-  border: 1px solid #c8c8c8;
+  border: 1px solid var(--border-light-alt);
   border-radius: 4px;
-  background: white;
-  color: #111;
+  background: var(--white);
+  color: var(--dark);
   cursor: pointer;
   font-size: 1rem;
 }
@@ -100,10 +125,10 @@ body, button, input, textarea {
   justify-content: center;
   width: 3rem;
   height: 3rem;
-  border: 1px solid #c8c8c8;
+  border: 1px solid var(--border-light-alt);
   border-radius: 999px;
-  background: white;
-  color: #111;
+  background: var(--white);
+  color: var(--dark);
   cursor: pointer;
 }
 
@@ -129,17 +154,17 @@ body, button, input, textarea {
   display: block;
   padding: 0.85rem 1rem;
   background: var(--surface);
-  color: #111;
+  color: var(--dark);
   border: 1px solid transparent;
   text-decoration: none;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid var(--border-subtle);
 }
 
 .main-nav a:hover,
 .main-nav a.active,
 .main-nav a[aria-current="page"] {
-  background: #f3f3f3;
-  color: #111;
+  background: var(--surface-hover);
+  color: var(--dark);
   font-weight: 600;
 }
 
@@ -163,8 +188,8 @@ body, button, input, textarea {
   bottom: 1rem;
   right: 1rem;
   padding: 0.6rem 1.2rem;
-  background: #222222;
-  color: #ffffff;
+  background: var(--text);
+  color: var(--white);
   border: none;
   border-radius: 4px;
   font-size: 0.9rem;
@@ -211,7 +236,7 @@ body, button, input, textarea {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px var(--shadow-sm);
 }
 
 .discover-card img {
@@ -263,7 +288,7 @@ body, button, input, textarea {
   align-self: flex-start;
   padding: 0.5rem 1rem;
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -273,7 +298,7 @@ body, button, input, textarea {
 
 .learn-more-btn:hover,
 .learn-more-btn:focus-visible {
-  background: #0052a3;
+  background: var(--accent-dark);
 }
 
 .main-heading {
@@ -336,7 +361,7 @@ main {
 .view-button.active,
 .view-button:hover {
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border-color: var(--accent);
 }
 
@@ -360,7 +385,7 @@ main {
   border-radius: 4px;
   background: var(--surface);
   border: 1px solid var(--border);
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-lg);
 }
 
 .member-card.list-view {
@@ -419,23 +444,23 @@ main {
 }
 
 .member-chip.gold {
-  background: rgba(212, 165, 36, 0.15);
+  background: var(--gold-tint);
   color: var(--gold);
 }
 
 .member-chip.silver {
-  background: rgba(136, 136, 136, 0.15);
+  background: var(--silver-tint);
   color: var(--silver);
 }
 
 .member-chip.member {
-  background: rgba(0, 102, 204, 0.15);
+  background: var(--accent-tint);
   color: var(--member);
 }
 
 .page-footer {
   background: var(--header-bg);
-  color: white;
+  color: var(--white);
   margin-top: 2rem;
 }
 
@@ -446,7 +471,7 @@ main {
   display: flex;
   justify-content: space-between;
   gap: 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid var(--separator);
 }
 
 .footer-section {
@@ -462,7 +487,7 @@ main {
 .footer-section p {
   margin: 0.25rem 0;
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-muted-footer);
 }
 
 .social-links {
@@ -487,11 +512,7 @@ main {
 .social-links a:hover,
 .social-links a:focus-visible {
    background: var(--accent);
-   color: white;
-}
-
-.social-links a:hover {
-  background: rgba(255, 255, 255, 0.2);
+   color: var(--white);
 }
 
 .footer-bottom {
@@ -502,23 +523,18 @@ main {
   justify-content: space-between;
   gap: 1rem;
   text-align: center;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid var(--separator);
   font-size: 0.82rem;
 }
 
 .footer-info {
   margin: 0;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-footer);
 }
 
 .footer-info:first-child {
   flex: 1;
 }
-
-.page-title   { font-size: clamp(1.4rem, 4vw, 2rem); }
-.home-intro   { padding: 1.75rem 1.25rem; }
-.home-section { padding: 1.75rem 1.25rem; }
-.home-container { gap: 0; }
 
 /* ── Overlay CTA button on hero banner ──────────────────────────── */
 .cta-button {
@@ -556,7 +572,7 @@ main {
   border-radius: 12px;
   background: var(--surface);
   border: 1px solid var(--border);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 1px 4px var(--shadow-md);
 }
 
 .spotlight-logo {
@@ -601,7 +617,7 @@ main {
   display: inline-block;
   padding: 0.65rem 0.95rem;
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border-radius: 8px;
   text-decoration: none;
   font-weight: 700;
@@ -630,7 +646,7 @@ main {
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px var(--shadow-lg);
 }
 
 .form-title {
@@ -679,7 +695,7 @@ main {
 .form-group select:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
+  box-shadow: 0 0 0 3px var(--focus-ring);
 }
 
 .form-group input:invalid:not(:placeholder-shown),
@@ -698,7 +714,7 @@ main {
   width: 100%;
   padding: 0.85rem 1.5rem;
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 4px;
   font-size: 1rem;
@@ -709,7 +725,7 @@ main {
 }
 
 .submit-btn:hover {
-  background: #0052a3;
+  background: var(--accent-dark);
   transform: translateY(-2px);
 }
 
@@ -742,7 +758,7 @@ main {
    border-radius: 8px;
    padding: 1.5rem;
    text-align: center;
-   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+   box-shadow: 0 2px 8px var(--shadow-lg);
    transition: transform 0.3s ease, box-shadow 0.3s ease;
    display: flex;
    flex-direction: column;
@@ -771,7 +787,7 @@ main {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, var(--shimmer), transparent);
   animation: shimmer 2s infinite;
 }
 
@@ -803,7 +819,7 @@ main {
 .card-link {
   padding: 0.65rem 1.25rem;
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -814,7 +830,7 @@ main {
 }
 
 .card-link:hover {
-  background: #0052a3;
+  background: var(--accent-dark);
 }
 
 /* Card-specific styling */
@@ -883,7 +899,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--overlay);
   align-items: center;
   justify-content: center;
   padding: 1rem;
@@ -891,7 +907,7 @@ main {
 }
 
 .modal::backdrop {
-  background: rgba(0, 0, 0, 0.6);
+  background: var(--overlay);
 }
 
 .modal-content {
@@ -901,7 +917,7 @@ main {
   max-width: 500px;
   width: 100%;
   position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 40px var(--shadow-xl);
   max-height: 90vh;
   overflow-y: auto;
   animation: modalSlideIn 0.3s ease-out;
@@ -963,7 +979,7 @@ main {
   margin: 1.5rem auto 0;
   padding: 0.65rem 1.5rem;
   background: var(--accent);
-  color: white;
+  color: var(--white);
   border: none;
   border-radius: 4px;
   font-weight: 600;
@@ -972,7 +988,7 @@ main {
 }
 
 .modal-close-btn:hover {
-  background: #0052a3;
+  background: var(--accent-dark);
 }
 
 /* ── Thank You Page ────────────────────────────────────────────────── */
@@ -982,7 +998,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--bg) 0%, rgba(0, 102, 204, 0.05) 100%);
+  background: linear-gradient(135deg, var(--bg) 0%, var(--accent-tint) 100%);
 }
 
 .thankyou-container {
@@ -991,7 +1007,7 @@ main {
   padding: 2rem;
   max-width: 600px;
   width: 100%;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px var(--shadow-lg);
   text-align: center;
   animation: containerSlideIn 0.6s ease-out;
 }
@@ -1017,7 +1033,7 @@ main {
   align-items: center;
   justify-content: center;
   font-size: 3rem;
-  color: white;
+  color: var(--white);
   font-weight: 700;
   animation: iconPulse 0.8s ease-out;
 }
@@ -1146,12 +1162,12 @@ main {
  
  .btn-primary {
    background: var(--accent);
-   color: white;
+   color: var(--white);
    border: 2px solid var(--accent);
  }
  
  .btn-primary:hover {
-   background: #0052a3;
+   background: var(--accent-dark);
    border-color: #0052a3;
    transform: translateY(-2px);
  }
@@ -1164,7 +1180,7 @@ main {
  
  .btn-secondary:hover {
   background: var(--accent);
-  color: white;
+  color: var(--white);
   transform: translateY(-2px);
 }
 
@@ -1179,3 +1195,4 @@ main {
     scroll-behavior: auto !important;
   }
 }
+
