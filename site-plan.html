@@ -3,377 +3,48 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jinja City Guide - Website Plan</title>
+  <meta name="description" content="Discover the Jinja City Guide website plan. Explore the local discovery platform design, typography, color scheme, moodboard, sitemap, and wireframes for the Timbuktu Chamber project.">
+  <meta name="author" content="Hyeyendele Rashidi">
+  <title>Discover Jinja City Guide - Timbuktu Chamber Website Plan</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --teal: #006d77;
-      --teal-light: #e0f2f1;
-      --coral: #e29578;
-      --coral-light: #fbe9e7;
-      --cream: #fdf6e3;
-      --dark: #1a1a2e;
-      --muted: #666;
-      --white: #ffffff;
-      --border: #e0e0e0;
-    }
 
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+  <meta property="og:title" content="Discover Jinja City Guide - Timbuktu Chamber Website Plan">
+  <meta property="og:description" content="Explore the website plan for Jinja City Guide, including design goals, audience personas, visual identity, and site architecture.">
+  <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/chamber/images/hero-banner.svg">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/site-plan.html">
+  <meta property="og:type" content="website">
 
-    body {
-      font-family: 'Inter', 'Open Sans', Arial, sans-serif;
-      background: var(--cream);
-      color: var(--dark);
-      line-height: 1.6;
-      padding: 2rem 1rem;
-    }
-
-    .plan-board {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
-
-    .board-header {
-      background: linear-gradient(135deg, var(--teal) 0%, #005f69 100%);
-      color: white;
-      padding: 2.5rem 2rem;
-      border-radius: 16px;
-      margin-bottom: 1.5rem;
-      text-align: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .board-header::before {
-      content: "";
-      position: absolute;
-      top: -50%;
-      right: -20%;
-      width: 400px;
-      height: 400px;
-      background: radial-gradient(circle, rgba(255,255,255,0.08) 0%, transparent 70%);
-      border-radius: 50%;
-    }
-
-    .board-header h1 {
-      font-size: clamp(1.8rem, 5vw, 2.5rem);
-      font-weight: 800;
-      margin-bottom: 0.5rem;
-      position: relative;
-    }
-
-    .board-header p {
-      font-size: 1rem;
-      opacity: 0.9;
-      position: relative;
-    }
-
-    .board-header .logo-mark {
-      margin-bottom: 1rem;
-      position: relative;
-    }
-
-    .card-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.25rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .card {
-      background: white;
-      border-radius: 12px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-      border: 1px solid var(--border);
-      position: relative;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    }
-
-    .card--wide {
-      grid-column: 1 / -1;
-    }
-
-    .card-label {
-      display: inline-block;
-      font-size: 0.7rem;
-      font-weight: 700;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--teal);
-      background: var(--teal-light);
-      padding: 0.25rem 0.6rem;
-      border-radius: 4px;
-      margin-bottom: 0.75rem;
-    }
-
-    .card--coral .card-label {
-      color: #a85d3e;
-      background: var(--coral-light);
-    }
-
-    .card h2 {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 0.75rem;
-      padding-bottom: 0.5rem;
-      border-bottom: 2px solid var(--border);
-    }
-
-    .card h3 {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: var(--teal);
-      margin: 1rem 0 0.4rem;
-    }
-
-    .card p, .card li {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin-bottom: 0.5rem;
-    }
-
-    .card ul, .card ol {
-      margin-left: 1.25rem;
-    }
-
-    .card strong {
-      color: var(--dark);
-    }
-
-    .persona-card {
-      display: flex;
-      gap: 1rem;
-      align-items: flex-start;
-    }
-
-    .persona-avatar {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, var(--teal), var(--coral));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.5rem;
-      color: white;
-      flex-shrink: 0;
-    }
-
-    .persona-info h4 {
-      font-size: 0.9rem;
-      font-weight: 700;
-      color: var(--dark);
-      margin-bottom: 0.2rem;
-    }
-
-    .persona-info p {
-      font-size: 0.82rem;
-      color: var(--muted);
-      margin: 0;
-    }
-
-    .mood-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-      gap: 0.75rem;
-    }
-
-    .mood-item {
-      aspect-ratio: 1;
-      border-radius: 10px;
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .mood-item::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      border: 3px solid transparent;
-      border-radius: 10px;
-      transition: border-color 0.2s;
-    }
-
-    .mood-item:hover::after {
-      border-color: var(--teal);
-    }
-
-    .mood-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: rgba(0,0,0,0.6);
-      color: white;
-      font-size: 0.7rem;
-      padding: 0.3rem 0.5rem;
-      text-align: center;
-    }
-
-    .sitemap-visual {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-      justify-content: center;
-      align-items: center;
-      padding: 1rem 0;
-    }
-
-    .sitemap-node {
-      background: var(--teal);
-      color: white;
-      padding: 0.5rem 1rem;
-      border-radius: 20px;
-      font-size: 0.8rem;
-      font-weight: 600;
-    }
-
-    .sitemap-node--accent {
-      background: var(--coral);
-    }
-
-    .sitemap-arrow {
-      color: var(--muted);
-      font-size: 1.2rem;
-    }
-
-    .wireframe-box {
-      background: #f8f9fc;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      padding: 1rem;
-      font-family: 'Courier New', Courier, monospace;
-      font-size: 0.75rem;
-      line-height: 1.4;
-      color: #333;
-      overflow-x: auto;
-      white-space: pre;
-    }
-
-    .preview-frame {
-      background: linear-gradient(135deg, var(--coral-light) 0%, var(--teal-light) 100%);
-      border-radius: 10px;
-      padding: 1rem;
-      border: 1px solid var(--border);
-    }
-
-    .preview-browser {
-      background: white;
-      border-radius: 8px;
-      overflow: hidden;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-    }
-
-    .preview-bar {
-      background: var(--teal);
-      padding: 0.5rem 0.75rem;
-      display: flex;
-      gap: 0.4rem;
-      align-items: center;
-    }
-
-    .preview-dot {
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: rgba(255,255,255,0.5);
-    }
-
-    .preview-body {
-      padding: 1rem;
-      display: grid;
-      grid-template-columns: 2fr 1fr;
-      gap: 0.75rem;
-    }
-
-    .preview-hero {
-      background: linear-gradient(135deg, var(--teal), #268b94);
-      border-radius: 6px;
-      padding: 1.5rem;
-      color: white;
-      text-align: center;
-    }
-
-    .preview-hero h4 {
-      font-size: 0.85rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .preview-btn {
-      display: inline-block;
-      background: var(--coral);
-      color: white;
-      padding: 0.3rem 0.75rem;
-      border-radius: 4px;
-      font-size: 0.7rem;
-      margin-top: 0.4rem;
-    }
-
-    .preview-side {
-      background: var(--teal-light);
-      border-radius: 6px;
-      padding: 0.75rem;
-    }
-
-    .preview-side h5 {
-      font-size: 0.7rem;
-      color: var(--teal);
-      margin-bottom: 0.4rem;
-    }
-
-    .preview-cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 0.5rem;
-      margin-top: 0.75rem;
-    }
-
-    .preview-card {
-      background: white;
-      border-radius: 4px;
-      padding: 0.5rem;
-      border: 1px solid var(--border);
-    }
-
-    .preview-card-icon {
-      width: 100%;
-      height: 20px;
-      background: var(--teal-light);
-      border-radius: 3px;
-      margin-bottom: 0.3rem;
-    }
-
-    .preview-card-line {
-      height: 3px;
-      background: #e0e0e0;
-      border-radius: 2px;
-      margin-bottom: 0.2rem;
-    }
-
-    @media (max-width: 600px) {
-      .card-grid { grid-template-columns: 1fr; }
-      .preview-body { grid-template-columns: 1fr; }
-      .sitemap-visual { gap: 0.4rem; }
-      .sitemap-node { padding: 0.4rem 0.75rem; font-size: 0.75rem; }
-    }
-  </style>
+  <link rel="icon" href="chamber/images/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="chamber/styles/reset.css">
+  <link rel="stylesheet" href="chamber/styles/site-plan.css">
+  <script src="chamber/scripts/site-plan.js" defer></script>
 </head>
 <body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="page-header">
+    <div class="header-top">
+      <div class="header-brand">
+        <a class="brand-logo" href="index.html" aria-label="Timbuktu Chamber Home">🏛</a>
+        <span class="chamber-name">Timbuktu Chamber of Commerce</span>
+      </div>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">☰ Menu</button>
+      <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
+        <a href="chamber/index.html">Home</a>
+        <a href="chamber/directory.html">Directory</a>
+        <a href="chamber/join.html">Join</a>
+        <a href="site-plan.html" aria-current="page">Site Plan</a>
+      </nav>
+    </div>
+  </header>
+
   <main id="main">
     <header class="board-header">
       <div class="logo-mark">
-        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="filter: drop-shadow(0 3px 6px rgba(0,0,0,0.2));">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <circle cx="45" cy="45" r="45" fill="white" opacity="0.15"/>
           <circle cx="45" cy="45" r="38" fill="var(--teal)"/>
           <path d="M25 62 C25 62 35 38 45 38 C55 38 65 62 65 62" stroke="white" stroke-width="3.5" stroke-linecap="round" fill="none"/>
@@ -383,8 +54,8 @@
         </svg>
       </div>
       <h1>Jinja City Guide</h1>
-      <img src="chamber/images/my_own_image.jpg" alt="Hyeyendele Rashidi" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; border: 3px solid var(--coral); margin: 0.75rem 0; box-shadow: 0 4px 12px rgba(0,0,0,0.15);">
-      <p style="font-size: 1.1rem; font-weight: 600; margin: 0.25rem 0;">Hyeyendele Rashidi</p>
+      <img src="chamber/images/my_own_image.jpg" alt="Hyeyendele Rashidi" class="profile-img">
+      <p class="profile-name">Hyeyendele Rashidi</p>
       <p>Website Planning Board &mdash; Local Discovery Platform</p>
     </header>
 
@@ -419,14 +90,14 @@
             <p>Backpackers &amp; solo travelers, 22&ndash;35, looking for thrill activities and budget tips.</p>
           </div>
         </div>
-        <div class="persona-card" style="margin-top: 0.75rem;">
+        <div class="persona-card">
           <div class="persona-avatar">&#127869;</div>
           <div class="persona-info">
             <h4>Family tourists</h4>
             <p>Parents 30&ndash;45 seeking safe dining, kid-friendly spots, and relaxed itineraries.</p>
           </div>
         </div>
-        <div class="persona-card" style="margin-top: 0.75rem;">
+        <div class="persona-card">
           <div class="persona-avatar">&#128188;</div>
           <div class="persona-info">
             <h4>Local entrepreneurs</h4>
@@ -449,21 +120,21 @@
       <div class="card card--coral">
         <span class="card-label">Visuals</span>
         <h2>Color Scheme</h2>
-        <div style="text-align: center; margin-bottom: 1rem;">
-          <img src="https://jinjacity.go.ug/sites/default/files/2023-04/Jinja-City-2.jpeg" alt="Jinja City" style="width: 100%; max-width: 400px; border-radius: 8px; border: 2px solid rgba(0,0,0,0.08); box-shadow: 0 2px 6px rgba(0,0,0,0.1);">
+        <div class="color-scheme-wrap">
+          <img src="https://jinjacity.go.ug/sites/default/files/2023-04/Jinja-City-2.jpeg" alt="Jinja City" class="color-hero-img">
         </div>
         <p><strong>Deep Teal</strong> <code>#006d77</code> — used for the page header background, section labels, primary navigation accents, and text highlights.</p>
         <p><strong>Warm Coral</strong> <code>#e29578</code> — used for call-to-action buttons, logo accents, card borders, and selected icon details.</p>
         <p><strong>Soft Cream</strong> <code>#fdf6e3</code> — used as the overall page background and content card background.</p>
         <p><strong>Dark Navy</strong> <code>#1a1a2e</code> — used for primary heading text and important content copy.</p>
         <p><strong>Muted Gray</strong> <code>#666666</code> — used for body text, list text, and secondary supporting copy.</p>
-        <p style="text-align: center; font-weight: 600; color: var(--teal); margin-top: 0.5rem;">These colors are actively used in this site plan document.</p>
+        <p class="color-summary">These colors are actively used in this site plan document.</p>
       </div>
 
       <div class="card card--coral">
         <span class="card-label">Type</span>
         <h2>Typography</h2>
-        <p style="font-family: 'Inter', sans-serif; font-size: 1.6rem; font-weight: 700; color: var(--teal); margin: 0.5rem 0;">Aa Bb Cc 123</p>
+        <p class="type-sample">Aa Bb Cc 123</p>
         <p><strong>Inter</strong> &mdash; Primary font for headings, body text, navigation labels, and UI elements. It is actively used in this document for the page title, section headings, labels, and paragraph copy.</p>
         <p><strong>Open Sans</strong> &mdash; Fallback font for captions and secondary text if Inter is unavailable. It supports the same clean, readable style while maintaining consistency.</p>
       </div>
@@ -516,7 +187,7 @@
         <h2>Wireframes</h2>
         <p>Visual layout plans for the home page on mobile and desktop.</p>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin-top: 1rem;">
+        <div class="wireframes-grid">
           <div>
             <h3>Desktop Wireframe (768px+)</h3>
             <div class="preview-frame">
@@ -530,29 +201,29 @@
                   <div>
                     <div class="preview-hero">
                       <h4>Discover Jinja</h4>
-                      <p style="font-size: 0.65rem; opacity: 0.9;">Adventures by the Nile</p>
+                      <p class="preview-hero-sub">Adventures by the Nile</p>
                       <span class="preview-btn">Explore Now</span>
                     </div>
                     <div class="preview-cards">
                       <div class="preview-card">
                         <div class="preview-card-icon"></div>
-                        <div class="preview-card-line" style="width: 80%;"></div>
+                        <div class="preview-card-line preview-card-line--80"></div>
                       </div>
                       <div class="preview-card">
                         <div class="preview-card-icon"></div>
-                        <div class="preview-card-line" style="width: 70%;"></div>
+                        <div class="preview-card-line preview-card-line--70"></div>
                       </div>
                       <div class="preview-card">
                         <div class="preview-card-icon"></div>
-                        <div class="preview-card-line" style="width: 90%;"></div>
+                        <div class="preview-card-line preview-card-line--90"></div>
                       </div>
                     </div>
                   </div>
                   <div class="preview-side">
                     <h5>Quick Info</h5>
-                    <div class="preview-card-line" style="width: 100%;"></div>
-                    <div class="preview-card-line" style="width: 80%; margin-top: 0.3rem;"></div>
-                    <div class="preview-card-line" style="width: 90%; margin-top: 0.3rem;"></div>
+                    <div class="preview-card-line preview-card-line--full"></div>
+                    <div class="preview-card-line preview-card-line--80 preview-card-line--mt"></div>
+                    <div class="preview-card-line preview-card-line--90 preview-card-line--mt"></div>
                   </div>
                 </div>
               </div>
@@ -585,5 +256,26 @@
       </div>
     </div>
   </main>
+
+  <footer class="page-footer">
+    <div class="footer-top">
+      <div class="footer-section">
+        <h3>Timbuktu Chamber of Commerce</h3>
+        <p>10 Rue De La Paix</p>
+        <p>Timbuktu, Mali 00000</p>
+        <p>(223) 555-2300</p>
+      </div>
+      <div class="footer-section footer-section--social social-links">
+        <a href="#youtube" aria-label="YouTube">▶</a>
+        <a href="#twitter" aria-label="Twitter">𝕏</a>
+        <a href="#linkedin" aria-label="LinkedIn">in</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-info">WDD 231 Course Project</p>
+      <p class="footer-info" id="author">Hyeyendele Rashidi</p>
+      <p class="footer-info" id="modified"></p>
+    </div>
+  </footer>
 </body>
 </html>
