@@ -482,6 +482,47 @@ dialog.modal::backdrop {
   color: rgba(255,255,255,0.6);
 }
 
+.form-section-wide {
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.submission-details {
+  background: var(--teal-light);
+  border-left: 4px solid var(--teal);
+  padding: 1.5rem;
+  border-radius: 4px;
+}
+
+.submission-details h3 {
+  margin: 0 0 1rem;
+  color: var(--dark);
+}
+
+.form-actions {
+  margin-top: 2rem;
+}
+
+.submit-btn-coral {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--coral);
+}
+
+.submit-btn-teal {
+  display: inline-block;
+  text-decoration: none;
+  background: var(--teal);
+}
+
+.submit-btn-teal + .submit-btn-teal {
+  margin-left: 0.5rem;
+}
+
+.card-full-width {
+  grid-column: 1 / -1;
+}
+
 /* Responsive layouts */
 @media (min-width: 720px) {
   .cards-grid {
