@@ -212,6 +212,30 @@ body {
   overflow: hidden;
 }
 
+.mood-item--nile {
+  background-image: url('https://images.unsplash.com/photo-1547471080-7cc2caa01a7e?w=400&h=400&fit=crop');
+}
+
+.mood-item--sunset {
+  background-image: url('https://images.unsplash.com/photo-1524492412937-b28074a5d7da?w=400&h=400&fit=crop');
+}
+
+.mood-item--dining {
+  background-image: url('https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=400&fit=crop');
+}
+
+.mood-item--bungee {
+  background-image: url('https://images.unsplash.com/photo-1530789253388-582c481c54b0?w=400&h=400&fit=crop');
+}
+
+.mood-item--nature {
+  background-image: url('https://images.unsplash.com/photo-1489392191049-fc10c97e64b6?w=400&h=400&fit=crop');
+}
+
+.mood-item--community {
+  background-image: url('https://images.unsplash.com/photo-1517457373958-b7ebdd18099d?w=400&h=400&fit=crop');
+}
+
 .mood-item::after {
   content: "";
   position: absolute;
