@@ -1,13 +1,9 @@
 /* Larger-screen overrides (min-width: 720px) */
 @media (min-width: 720px) {
 
-  /* ── Discover: tablet 2-column ──────────────────────────────── */
+/* ── Discover: tablet 2-column ──────────────────────────────── */
   .cards-grid {
-    grid-template-areas:
-      "t1 t2"
-      "t3 t4"
-      "t5 t6"
-      "t7 t8";
+    grid-template-areas: "t1 t2" "t3 t4" "t5 t6" "t7 t8";
     grid-template-columns: 1fr 1fr;
   }
 
@@ -121,12 +117,9 @@
 /* Large screens (min-width: 1000px) */
 @media (min-width: 1000px) {
 
-  /* ── Discover: desktop 3-column ─────────────────────────────── */
+/* ── Discover: desktop 3-column ─────────────────────────────── */
   .cards-grid {
-    grid-template-areas:
-      "d1 d2 d3"
-      "d4 d5 d6"
-      "d7 d8 .";
+    grid-template-areas: "d1 d2 d3" "d4 d5 d6" "d7 d8 .";
     grid-template-columns: 1fr 1fr 1fr;
   }
 

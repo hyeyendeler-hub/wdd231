@@ -1,0 +1,74 @@
+{
+  "members": [
+    {
+      "name": "Riverside Gardens",
+      "address": "1124 River Road, Kampala, Uganda",
+      "phone": "(256) 703-123-812",
+      "website": "https://riverside-gardens.example.com",
+      "image": "member-1.svg",
+      "membershipLevel": 3,
+      "category": "Hospitality",
+      "email": "contact@riverside-gardens.example.com"
+    },
+    {
+      "name": "Bright Path Education",
+      "address": "45 Scholar Street, Kampala, Uganda",
+      "phone": "(256) 704-556-221",
+      "website": "https://brightpath.example.com",
+      "image": "member-2.svg",
+      "membershipLevel": 2,
+      "category": "Education",
+      "email": "hello@brightpath.example.com"
+    },
+    {
+      "name": "Harbor Tech Labs",
+      "address": "21 Innovation Avenue, Kampala, Uganda",
+      "phone": "(256) 705-998-443",
+      "website": "https://harbortech.example.com",
+      "image": "member-3.svg",
+      "membershipLevel": 1,
+      "category": "Technology",
+      "email": "support@harbortech.example.com"
+    },
+    {
+      "name": "Crestview Realty",
+      "address": "7 Market Lane, Kampala, Uganda",
+      "phone": "(256) 706-334-778",
+      "website": "https://crestview-realty.example.com",
+      "image": "member-4.svg",
+      "membershipLevel": 2,
+      "category": "Real Estate",
+      "email": "sales@crestview-realty.example.com"
+    },
+    {
+      "name": "Fresh Harvest Organics",
+      "address": "320 Farm Road, Kampala, Uganda",
+      "phone": "(256) 707-220-555",
+      "website": "https://freshharvest.example.com",
+      "image": "member-5.svg",
+      "membershipLevel": 3,
+      "category": "Agriculture",
+      "email": "order@freshharvest.example.com"
+    },
+    {
+      "name": "City Spark Creative",
+      "address": "98 Studio Boulevard, Kampala, Uganda",
+      "phone": "(256) 708-111-990",
+      "website": "https://cityspark.example.com",
+      "image": "member-6.svg",
+      "membershipLevel": 1,
+      "category": "Creative",
+      "email": "team@cityspark.example.com"
+    },
+    {
+      "name": "Evergreen Financial",
+      "address": "14 Capital Court, Kampala, Uganda",
+      "phone": "(256) 709-887-632",
+      "website": "https://evergreen-finance.example.com",
+      "image": "member-7.svg",
+      "membershipLevel": 2,
+      "category": "Finance",
+      "email": "info@evergreen-finance.example.com"
+    }
+  ]
+}

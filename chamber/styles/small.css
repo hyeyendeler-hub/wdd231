@@ -61,6 +61,7 @@ body, button, input, textarea {
 
 .skip-link:focus {
   top: 1rem;
+  outline: 2px solid var(--accent);
 }
 
 .page-header {
@@ -220,10 +221,7 @@ body, button, input, textarea {
   display: grid;
   gap: 1rem;
   padding: 0 1rem 1rem 1rem;
-  grid-template-areas:
-    "m1" "m2" "m3"
-    "m4" "m5" "m6"
-    "m7" "m8";
+  grid-template-areas: "m1" "m2" "m3" "m4" "m5" "m6" "m7" "m8";
   grid-template-columns: 1fr;
 }
 
