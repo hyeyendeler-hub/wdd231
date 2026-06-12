@@ -1,6 +1,14 @@
 /* Larger-screen overrides (min-width: 720px) */
 @media (min-width: 720px) {
 
+[data-theme="dark"] .main-nav a {
+  color: #e0e0e0;
+}
+
+[data-theme="dark"] .main-nav a[aria-current="page"] {
+  border-bottom-color: #e0e0e0;
+}
+
 /* ── Discover: tablet 2-column ──────────────────────────────── */
   .cards-grid {
     grid-template-areas: "t1 t2" "t3 t4" "t5 t6" "t7 t8";

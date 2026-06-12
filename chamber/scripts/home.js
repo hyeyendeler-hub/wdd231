@@ -5,6 +5,8 @@
    Member spotlight (random gold | silver selection)
    ───────────────────────────────────────────────────────────────── */
 
+const THEME_TOGGLE = document.querySelector('.theme-toggle');
+
 // ── Live weather data helpers ─────────────────────────────────
 const DEG_SYMBOL = '\u00B0';
 
@@ -218,14 +220,30 @@ function initFooterDates() {
 
 // ── Events "last updated" stamp ────────────────────────────────
 function initEventsStamp() {
-  const el = document.getElementById('evt-updated');
-  if (el) {
-    // use data-mtime attribute set by the server, or file mtime
-    el.textContent = 'Last updated: ' +
-      new Date(document.lastModified).toLocaleDateString('en-US', {
-        month: 'short', day: 'numeric', year: 'numeric'
-      });
-  }
+   const el = document.getElementById('evt-updated');
+   if (el) {
+     // use data-mtime attribute set by the server, or file mtime
+     el.textContent = 'Last updated: ' +
+       new Date(document.lastModified).toLocaleDateString('en-US', {
+         month: 'short', day: 'numeric', year: 'numeric'
+       });
+   }
+}
+
+// ── Theme toggle ───────────────────────────────────────────────
+function initTheme() {
+   const savedTheme = localStorage.getItem('theme');
+   if (savedTheme === 'dark') {
+     document.documentElement.setAttribute('data-theme', 'dark');
+   }
+   if (THEME_TOGGLE) {
+     THEME_TOGGLE.addEventListener('click', () => {
+       const current = document.documentElement.getAttribute('data-theme');
+       const next = current === 'dark' ? '' : 'dark';
+       document.documentElement.setAttribute('data-theme', next);
+       localStorage.setItem('theme', next || 'light');
+     });
+   }
 }
 
 // ── Mobile nav toggle (same pattern as directory.js) ───────────
@@ -260,15 +278,16 @@ function initCTAButton() {
 
 // ── Bootstrap ─────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  initNav();
-  initCTAButton();
-  initWeather();
-  initSpotlight();
-  initFooterDates();
-  initEventsStamp();
+   initNav();
+   initTheme();
+   initCTAButton();
+   initWeather();
+   initSpotlight();
+   initFooterDates();
+   initEventsStamp();
 
-  /* Tip for students:
-     Set your OpenWeatherMap key in the DevTools console once:
-       localStorage.setItem('OWM_KEY', 'your-key-here')
-     Then hard-code it above in the OWM_KEY constant for submission. */
+   /* Tip for students:
+      Set your OpenWeatherMap key in the DevTools console once:
+        localStorage.setItem('OWM_KEY', 'your-key-here')
+      Then hard-code it above in the OWM_KEY constant for submission. */
 });

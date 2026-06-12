@@ -14,6 +14,7 @@
   <meta property="og:title" content="Thank You - Timbuktu Chamber of Commerce">
   <meta property="og:description" content="Thank you for your membership application.">
   <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/chamber/thankyou.html">
+  <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/chamber/images/hero-banner.svg">
   <meta property="og:type" content="website">
 
   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
@@ -31,7 +32,8 @@
         <a class="brand-logo" href="index.html" aria-label="Chamber Home">&#127970;</a>
         <span class="chamber-name">Timbuktu Chamber of Commerce</span>
       </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
+      <button type="button" class="theme-toggle" aria-label="Toggle theme">&#9680;</button>
       <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
         <a href="index.html">Home</a>
         <a href="directory.html">Directory</a>
@@ -44,11 +46,11 @@
   <main id="main">
     <section class="thankyou-section">
       <div class="thankyou-container">
-        <div class="thankyou-icon">✓</div>
+        <div class="thankyou-icon">&#10003;</div>
         <h1 class="thankyou-title">Thank You!</h1>
         <p class="thankyou-message">
-          Thank you for submitting your membership application to the Timbuktu Chamber of Commerce. 
-          We have received your information and will review your application shortly. You can expect 
+          Thank you for submitting your membership application to the Timbuktu Chamber of Commerce.
+          We have received your information and will review your application shortly. You can expect
           to hear from us within 2-3 business days.
         </p>
 
@@ -57,27 +59,27 @@
           <div class="details-grid">
             <div class="detail-item">
               <span class="detail-label">First Name:</span>
-              <span class="detail-value" id="displayFirstName">—</span>
+              <span class="detail-value" id="displayFirstName">-</span>
             </div>
             <div class="detail-item">
               <span class="detail-label">Last Name:</span>
-              <span class="detail-value" id="displayLastName">—</span>
+              <span class="detail-value" id="displayLastName">-</span>
             </div>
             <div class="detail-item">
               <span class="detail-label">Email Address:</span>
-              <span class="detail-value" id="displayEmail">—</span>
+              <span class="detail-value" id="displayEmail">-</span>
             </div>
             <div class="detail-item">
-              <span class="detail-label">Mobile Phone:</span>
-              <span class="detail-value" id="displayPhone">—</span>
+              <span class="detail-label">Phone Number:</span>
+              <span class="detail-value" id="displayPhone">-</span>
             </div>
             <div class="detail-item">
-              <span class="detail-label">Business/Organization:</span>
-              <span class="detail-value" id="displayBusinessName">—</span>
+              <span class="detail-label">Organization:</span>
+              <span class="detail-value" id="displayBusinessName">-</span>
             </div>
             <div class="detail-item">
-              <span class="detail-label">Application Date & Time:</span>
-              <span class="detail-value" id="displayTimestamp">—</span>
+              <span class="detail-label">Application Date:</span>
+              <span class="detail-value" id="displayTimestamp">-</span>
             </div>
           </div>
         </div>
@@ -85,16 +87,16 @@
         <div class="next-steps">
           <h3 class="steps-title">What's Next?</h3>
           <ul class="steps-list">
-            <li>We will contact you at the email or phone number provided to confirm your membership.</li>
-            <li>Member benefits will be activated upon membership approval.</li>
-            <li>You will receive a welcome packet with membership details and resources.</li>
+            <li>We will contact you at the email or phone number provided.</li>
+            <li>Member benefits will be activated upon approval.</li>
+            <li>You will receive a welcome packet with membership details.</li>
             <li>We look forward to partnering with you!</li>
           </ul>
         </div>
 
         <div class="action-buttons">
           <a href="index.html" class="btn-primary">Back to Home</a>
-          <a href="join.html" class="btn-secondary">Submit Another Application</a>
+          <a href="join.html" class="btn-secondary">Submit Another</a>
         </div>
       </div>
     </section>

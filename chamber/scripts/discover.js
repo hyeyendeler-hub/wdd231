@@ -4,6 +4,7 @@ const CARDS_CONTAINER = document.getElementById('cards-container');
 const VISIT_MESSAGE   = document.getElementById('visit-message');
 const NAV_TOGGLE      = document.querySelector('.nav-toggle');
 const MAIN_NAV        = document.getElementById('main-navigation');
+const THEME_TOGGLE    = document.querySelector('.theme-toggle');
 
 const LAYOUT_MAP = {
   mobile: ['m1','m2','m3','m4','m5','m6','m7','m8'],
@@ -103,6 +104,21 @@ function initVisitMessage() {
   VISIT_MESSAGE.textContent = message;
 }
 
+function initTheme() {
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.setAttribute('data-theme', 'dark');
+  }
+  if (THEME_TOGGLE) {
+    THEME_TOGGLE.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme');
+      const next = current === 'dark' ? '' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('theme', next || 'light');
+    });
+  }
+}
+
 function initNav() {
   if (!NAV_TOGGLE || !MAIN_NAV) return;
   NAV_TOGGLE.addEventListener('click', () => {
@@ -126,8 +142,9 @@ function updateFooter() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  initNav();
-  initVisitMessage();
-  initDiscover();
-  updateFooter();
+   initNav();
+   initTheme();
+   initVisitMessage();
+   initDiscover();
+   updateFooter();
 });

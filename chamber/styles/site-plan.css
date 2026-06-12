@@ -10,6 +10,12 @@
   --border: #e0e0e0;
 }
 
+[data-theme="dark"] {
+  --cream: #1a1a1a;
+  --dark: #e0e0e0;
+  --muted: #a0a0a0;
+}
+
 body {
   font-family: 'Inter', 'Open Sans', Arial, sans-serif;
   background: var(--cream);

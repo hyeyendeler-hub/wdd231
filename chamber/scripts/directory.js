@@ -3,6 +3,7 @@ const memberCountElement = document.getElementById('member-count');
 const viewButtons = document.querySelectorAll('[data-view]');
 const navToggle = document.querySelector('.nav-toggle');
 const mainNav = document.getElementById('main-navigation');
+const THEME_TOGGLE = document.querySelector('.theme-toggle');
 
 const membershipLabel = {
   1: 'Member',
@@ -87,18 +88,34 @@ async function initDirectory() {
 }
 
 function updateFooter() {
-  const authorElement = document.getElementById('author');
-  const modifiedElement = document.getElementById('modified');
-  const year = new Date().getFullYear();
-  authorElement.textContent = `© ${year} Hyeyendele Rashidi`;
-  modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+   const authorElement = document.getElementById('author');
+   const modifiedElement = document.getElementById('modified');
+   const year = new Date().getFullYear();
+   authorElement.textContent = `© ${year} Hyeyendele Rashidi`;
+   modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
+}
+
+function initTheme() {
+   const savedTheme = localStorage.getItem('theme');
+   if (savedTheme === 'dark') {
+     document.documentElement.setAttribute('data-theme', 'dark');
+   }
+   if (THEME_TOGGLE) {
+     THEME_TOGGLE.addEventListener('click', () => {
+       const current = document.documentElement.getAttribute('data-theme');
+       const next = current === 'dark' ? '' : 'dark';
+       document.documentElement.setAttribute('data-theme', next);
+       localStorage.setItem('theme', next || 'light');
+     });
+   }
 }
 
 navToggle.addEventListener('click', () => {
-  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
-  navToggle.setAttribute('aria-expanded', String(!expanded));
-  mainNav.classList.toggle('open');
+   const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+   navToggle.setAttribute('aria-expanded', String(!expanded));
+   mainNav.classList.toggle('open');
 });
 
+initTheme();
 initDirectory();
 updateFooter();

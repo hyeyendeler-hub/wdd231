@@ -1,8 +1,26 @@
 'use strict';
 
+const THEME_TOGGLE = document.querySelector('.theme-toggle');
+
 /* ─────────────────────────────────────────────────────────────────
    Chamber Thank You Page – Display submitted form data
    ───────────────────────────────────────────────────────────────── */
+
+// ── Theme toggle ───────────────────────────────────────────────
+function initTheme() {
+   const savedTheme = localStorage.getItem('theme');
+   if (savedTheme === 'dark') {
+     document.documentElement.setAttribute('data-theme', 'dark');
+   }
+   if (THEME_TOGGLE) {
+     THEME_TOGGLE.addEventListener('click', () => {
+       const current = document.documentElement.getAttribute('data-theme');
+       const next = current === 'dark' ? '' : 'dark';
+       document.documentElement.setAttribute('data-theme', next);
+       localStorage.setItem('theme', next || 'light');
+     });
+   }
+}
 
 function displayFormData() {
   // Get URL parameters
@@ -50,16 +68,16 @@ function initializeNavigation() {
 
 // ── Update modified date in footer ────────────────────────────
 function updateModifiedDate() {
-  const modifiedElement = document.getElementById('modified');
-  if (modifiedElement) {
-    const lastModified = new Date(document.lastModified);
-    modifiedElement.textContent = `Last modified: ${lastModified.toLocaleDateString('en-US')}`;
-  }
+   const author = document.getElementById('author');
+   const modifiedElement = document.getElementById('modified');
+   if (author) author.textContent = `© ${new Date().getFullYear()} Hyeyendele Rashidi`;
+   if (modifiedElement) modifiedElement.textContent = `Last Modified: ${document.lastModified}`;
 }
 
 // ── Initialize all functions on page load ──────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  displayFormData();
-  initializeNavigation();
-  updateModifiedDate();
+   initTheme();
+   displayFormData();
+   initializeNavigation();
+   updateModifiedDate();
 });
