@@ -221,13 +221,22 @@ body, button, input, textarea {
   display: grid;
   gap: 1rem;
   padding: 0 1rem 1rem 1rem;
-  grid-template-areas: "m1" "m2" "m3" "m4" "m5" "m6" "m7" "m8";
+  grid-template-areas:
+    "m1"
+    "m2"
+    "m3"
+    "m4"
+    "m5"
+    "m6"
+    "m7"
+    "m8";
   grid-template-columns: 1fr;
 }
 
 .discover-card {
   display: grid;
   grid-template-columns: 140px 1fr;
+  grid-template-areas: "img body";
   gap: 1rem;
   align-items: center;
   background: var(--surface);
@@ -243,6 +252,7 @@ body, button, input, textarea {
   object-fit: cover;
   border-radius: 4px;
   background: var(--bg);
+  grid-area: img;
   transition: none;
   transform: none;
 }
@@ -546,9 +556,9 @@ main {
   bottom: 1rem;
   right: 1rem;
   padding: 0.65rem 1.5rem;
-  background: #0d1b4b;
-  color: #ffc107;
-  border: 2px solid #ffc107;
+  background: var(--accent);
+  color: var(--white);
+  border: 2px solid var(--accent);
   border-radius: 8px;
   font-size: 0.9rem;
   font-weight: 700;
@@ -559,8 +569,9 @@ main {
 
 .cta-button:hover,
 .cta-button:focus-visible {
-  background: #ffc107;
-  color: #0d1b4b;
+  background: var(--accent-dark);
+  border-color: var(--accent-dark);
+  color: var(--white);
 }
 
 .home-section--spotlight .spotlight-list {
