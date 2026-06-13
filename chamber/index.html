@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <title>Timbuktu Chamber of Commerce - Home</title>
+  <title>Timbuktu Chamber of Commerce - Home</title>
   <meta name="description" content="Timbuktu Chamber of Commerce – welcoming visitors with local events, live weather, and member spotlights.">
   <meta name="author" content="Hyeyendele Rashidi">
 
@@ -11,13 +11,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-   <meta property="og:title" content="Timbuktu Chamber of Commerce - Home">
+  <meta property="og:title" content="Timbuktu Chamber of Commerce - Home">
   <meta property="og:description" content="Connect with local Timbuktu businesses, explore current events, and discover chamber membership opportunities.">
-    <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/chamber/images/hero-banner.svg">
-    <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/chamber/index.html">
+  <meta property="og:image" content="https://hyeyendeler-hub.github.io/wdd231/chamber/images/hero-banner.svg">
+  <meta property="og:url" content="https://hyeyendeler-hub.github.io/wdd231/chamber/index.html">
   <meta property="og:type" content="website">
 
-   <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles/reset.css">
   <link rel="stylesheet" href="styles/small.css">
   <link rel="stylesheet" href="styles/larger.css">
@@ -32,8 +32,7 @@
         <a class="brand-logo" href="index.html" aria-label="Timbuktu Chamber Home">&#127970;</a>
         <span class="chamber-name">Timbuktu Chamber of Commerce</span>
       </div>
-      <button class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
-      <button type="button" class="theme-toggle" aria-label="Toggle theme">&#9680;</button>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="main-navigation">&#9776; Menu</button>
       <nav id="main-navigation" class="main-nav" aria-label="Primary navigation">
         <a href="index.html" aria-current="page">Home</a>
         <a href="directory.html">Directory</a>
@@ -43,21 +42,17 @@
     </div>
   </header>
 
-  <!-- Hero banner with overlaid CTA button -->
   <div class="hero-banner">
     <img src="images/commerce_image.jpg" alt="Timbuktu Chamber of Commerce building with traditional architecture and modern signage">
     <a href="join.html" class="cta-button">Join the Chamber</a>
   </div>
 
   <main id="main">
-
-    <!-- Welcome / Intro -->
     <div class="home-intro" id="discover">
       <h1 class="main-heading">Welcome to the&nbsp;Timbuktu&nbsp;Chamber&nbsp;of&nbsp;Commerce</h1>
       <p>We empower local businesses to thrive through networking, advocacy, and community-driven initiatives that make Timbuktu a better place to live, work, and grow.</p>
     </div>
 
-    <!-- ── Weather ──────────────────────────────────────────────── -->
     <section class="home-section" id="weather">
       <h2 class="section-title" id="weather-heading">Weather in Timbuktu</h2>
       <p class="weather-loading" id="weather-loading">Loading weather data&hellip;</p>
@@ -73,12 +68,9 @@
           <ul class="forecast-list" id="forecast-list"></ul>
         </div>
       </div>
-      <p class="weather-msg" id="weather-msg" hidden>
-        Weather information is currently unavailable. Please try again later.
-      </p>
+      <p class="weather-msg" id="weather-msg" hidden>Weather information is currently unavailable. Please try again later.</p>
     </section>
 
-    <!-- ── Current Events ───────────────────────────────────────── -->
     <section class="home-section home-section--striped" id="events">
       <h2 class="section-title">Current Events</h2>
       <ul class="events-list">
@@ -116,7 +108,6 @@
       <p class="evt-updated" id="evt-updated"></p>
     </section>
 
-    <!-- ── Company Spotlight ────────────────────────────────────── -->
     <section class="home-section home-section--spotlight" id="spotlight">
       <h2 class="section-title">Company Spotlight</h2>
       <div class="spotlight-list" id="spotlight-list" aria-live="polite">
@@ -124,13 +115,11 @@
       </div>
     </section>
 
-    <!-- ── Join CTA ─────────────────────────────────────────────── -->
     <section class="home-section home-section--join" id="join">
       <h2 class="section-title section-title--light">Become a Member</h2>
       <p class="join-text">Join the Timbuktu Chamber of Commerce and unlock networking events, exclusive resources, and a powerful community of business leaders.</p>
       <a href="join.html" class="cta-link">Explore Membership</a>
     </section>
-
   </main>
 
   <footer class="page-footer">
