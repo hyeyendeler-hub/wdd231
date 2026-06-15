@@ -586,6 +586,17 @@ main {
   color: var(--white);
 }
 
+/* ── Home-page sections ──────────────────────────────────────── */
+.home-section {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.home-section--striped {
+  background: var(--bg);
+}
+
 .home-section--spotlight .spotlight-list {
   display: grid;
   gap: 1rem;

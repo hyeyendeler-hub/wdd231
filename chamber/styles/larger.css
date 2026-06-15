@@ -96,6 +96,7 @@
 
   /* ── Events: 2-column card layout ───────────────────────────── */
   .events-list {
+    display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 1rem;
     padding: 0;

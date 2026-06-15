@@ -69,6 +69,96 @@
       "membershipLevel": 2,
       "category": "Finance",
       "email": "info@evergreen-finance.example.com"
+    },
+    {
+      "name": "Sahara Sands Travel",
+      "address": "56 Oasis Street, Timbuktu, Mali",
+      "phone": "(223) 701-234-567",
+      "website": "https://sahara-sands.example.com",
+      "image": "member-8.svg",
+      "membershipLevel": 3,
+      "category": "Travel",
+      "email": "book@sahara-sands.example.com"
+    },
+    {
+      "name": "Timbuktu Crafts Cooperative",
+      "address": "12 Artisan Alley, Timbuktu, Mali",
+      "phone": "(223) 702-345-678",
+      "website": "https://timbuktucrafts.example.com",
+      "image": "member-9.svg",
+      "membershipLevel": 1,
+      "category": "Crafts",
+      "email": "hello@timbuktucrafts.example.com"
+    },
+    {
+      "name": "Niger Logistics",
+      "address": "89 Port Road, Timbuktu, Mali",
+      "phone": "(223) 703-456-789",
+      "website": "https://niger-logistics.example.com",
+      "image": "member-10.svg",
+      "membershipLevel": 2,
+      "category": "Logistics",
+      "email": "info@niger-logistics.example.com"
+    },
+    {
+      "name": "Desert Bloom Hotel",
+      "address": "34 Dune Avenue, Timbuktu, Mali",
+      "phone": "(223) 704-567-890",
+      "website": "https://desert-bloom.example.com",
+      "image": "member-11.svg",
+      "membershipLevel": 3,
+      "category": "Hospitality",
+      "email": "stay@desert-bloom.example.com"
+    },
+    {
+      "name": "Timbuktu Digital",
+      "address": "78 Tech Park, Timbuktu, Mali",
+      "phone": "(223) 705-678-901",
+      "website": "https://timbuktudigital.example.com",
+      "image": "member-12.svg",
+      "membershipLevel": 1,
+      "category": "Technology",
+      "email": "hello@timbuktudigital.example.com"
+    },
+    {
+      "name": "Azalai Insurance",
+      "address": "90 Security Lane, Timbuktu, Mali",
+      "phone": "(223) 706-789-012",
+      "website": "https://azalai-insurance.example.com",
+      "image": "member-13.svg",
+      "membershipLevel": 2,
+      "category": "Finance",
+      "email": "quote@azalai-insurance.example.com"
+    },
+    {
+      "name": "Sahel Consulting",
+      "address": "45 Business District, Timbuktu, Mali",
+      "phone": "(223) 707-890-123",
+      "website": "https://sahel-consulting.example.com",
+      "image": "member-14.svg",
+      "membershipLevel": 3,
+      "category": "Consulting",
+      "email": "contact@sahel-consulting.example.com"
+    },
+    {
+      "name": "Medina Café",
+      "address": "23 Old Town Square, Timbuktu, Mali",
+      "phone": "(223) 708-901-234",
+      "website": "https://medina-cafe.example.com",
+      "image": "member-15.svg",
+      "membershipLevel": 1,
+      "category": "Food & Beverage",
+      "email": "orders@medina-cafe.example.com"
+    },
+    {
+      "name": "Camel Caravan Tours",
+      "address": "67 Gateway Road, Timbuktu, Mali",
+      "phone": "(223) 709-012-345",
+      "website": "https://camel-caravan.example.com",
+      "image": "member-16.svg",
+      "membershipLevel": 2,
+      "category": "Travel",
+      "email": "tours@camel-caravan.example.com"
     }
   ]
 }
