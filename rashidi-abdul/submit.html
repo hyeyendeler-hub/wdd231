@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Submit Content - RASHIDI.ABDUL</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/submit.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="20" fill="#6366f1"/>
+                    <path d="M12 15v10a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V15l-4-4h-8l-4 4z" fill="white" opacity="0.9"/>
+                </svg>
+                <h1>RASHIDI.ABDUL</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="index.html#movies" class="nav-link">Movies</a>
+                <a href="index.html#music" class="nav-link">Music</a>
+                <a href="index.html#series" class="nav-link">Series</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3a1 1 0 011 1V5a1 1 0 01-2 0V4a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l.75.75a1 1 0 11-1.42 1.42l-.75-.75a1 1 0 010-1.42zM15 10a5 5 0 11-10 0 5 5 0 0110 0zM3 10a1 1 0 011-1H4a1 1 0 010 2h-.5a1 1 0 01-1-1v-.5zM16 9a1 1 0 011 1v.5a1 1 0 11-2 0V9a1 1 0 011-1h.5zM4.22 15.78a1 1 0 010-1.42l.75-.75a1 1 0 111.42 1.42l-.75.75a1 1 0 01-1.42 0zM15.29 15.29a1 1 0 010 1.42l-.75.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 15a1 1 0 011 1v.5a1 1 0 11-2 0V16a1 1 0 011-1h.5zM17 4.22a1 1 0 010 1.42l-.75-.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 2a1 1 0 011 1V4a1 1 0 010 2V3a1 1 0 011-1z"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.252 13.396c-.248.073-.5.012-.67-.158A8.001 8.001 0 0110 4.758a7.968 7.968 0 015.585 7.49c-.016.17-.057.34-.129.503l-1.82 4.01-2.53-2.53-1.04 4.95 2.53-2.54zM15.896 18.252c-1.272 2.104-3.612 3.128-6.068 2.447-2.456-.681-4.2-2.425-4.72-4.595-.52-2.17.133-4.44.958-6.161.416-.855.93-1.633 1.538-2.332.12-.135.158-.325.093-.5l-.76-1.644-2.54 9.12 2.54-2.54.76 1.644c.066.138.248.184.4.222.62.15 1.26.226 1.91.226.6 0 1.2-.068 1.78-.2a1 1 0 01.85.43c.248.37.434.77.55 1.19.57 2.12 1.64 4.02 3.2 5.31.31.26.67.48 1.05.65.15.07.32.1.47.1z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="submit-hero">
+            <h2>Share Your Content</h2>
+            <p>Upload your movies, music, or series to share with our community</p>
+        </section>
+
+        <section class="submit-form-section">
+            <form id="contentSubmitForm" class="content-form">
+                <div class="form-tabs">
+                    <button type="button" class="form-tab active" data-tab="movie">Movie</button>
+                    <button type="button" class="form-tab" data-tab="music">Music</button>
+                    <button type="button" class="form-tab" data-tab="series">Series</button>
+                </div>
+
+                <div class="form-content">
+                    <div class="form-group">
+                        <label for="title">Title *</label>
+                        <input type="text" id="title" name="title" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="year">Year *</label>
+                            <input type="number" id="year" name="year" min="1900" max="2030" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="vj">VJ / Creator *</label>
+                            <input type="text" id="vj" name="vj" required placeholder="e.g., vj junior">
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="description">Description</label>
+                        <textarea id="description" name="description" rows="4" placeholder="Brief description of your content..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Genres *</label>
+                        <div class="genre-checkboxes">
+                            <label class="genre-label"><input type="checkbox" name="genres" value="action"> Action</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="drama"> Drama</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="comedy"> Comedy</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="thriller"> Thriller</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="horror"> Horror</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="scifi"> Sci-Fi</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="adventure"> Adventure</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="romance"> Romance</label>
+                            <label class="genre-label"><input type="checkbox" name="genres" value="documentary"> Documentary</label>
+                        </div>
+                    </div>
+
+                    <div class="form-group file-upload-group">
+                        <label for="file">Upload File * (<span id="fileTypeLabel">MP4/Video</span>)</label>
+                        <input type="file" id="file" name="file" required>
+                        <div class="file-preview" id="filePreview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="poster">Upload Poster/Image</label>
+                        <input type="file" id="poster" name="poster" accept="image/*">
+                        <div class="poster-preview" id="posterPreview"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Your Email (for credit) *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="terms-label">
+                            <input type="checkbox" id="terms" required> 
+                            I confirm I have rights to upload this content and agree to the terms
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn-primary">Submit for Review</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="submission-info">
+            <h3>Submission Guidelines</h3>
+            <ul>
+                <li>Content must be your original work or you must have distribution rights</li>
+                <li>Maximum file size: 2GB for movies, 100MB for music</li>
+                <li>Accepted formats: MP4, MOV, AVI for videos; MP3, WAV, FLAC for audio</li>
+                <li>All submissions are reviewed before being published</li>
+                <li>You will be credited as the uploader/creator</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <p>&copy; 2026 RASHIDI.ABDUL. Share your creativity with the world.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    <script src="scripts/submit.js"></script>
+</body>
+</html>

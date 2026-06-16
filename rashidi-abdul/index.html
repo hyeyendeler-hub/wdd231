@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RASHIDI.ABDUL - Music & Movies</title>
+    <link rel="stylesheet" href="styles/reset.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+</head>
+<body>
+    <header class="site-header">
+        <div class="header-container">
+            <div class="logo">
+                <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                    <circle cx="20" cy="20" r="20" fill="#6366f1"/>
+                    <path d="M12 15v10a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V15l-4-4h-8l-4 4z" fill="white" opacity="0.9"/>
+                    <circle cx="16" cy="20" r="2" fill="#6366f1"/>
+                    <circle cx="24" cy="20" r="2" fill="#6366f1"/>
+                </svg>
+                <h1>RASHIDI.ABDUL</h1>
+            </div>
+            <nav class="main-nav">
+                <a href="#movies" class="nav-link active">Movies</a>
+                <a href="#music" class="nav-link">Music</a>
+                <a href="#series" class="nav-link">Series</a>
+                <a href="#vjs" class="nav-link">VJs</a>
+                <a href="#search" class="nav-link">Search</a>
+            </nav>
+            <button class="theme-toggle" aria-label="Toggle dark mode">
+                <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3a1 1 0 011 1V5a1 1 0 01-2 0V4a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l.75.75a1 1 0 11-1.42 1.42l-.75-.75a1 1 0 010-1.42zM15 10a5 5 0 11-10 0 5 5 0 0110 0zM3 10a1 1 0 011-1H4a1 1 0 010 2h-.5a1 1 0 01-1-1v-.5zM16 9a1 1 0 011 1v.5a1 1 0 11-2 0V9a1 1 0 011-1h.5zM4.22 15.78a1 1 0 010-1.42l.75-.75a1 1 0 111.42 1.42l-.75.75a1 1 0 01-1.42 0zM15.29 15.29a1 1 0 010 1.42l-.75.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 15a1 1 0 011 1v.5a1 1 0 11-2 0V16a1 1 0 011-1h.5zM17 4.22a1 1 0 010 1.42l-.75-.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 2a1 1 0 011 1V4a1 1 0 01-2 0V3a1 1 0 011-1z"/></svg>
+                <svg class="moon-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M17.252 13.396c-.248.073-.5.012-.67-.158A8.001 8.001 0 0110 4.758a7.968 7.968 0 015.585 7.49c-.016.17-.057.34-.129.503l-1.82 4.01-2.53-2.53-1.04 4.95 2.53-2.54zM15.896 18.252c-1.272 2.104-3.612 3.128-6.068 2.447-2.456-.681-4.2-2.425-4.72-4.595-.52-2.17.133-4.44.958-6.161.416-.855.93-1.633 1.538-2.332.12-.135.158-.325.093-.5l-.76-1.644-2.54 9.12 2.54-2.54.76 1.644c.066.138.248.184.4.222.62.15 1.26.226 1.91.226.6 0 1.2-.068 1.78-.2a1 1 0 01.85.43c.248.37.434.77.55 1.19.57 2.12 1.64 4.02 3.2 5.31.31.26.67.48 1.05.65.15.07.32.1.47.1z"/></svg>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="hero-section">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h2>Laba Film</h2>
+                <p class="hero-tagline">Discover. Download. Enjoy.</p>
+                <div class="search-container">
+                    <input type="search" id="searchInput" placeholder="Search Movies, Shows, Music...">
+                    <button class="search-btn" aria-label="Search">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.477l4.81 4.81a1 1 0 01-1.414 1.414l-4.81-4.81A6 6 0 012 8z"/></svg>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section id="categories" class="categories-section">
+            <h3 class="section-title">Browse Categories</h3>
+            <div class="categories-grid">
+                <button class="category-btn active" data-category="all">All</button>
+                <button class="category-btn" data-category="action">Action</button>
+                <button class="category-btn" data-category="drama">Drama</button>
+                <button class="category-btn" data-category="comedy">Comedy</button>
+                <button class="category-btn" data-category="thriller">Thriller</button>
+                <button class="category-btn" data-category="horror">Horror</button>
+                <button class="category-btn" data-category="scifi">Sci-Fi</button>
+                <button class="category-btn" data-category="adventure">Adventure</button>
+            </div>
+        </section>
+
+        <section id="movies" class="content-section">
+            <div class="section-header">
+                <h3>Movies</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="latest">Latest</button>
+                    <button class="tab-btn" data-tab="popular">Popular</button>
+                    <button class="tab-btn" data-tab="all">View All</button>
+                </div>
+            </div>
+            <div class="movies-grid" id="moviesGrid">
+            </div>
+        </section>
+
+        <section id="music" class="content-section">
+            <div class="section-header">
+                <h3>Music</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="latest">Latest</button>
+                    <button class="tab-btn" data-tab="popular">Popular</button>
+                    <button class="tab-btn" data-tab="artists">Artists</button>
+                </div>
+            </div>
+            <div class="music-grid" id="musicGrid">
+            </div>
+        </section>
+
+        <section id="series" class="content-section">
+            <div class="section-header">
+                <h3>Series</h3>
+                <div class="tabs">
+                    <button class="tab-btn active" data-tab="latest">Latest</button>
+                    <button class="tab-btn" data-tab="popular">Popular</button>
+                    <button class="tab-btn" data-tab="all">View All</button>
+                </div>
+            </div>
+            <div class="series-grid" id="seriesGrid">
+            </div>
+        </section>
+
+        <section id="vjs" class="content-section">
+            <h3>VJs Directory</h3>
+            <div class="vjs-grid" id="vjsGrid">
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <div class="logo-footer">
+                    <svg width="32" height="32" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="20" fill="#6366f1"/>
+                        <path d="M12 15v10a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V15l-4-4h-8l-4 4z" fill="white" opacity="0.9"/>
+                    </svg>
+                    <span>RASHIDI.ABDUL</span>
+                </div>
+                <p>Your premier destination for movies and music downloads. Streamlined entertainment at your fingertips.</p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <a href="#movies">Movies</a>
+                    <a href="#music">Music</a>
+                    <a href="#series">TV Series</a>
+                    <a href="#vjs">VJs</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Genres</h4>
+                    <a href="#">Action</a>
+                    <a href="#">Comedy</a>
+                    <a href="#">Drama</a>
+                    <a href="#">Horror</a>
+                    <a href="#">Sci-Fi</a>
+                    <a href="#">Documentary</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">DMCA</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 RASHIDI.ABDUL. A part of Pixi Labs Entertainment.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+</body>
+</html>
