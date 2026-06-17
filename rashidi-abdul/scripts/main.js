@@ -44,6 +44,11 @@ function renderMovies(movies) {
   const grid = document.getElementById('moviesGrid');
   if (!grid) return;
   
+  if (!movies || movies.length === 0) {
+    grid.innerHTML = '<p class="no-results">No movies found</p>';
+    return;
+  }
+  
   grid.innerHTML = movies.map(movie => `
     <div class="content-card">
       <div class="card-poster">
@@ -66,6 +71,11 @@ function renderMusic(music) {
   const grid = document.getElementById('musicGrid');
   if (!grid) return;
   
+  if (!music || music.length === 0) {
+    grid.innerHTML = '<p class="no-results">No music found</p>';
+    return;
+  }
+  
   grid.innerHTML = music.map(track => `
     <div class="content-card">
       <div class="card-poster">
@@ -87,6 +97,11 @@ function renderMusic(music) {
 function renderSeries(series) {
   const grid = document.getElementById('seriesGrid');
   if (!grid) return;
+  
+  if (!series || series.length === 0) {
+    grid.innerHTML = '<p class="no-results">No series found</p>';
+    return;
+  }
   
   grid.innerHTML = series.map(show => `
     <div class="content-card">
@@ -120,22 +135,322 @@ function renderVJs(vjs) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-  renderMovies(contentData.movies);
-  renderMusic(contentData.music);
-  renderSeries(contentData.series);
-  renderVJs(contentData.vjs);
+   renderMovies(contentData.movies);
+   renderMusic(contentData.music);
+   renderSeries(contentData.series);
+   renderVJs(contentData.vjs);
+   
+   initSearch();
+   initCategories();
+   initTabs();
+   initNavLinks();
+   initDownloadButtons();
+   initThemeToggle();
+   initInstallPrompt();
+   registerServiceWorker();
+   initHapticFeedback();
+   initAppLikeFeatures();
+   initPullToRefresh();
 });
 
-const themeToggle = document.querySelector('.theme-toggle');
-if (themeToggle) {
-  themeToggle.addEventListener('click', () => {
-    const currentTheme = document.documentElement.getAttribute('data-theme');
-    document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? '' : 'dark');
-    localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
+function initSearch() {
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.querySelector('.search-btn');
+  
+  const performSearch = () => {
+    const query = searchInput.value.toLowerCase().trim();
+    if (!query) {
+      renderMovies(contentData.movies);
+      renderMusic(contentData.music);
+      renderSeries(contentData.series);
+      return;
+    }
+    
+    const filteredMovies = contentData.movies.filter(m => 
+      m.title.toLowerCase().includes(query) || 
+      m.genre.toLowerCase().includes(query) ||
+      m.vj.toLowerCase().includes(query)
+    );
+    const filteredMusic = contentData.music.filter(t => 
+      t.title.toLowerCase().includes(query) || 
+      t.artist.toLowerCase().includes(query) ||
+      t.genre.toLowerCase().includes(query)
+    );
+    const filteredSeries = contentData.series.filter(s => 
+      s.title.toLowerCase().includes(query) || 
+      s.vj.toLowerCase().includes(query)
+    );
+    
+    renderMovies(filteredMovies);
+    renderMusic(filteredMusic);
+    renderSeries(filteredSeries);
+  };
+  
+  searchInput?.addEventListener('input', performSearch);
+  searchBtn?.addEventListener('click', performSearch);
+  searchInput?.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') performSearch();
+  });
+}
+
+function initCategories() {
+  const categoryBtns = document.querySelectorAll('.category-btn');
+  
+  categoryBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      categoryBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      
+      const category = btn.dataset.category;
+      if (category === 'all') {
+        renderMovies(contentData.movies);
+      } else {
+        const filtered = contentData.movies.filter(m => m.genre === category);
+        renderMovies(filtered);
+      }
+      
+      document.getElementById('movies').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+}
+
+function initTabs() {
+  const moviesTabs = document.querySelectorAll('#movies .tab-btn');
+  const musicTabs = document.querySelectorAll('#music .tab-btn');
+  const seriesTabs = document.querySelectorAll('#series .tab-btn');
+  
+  moviesTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      moviesTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      const tabType = tab.dataset.tab;
+      let filtered;
+      if (tabType === 'latest') {
+        filtered = [...contentData.movies].sort((a, b) => b.year - a.year).slice(0, 6);
+      } else if (tabType === 'popular') {
+        filtered = contentData.movies.slice(0, 6);
+      } else {
+        filtered = contentData.movies;
+      }
+      renderMovies(filtered);
+    });
   });
   
-  const savedTheme = localStorage.getItem('theme');
-  if (savedTheme) {
-    document.documentElement.setAttribute('data-theme', savedTheme);
-  }
+  musicTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      musicTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      const tabType = tab.dataset.tab;
+      let filtered;
+      if (tabType === 'latest') {
+        filtered = [...contentData.music].sort((a, b) => b.year - a.year);
+      } else if (tabType === 'popular') {
+        filtered = [...contentData.music].sort((a, b) => b.downloads - a.downloads);
+      } else {
+        filtered = contentData.music;
+      }
+      renderMusic(filtered);
+    });
+  });
+  
+  seriesTabs.forEach(tab => {
+    tab.addEventListener('click', () => {
+      seriesTabs.forEach(t => t.classList.remove('active'));
+      tab.classList.add('active');
+      
+      const tabType = tab.dataset.tab;
+      let filtered;
+      if (tabType === 'latest') {
+        filtered = [...contentData.series].sort((a, b) => b.year - a.year);
+      } else if (tabType === 'popular') {
+        filtered = contentData.series;
+      } else {
+        filtered = contentData.series;
+      }
+      renderSeries(filtered);
+    });
+  });
 }
+
+function initNavLinks() {
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      navLinks.forEach(l => l.classList.remove('active'));
+      link.classList.add('active');
+    });
+  });
+  
+  const sections = document.querySelectorAll('section[id]');
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (pageYOffset >= sectionTop - 200) {
+        current = section.getAttribute('id');
+      }
+    });
+    
+    navLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === `#${current}`) {
+        link.classList.add('active');
+      }
+    });
+  });
+}
+
+function initDownloadButtons() {
+  document.addEventListener('click', (e) => {
+    if (e.target.classList.contains('download-btn')) {
+      const card = e.target.closest('.content-card');
+      const title = card.querySelector('h4').textContent;
+      alert('Starting download for: ' + title + '\n\nIn a real application, this would initiate the file download.');
+    }
+  });
+}
+
+function initThemeToggle() {
+   const themeToggle = document.querySelector('.theme-toggle');
+   if (themeToggle) {
+     themeToggle.addEventListener('click', () => {
+       const currentTheme = document.documentElement.getAttribute('data-theme');
+       document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? '' : 'dark');
+       localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
+     });
+     
+     const savedTheme = localStorage.getItem('theme');
+     if (savedTheme) {
+       document.documentElement.setAttribute('data-theme', savedTheme);
+     }
+   }
+ }
+
+ let deferredPrompt;
+
+ function initInstallPrompt() {
+   const installBanner = document.createElement('div');
+   installBanner.className = 'install-banner';
+   installBanner.innerHTML = `
+     <div class="install-content">
+       <span>Install RASHIDI.ABDUL for the best experience</span>
+       <div class="install-actions">
+         <button class="install-btn">Install</button>
+         <button class="dismiss-btn" aria-label="Dismiss">×</button>
+       </div>
+     </div>
+   `;
+   document.body.appendChild(installBanner);
+   
+   window.addEventListener('beforeinstallprompt', (e) => {
+     e.preventDefault();
+     deferredPrompt = e;
+     installBanner.classList.add('show');
+   });
+   
+   installBanner.querySelector('.install-btn').addEventListener('click', async () => {
+     if (deferredPrompt) {
+       deferredPrompt.prompt();
+       const { outcome } = await deferredPrompt.userChoice;
+       if (outcome === 'accepted') {
+         installBanner.classList.remove('show');
+       }
+       deferredPrompt = null;
+     }
+   });
+   
+   installBanner.querySelector('.dismiss-btn').addEventListener('click', () => {
+     installBanner.classList.remove('show');
+   });
+ }
+
+ function registerServiceWorker() {
+   if ('serviceWorker' in navigator) {
+     navigator.serviceWorker.register('sw.js')
+       .then((registration) => {
+         console.log('SW registered: ', registration);
+         showToast('App ready for offline use!');
+       })
+       .catch((registrationError) => {
+         console.log('SW registration failed: ', registrationError);
+       });
+   }
+ }
+
+ function showToast(message) {
+   const toast = document.createElement('div');
+   toast.className = 'toast';
+   toast.textContent = message;
+   document.body.appendChild(toast);
+   setTimeout(() => toast.classList.add('show'), 100);
+   setTimeout(() => {
+     toast.classList.remove('show');
+     setTimeout(() => toast.remove(), 300);
+   }, 3000);
+ }
+
+ function triggerHaptic() {
+   if ('vibrate' in navigator) {
+     navigator.vibrate(15);
+   }
+ }
+
+ function initHapticFeedback() {
+   document.addEventListener('click', (e) => {
+     if (e.target.matches('button, .nav-link, .download-btn, .category-btn, .tab-btn')) {
+       triggerHaptic();
+     }
+   });
+ }
+
+ function initAppLikeFeatures() {
+   if (window.matchMedia('(display-mode: standalone)').matches) {
+     document.body.classList.add('pwa-installed');
+   }
+   
+   let lastTouchTime = 0;
+   document.addEventListener('touchstart', () => {
+     lastTouchTime = Date.now();
+   });
+   
+   document.addEventListener('mousedown', (e) => {
+     const now = Date.now();
+     if (now - lastTouchTime < 500) return;
+     const ripple = document.createElement('span');
+     ripple.className = 'ripple';
+     ripple.style.left = e.offsetX + 'px';
+     ripple.style.top = e.offsetY + 'px';
+     e.target.appendChild(ripple);
+     setTimeout(() => ripple.remove(), 600);
+   });
+ }
+
+ function initPullToRefresh() {
+   let startY = 0;
+   let currentY = 0;
+   
+   document.addEventListener('touchstart', (e) => {
+     if (window.scrollY === 0) {
+       startY = e.touches[0].clientY;
+     }
+   });
+   
+   document.addEventListener('touchmove', (e) => {
+     if (startY === 0) return;
+     currentY = e.touches[0].clientY;
+     const pullDistance = currentY - startY;
+     if (pullDistance > 100 && window.scrollY === 0) {
+       showToast('Refreshing...');
+       setTimeout(() => location.reload(), 500);
+       startY = 0;
+     }
+   });
+   
+   document.addEventListener('touchend', () => {
+     startY = 0;
+   });
+ }

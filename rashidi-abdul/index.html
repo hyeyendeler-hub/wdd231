@@ -2,11 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>RASHIDI.ABDUL - Music & Movies</title>
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="preload" href="scripts/main.js" as="script">
+    <meta name="theme-color" content="#6366f1">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="RASHIDI.ABDUL">
+    <link rel="manifest" href="manifest.json">
+    <link rel="apple-touch-icon" href="images/icon-192.svg">
 </head>
 <body>
     <header class="site-header">
@@ -25,7 +33,7 @@
                 <a href="#music" class="nav-link">Music</a>
                 <a href="#series" class="nav-link">Series</a>
                 <a href="#vjs" class="nav-link">VJs</a>
-                <a href="#search" class="nav-link">Search</a>
+                <a href="submit.html" class="nav-link submit-btn">Submit</a>
             </nav>
             <button class="theme-toggle" aria-label="Toggle dark mode">
                 <svg class="sun-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor"><path d="M10 3a1 1 0 011 1V5a1 1 0 01-2 0V4a1 1 0 011-1zM4.22 4.22a1 1 0 011.42 0l.75.75a1 1 0 11-1.42 1.42l-.75-.75a1 1 0 010-1.42zM15 10a5 5 0 11-10 0 5 5 0 0110 0zM3 10a1 1 0 011-1H4a1 1 0 010 2h-.5a1 1 0 01-1-1v-.5zM16 9a1 1 0 011 1v.5a1 1 0 11-2 0V9a1 1 0 011-1h.5zM4.22 15.78a1 1 0 010-1.42l.75-.75a1 1 0 111.42 1.42l-.75.75a1 1 0 01-1.42 0zM15.29 15.29a1 1 0 010 1.42l-.75.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 15a1 1 0 011 1v.5a1 1 0 11-2 0V16a1 1 0 011-1h.5zM17 4.22a1 1 0 010 1.42l-.75-.75a1 1 0 01-1.42-1.42l.75-.75a1 1 0 011.42 0zM10 2a1 1 0 011 1V4a1 1 0 01-2 0V3a1 1 0 011-1z"/></svg>
@@ -38,7 +46,7 @@
         <section class="hero-section">
             <div class="hero-overlay"></div>
             <div class="hero-content">
-                <h2>Laba Film</h2>
+                <h2>Media Watch</h2>
                 <p class="hero-tagline">Discover. Download. Enjoy.</p>
                 <div class="search-container">
                     <input type="search" id="searchInput" placeholder="Search Movies, Shows, Music...">
