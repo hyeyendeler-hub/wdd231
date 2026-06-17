@@ -1,30 +1,30 @@
 const contentData = {
   movies: [
-    { title: "Vicious", year: 2025, vj: "vj junior", genre: "thriller", description: "A young woman must spend the night fighting for her existence as she slips down a disturbing rabbit hole contained inside a mysterious gift from a late-night visitor." },
-    { title: "Kraken", year: 2026, vj: "vj icep", genre: "action", description: "An epic underwater adventure featuring naval forces and mythical sea creatures." },
-    { title: "Barurot 2", year: 2026, vj: "vj ham", genre: "action", description: "The sequel to the hit action thriller continues the story of vengeance." },
-    { title: "Krista", year: 2024, vj: "vj ham", genre: "drama", description: "A powerful drama about love, loss, and redemption." },
-    { title: "Check-In", year: 2026, vj: "vj ham", genre: "thriller", description: "A psychological thriller set in a mysterious hotel." },
-    { title: "Room Service", year: 2024, vj: "vj ham", genre: "drama", description: "An intimate story of human connection in unexpected places." },
-    { title: "Blades of the Guardians", year: 2026, vj: "vj junior", genre: "action", description: "Ancient warriors return to protect the modern world." },
-    { title: "Office Romance", year: 2026, vj: "vj junior", genre: "romance", description: "Love blooms in the most unexpected workplace." },
-    { title: "Animal Farm", year: 2026, vj: "vj uncle t", genre: "drama", description: "A modern retelling of the classic tale." },
-    { title: "Swapped", year: 2026, vj: "vj uncle t", genre: "comedy", description: "Body swap comedy with unexpected consequences." }
+    { title: "Vicious", year: 2025, vj: "vj junior", genre: "thriller", description: "A young woman must spend the night fighting for her existence as she slips down a disturbing rabbit hole contained inside a mysterious gift from a late-night visitor.", poster: "https://images.unsplash.com/photo-1626814026160-2237a95fc4a0?w=600&h=900&fit=crop", download: "videos/vicious.mp4" },
+    { title: "Kraken", year: 2026, vj: "vj icep", genre: "action", description: "An epic underwater adventure featuring naval forces and mythical sea creatures.", poster: "https://images.unsplash.com/photo-1551244072-5d12893278ab?w=600&h=900&fit=crop", download: "videos/kraken.mp4" },
+    { title: "Barurot 2", year: 2026, vj: "vj ham", genre: "action", description: "The sequel to the hit action thriller continues the story of vengeance.", poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=900&fit=crop", download: "videos/barurot2.mp4" },
+    { title: "Krista", year: 2024, vj: "vj ham", genre: "drama", description: "A powerful drama about love, loss, and redemption.", poster: "https://images.unsplash.com/photo-1518676590629-3dcbd9c5a5c9?w=600&h=900&fit=crop", download: "videos/krista.mp4" },
+    { title: "Check-In", year: 2026, vj: "vj ham", genre: "thriller", description: "A psychological thriller set in a mysterious hotel.", poster: "https://images.unsplash.com/photo-1566073771259-6a8506099945?w=600&h=900&fit=crop", download: "videos/checkin.mp4" },
+    { title: "Room Service", year: 2024, vj: "vj ham", genre: "drama", description: "An intimate story of human connection in unexpected places.", poster: "https://images.unsplash.com/photo-1582719478250-c89cae433dcb?w=600&h=900&fit=crop", download: "videos/roomservice.mp4" },
+    { title: "Blades of the Guardians", year: 2026, vj: "vj junior", genre: "action", description: "Ancient warriors return to protect the modern world.", poster: "https://images.unsplash.com/photo-1535016120720-40c6874c3b1c?w=600&h=900&fit=crop", download: "videos/blades.mp4" },
+    { title: "Office Romance", year: 2026, vj: "vj junior", genre: "romance", description: "Love blooms in the most unexpected workplace.", poster: "https://images.unsplash.com/photo-1497215842964-222b430dc094?w=600&h=900&fit=crop", download: "videos/officeromance.mp4" },
+    { title: "Animal Farm", year: 2026, vj: "vj uncle t", genre: "drama", description: "A modern retelling of the classic tale.", poster: "https://images.unsplash.com/photo-1500595046743-cd271d694d30?w=600&h=900&fit=crop", download: "videos/animalfarm.mp4" },
+    { title: "Swapped", year: 2026, vj: "vj uncle t", genre: "comedy", description: "Body swap comedy with unexpected consequences.", poster: "https://images.unsplash.com/photo-1533488765236-9174ab77e2d8?w=600&h=900&fit=crop", download: "videos/swapped.mp4" }
   ],
   music: [
-    { title: "Midnight Vibes", artist: "DJ Shadow", year: 2026, genre: "electronic", downloads: 1250 },
-    { title: "Afro Beats", artist: "Star Boy", year: 2025, genre: "african", downloads: 2100 },
-    { title: "Heart Strings", artist: "Melody Keys", year: 2026, genre: "pop", downloads: 890 },
-    { title: "Urban Flow", artist: "MC Flow", year: 2025, genre: "hiphop", downloads: 3400 },
-    { title: "Classical Dreams", artist: "Symphony Orchestra", year: 2024, genre: "classical", downloads: 560 },
-    { title: "Rock Anthems", artist: "The Outcasts", year: 2026, genre: "rock", downloads: 1890 }
+    { title: "Midnight Vibes", artist: "DJ Shadow", year: 2026, genre: "electronic", downloads: 1250, cover: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=600&h=600&fit=crop", audio: "audio/midnight-vibes.mp3" },
+    { title: "Afro Beats", artist: "Star Boy", year: 2025, genre: "african", downloads: 2100, cover: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&h=600&fit=crop", audio: "audio/afrobeats.mp3" },
+    { title: "Heart Strings", artist: "Melody Keys", year: 2026, genre: "pop", downloads: 890, cover: "https://images.unsplash.com/photo-1514320291840-2e0a9bf2a9ae?w=600&h=600&fit=crop", audio: "audio/heartstrings.mp3" },
+    { title: "Urban Flow", artist: "MC Flow", year: 2025, genre: "hiphop", downloads: 3400, cover: "https://images.unsplash.com/photo-1571330735066-03aaa9429d89?w=600&h=600&fit=crop", audio: "audio/urbanflow.mp3" },
+    { title: "Classical Dreams", artist: "Symphony Orchestra", year: 2024, genre: "classical", downloads: 560, cover: "https://images.unsplash.com/photo-1507838153414-b4b713384a76?w=600&h=600&fit=crop", audio: "audio/classical-dreams.mp3" },
+    { title: "Rock Anthems", artist: "The Outcasts", year: 2026, genre: "rock", downloads: 1890, cover: "https://images.unsplash.com/photo-1498038432885-c6f3f1b912ee?w=600&h=600&fit=crop", audio: "audio/rock-anthems.mp3" }
   ],
   series: [
-    { title: "Citadel", season: "S1", episode: "E6", vj: "vj icep", year: 2023 },
-    { title: "Citadel", season: "S2", episode: "E7", vj: "vj junior", year: 2024 },
-    { title: "Kiss Goblin", season: "S1", episode: "E12", vj: "vj lenon", year: 2025 },
-    { title: "FROM", season: "S4", episode: "E7", vj: "vj emmy", year: 2026 },
-    { title: "Spider-Noir", season: "S1", episode: "E8", vj: "vj junior", year: 2026 }
+    { title: "Citadel", season: "S1", episode: "E6", vj: "vj icep", year: 2023, poster: "https://images.unsplash.com/photo-1626814026160-2237a95fc4a0?w=600&h=900&fit=crop", download: "videos/citadel-s1.mp4" },
+    { title: "Citadel", season: "S2", episode: "E7", vj: "vj junior", year: 2024, poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=600&h=900&fit=crop", download: "videos/citadel-s2.mp4" },
+    { title: "Kiss Goblin", season: "S1", episode: "E12", vj: "vj lenon", year: 2025, poster: "https://images.unsplash.com/photo-1565371890620-830a8408c4e5?w=600&h=900&fit=crop", download: "videos/kissgoblin.mp4" },
+    { title: "FROM", season: "S4", episode: "E7", vj: "vj emmy", year: 2026, poster: "https://images.unsplash.com/photo-1505144808419-1957a94ca61e?w=600&h=900&fit=crop", download: "videos/from-s4.mp4" },
+    { title: "Spider-Noir", season: "S1", episode: "E8", vj: "vj junior", year: 2026, poster: "https://images.unsplash.com/photo-1635805737707-575885ab0820?w=600&h=900&fit=crop", download: "videos/spider-noir.mp4" }
   ],
   vjs: [
     { name: "vj junior", count: 24, avatar: "🎬" },
@@ -37,420 +37,17 @@ const contentData = {
     { name: "vj freddy", count: 16, avatar: "🎧" },
     { name: "vj soul", count: 21, avatar: "🎶" },
     { name: "vj ivo", count: 14, avatar: "📽️" }
+  ],
+  trendingVideos: [
+    { title: "Midnight Vibes - Official Video", artist: "DJ Shadow", views: "125K", youtubeId: "dQw4w9WgXcQ", type: "music" },
+    { title: "Afro Beats Dance Challenge", artist: "Star Boy", views: "340K", youtubeId: "dQw4w9WgXcQ", type: "music" },
+    { title: "Urban Flow Remix", artist: "MC Flow", views: "89K", youtubeId: "dQw4w9WgXcQ", type: "music" },
+    { title: "Heart Strings Ballad", artist: "Melody Keys", views: "210K", youtubeId: "dQw4w9WgXcQ", type: "music" }
+  ],
+  featuredFilms: [
+    { title: "Chasing Horizons", director: "Indie Studio", genre: "Sci-Fi", youtubeId: "dQw4w9WgXcQ", type: "film" },
+    { title: "Shadows in the Dark", director: "Night Owl Films", genre: "Drama", youtubeId: "dQw4w9WgXcQ", type: "film" },
+    { title: "The Last Stand", director: "Action House", genre: "Thriller", youtubeId: "dQw4w9WgXcQ", type: "film" },
+    { title: "Echoes of Time", director: "Dream Works", genre: "Drama", youtubeId: "dQw4w9WgXcQ", type: "film" }
   ]
 };
-
-function renderMovies(movies) {
-  const grid = document.getElementById('moviesGrid');
-  if (!grid) return;
-  
-  if (!movies || movies.length === 0) {
-    grid.innerHTML = '<p class="no-results">No movies found</p>';
-    return;
-  }
-  
-  grid.innerHTML = movies.map(movie => `
-    <div class="content-card">
-      <div class="card-poster">
-        <img src="https://via.placeholder.com/300x450/6366f1/ffffff?text=${encodeURIComponent(movie.title)}" alt="${movie.title}">
-        <span class="card-badge">${movie.year}</span>
-      </div>
-      <div class="card-info">
-        <h4>${movie.title}</h4>
-        <div class="card-meta">
-          <span>${movie.vj}</span>
-          <span>${movie.genre}</span>
-        </div>
-        <button class="download-btn">Download Now</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderMusic(music) {
-  const grid = document.getElementById('musicGrid');
-  if (!grid) return;
-  
-  if (!music || music.length === 0) {
-    grid.innerHTML = '<p class="no-results">No music found</p>';
-    return;
-  }
-  
-  grid.innerHTML = music.map(track => `
-    <div class="content-card">
-      <div class="card-poster">
-        <img src="https://via.placeholder.com/300x300/ec4899/ffffff?text=${encodeURIComponent(track.artist)}" alt="${track.title}">
-        <span class="card-badge">${track.year}</span>
-      </div>
-      <div class="card-info">
-        <h4>${track.title}</h4>
-        <div class="card-meta">
-          <span>${track.artist}</span>
-          <span>${track.downloads} downloads</span>
-        </div>
-        <button class="download-btn">Download</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderSeries(series) {
-  const grid = document.getElementById('seriesGrid');
-  if (!grid) return;
-  
-  if (!series || series.length === 0) {
-    grid.innerHTML = '<p class="no-results">No series found</p>';
-    return;
-  }
-  
-  grid.innerHTML = series.map(show => `
-    <div class="content-card">
-      <div class="card-poster">
-        <img src="https://via.placeholder.com/300x450/8b5cf6/ffffff?text=${encodeURIComponent(show.title)}" alt="${show.title}">
-        <span class="card-badge">${show.year}</span>
-      </div>
-      <div class="card-info">
-        <h4>${show.title}</h4>
-        <div class="card-meta">
-          <span>${show.season} ${show.episode}</span>
-          <span>${show.vj}</span>
-        </div>
-        <button class="download-btn">Download</button>
-      </div>
-    </div>
-  `).join('');
-}
-
-function renderVJs(vjs) {
-  const grid = document.getElementById('vjsGrid');
-  if (!grid) return;
-  
-  grid.innerHTML = vjs.map(vj => `
-    <div class="vj-card">
-      <div class="vj-avatar">${vj.avatar}</div>
-      <div class="vj-name">${vj.name}</div>
-      <div class="vj-count">${vj.count} uploads</div>
-    </div>
-  `).join('');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-   renderMovies(contentData.movies);
-   renderMusic(contentData.music);
-   renderSeries(contentData.series);
-   renderVJs(contentData.vjs);
-   
-   initSearch();
-   initCategories();
-   initTabs();
-   initNavLinks();
-   initDownloadButtons();
-   initThemeToggle();
-   initInstallPrompt();
-   registerServiceWorker();
-   initHapticFeedback();
-   initAppLikeFeatures();
-   initPullToRefresh();
-});
-
-function initSearch() {
-  const searchInput = document.getElementById('searchInput');
-  const searchBtn = document.querySelector('.search-btn');
-  
-  const performSearch = () => {
-    const query = searchInput.value.toLowerCase().trim();
-    if (!query) {
-      renderMovies(contentData.movies);
-      renderMusic(contentData.music);
-      renderSeries(contentData.series);
-      return;
-    }
-    
-    const filteredMovies = contentData.movies.filter(m => 
-      m.title.toLowerCase().includes(query) || 
-      m.genre.toLowerCase().includes(query) ||
-      m.vj.toLowerCase().includes(query)
-    );
-    const filteredMusic = contentData.music.filter(t => 
-      t.title.toLowerCase().includes(query) || 
-      t.artist.toLowerCase().includes(query) ||
-      t.genre.toLowerCase().includes(query)
-    );
-    const filteredSeries = contentData.series.filter(s => 
-      s.title.toLowerCase().includes(query) || 
-      s.vj.toLowerCase().includes(query)
-    );
-    
-    renderMovies(filteredMovies);
-    renderMusic(filteredMusic);
-    renderSeries(filteredSeries);
-  };
-  
-  searchInput?.addEventListener('input', performSearch);
-  searchBtn?.addEventListener('click', performSearch);
-  searchInput?.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') performSearch();
-  });
-}
-
-function initCategories() {
-  const categoryBtns = document.querySelectorAll('.category-btn');
-  
-  categoryBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      categoryBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      
-      const category = btn.dataset.category;
-      if (category === 'all') {
-        renderMovies(contentData.movies);
-      } else {
-        const filtered = contentData.movies.filter(m => m.genre === category);
-        renderMovies(filtered);
-      }
-      
-      document.getElementById('movies').scrollIntoView({ behavior: 'smooth' });
-    });
-  });
-}
-
-function initTabs() {
-  const moviesTabs = document.querySelectorAll('#movies .tab-btn');
-  const musicTabs = document.querySelectorAll('#music .tab-btn');
-  const seriesTabs = document.querySelectorAll('#series .tab-btn');
-  
-  moviesTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      moviesTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      
-      const tabType = tab.dataset.tab;
-      let filtered;
-      if (tabType === 'latest') {
-        filtered = [...contentData.movies].sort((a, b) => b.year - a.year).slice(0, 6);
-      } else if (tabType === 'popular') {
-        filtered = contentData.movies.slice(0, 6);
-      } else {
-        filtered = contentData.movies;
-      }
-      renderMovies(filtered);
-    });
-  });
-  
-  musicTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      musicTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      
-      const tabType = tab.dataset.tab;
-      let filtered;
-      if (tabType === 'latest') {
-        filtered = [...contentData.music].sort((a, b) => b.year - a.year);
-      } else if (tabType === 'popular') {
-        filtered = [...contentData.music].sort((a, b) => b.downloads - a.downloads);
-      } else {
-        filtered = contentData.music;
-      }
-      renderMusic(filtered);
-    });
-  });
-  
-  seriesTabs.forEach(tab => {
-    tab.addEventListener('click', () => {
-      seriesTabs.forEach(t => t.classList.remove('active'));
-      tab.classList.add('active');
-      
-      const tabType = tab.dataset.tab;
-      let filtered;
-      if (tabType === 'latest') {
-        filtered = [...contentData.series].sort((a, b) => b.year - a.year);
-      } else if (tabType === 'popular') {
-        filtered = contentData.series;
-      } else {
-        filtered = contentData.series;
-      }
-      renderSeries(filtered);
-    });
-  });
-}
-
-function initNavLinks() {
-  const navLinks = document.querySelectorAll('.nav-link');
-  
-  navLinks.forEach(link => {
-    link.addEventListener('click', (e) => {
-      navLinks.forEach(l => l.classList.remove('active'));
-      link.classList.add('active');
-    });
-  });
-  
-  const sections = document.querySelectorAll('section[id]');
-  window.addEventListener('scroll', () => {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.offsetTop;
-      const sectionHeight = section.clientHeight;
-      if (pageYOffset >= sectionTop - 200) {
-        current = section.getAttribute('id');
-      }
-    });
-    
-    navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${current}`) {
-        link.classList.add('active');
-      }
-    });
-  });
-}
-
-function initDownloadButtons() {
-  document.addEventListener('click', (e) => {
-    if (e.target.classList.contains('download-btn')) {
-      const card = e.target.closest('.content-card');
-      const title = card.querySelector('h4').textContent;
-      alert('Starting download for: ' + title + '\n\nIn a real application, this would initiate the file download.');
-    }
-  });
-}
-
-function initThemeToggle() {
-   const themeToggle = document.querySelector('.theme-toggle');
-   if (themeToggle) {
-     themeToggle.addEventListener('click', () => {
-       const currentTheme = document.documentElement.getAttribute('data-theme');
-       document.documentElement.setAttribute('data-theme', currentTheme === 'dark' ? '' : 'dark');
-       localStorage.setItem('theme', document.documentElement.getAttribute('data-theme'));
-     });
-     
-     const savedTheme = localStorage.getItem('theme');
-     if (savedTheme) {
-       document.documentElement.setAttribute('data-theme', savedTheme);
-     }
-   }
- }
-
- let deferredPrompt;
-
- function initInstallPrompt() {
-   const installBanner = document.createElement('div');
-   installBanner.className = 'install-banner';
-   installBanner.innerHTML = `
-     <div class="install-content">
-       <span>Install RASHIDI.ABDUL for the best experience</span>
-       <div class="install-actions">
-         <button class="install-btn">Install</button>
-         <button class="dismiss-btn" aria-label="Dismiss">×</button>
-       </div>
-     </div>
-   `;
-   document.body.appendChild(installBanner);
-   
-   window.addEventListener('beforeinstallprompt', (e) => {
-     e.preventDefault();
-     deferredPrompt = e;
-     installBanner.classList.add('show');
-   });
-   
-   installBanner.querySelector('.install-btn').addEventListener('click', async () => {
-     if (deferredPrompt) {
-       deferredPrompt.prompt();
-       const { outcome } = await deferredPrompt.userChoice;
-       if (outcome === 'accepted') {
-         installBanner.classList.remove('show');
-       }
-       deferredPrompt = null;
-     }
-   });
-   
-   installBanner.querySelector('.dismiss-btn').addEventListener('click', () => {
-     installBanner.classList.remove('show');
-   });
- }
-
- function registerServiceWorker() {
-   if ('serviceWorker' in navigator) {
-     navigator.serviceWorker.register('sw.js')
-       .then((registration) => {
-         console.log('SW registered: ', registration);
-         showToast('App ready for offline use!');
-       })
-       .catch((registrationError) => {
-         console.log('SW registration failed: ', registrationError);
-       });
-   }
- }
-
- function showToast(message) {
-   const toast = document.createElement('div');
-   toast.className = 'toast';
-   toast.textContent = message;
-   document.body.appendChild(toast);
-   setTimeout(() => toast.classList.add('show'), 100);
-   setTimeout(() => {
-     toast.classList.remove('show');
-     setTimeout(() => toast.remove(), 300);
-   }, 3000);
- }
-
- function triggerHaptic() {
-   if ('vibrate' in navigator) {
-     navigator.vibrate(15);
-   }
- }
-
- function initHapticFeedback() {
-   document.addEventListener('click', (e) => {
-     if (e.target.matches('button, .nav-link, .download-btn, .category-btn, .tab-btn')) {
-       triggerHaptic();
-     }
-   });
- }
-
- function initAppLikeFeatures() {
-   if (window.matchMedia('(display-mode: standalone)').matches) {
-     document.body.classList.add('pwa-installed');
-   }
-   
-   let lastTouchTime = 0;
-   document.addEventListener('touchstart', () => {
-     lastTouchTime = Date.now();
-   });
-   
-   document.addEventListener('mousedown', (e) => {
-     const now = Date.now();
-     if (now - lastTouchTime < 500) return;
-     const ripple = document.createElement('span');
-     ripple.className = 'ripple';
-     ripple.style.left = e.offsetX + 'px';
-     ripple.style.top = e.offsetY + 'px';
-     e.target.appendChild(ripple);
-     setTimeout(() => ripple.remove(), 600);
-   });
- }
-
- function initPullToRefresh() {
-   let startY = 0;
-   let currentY = 0;
-   
-   document.addEventListener('touchstart', (e) => {
-     if (window.scrollY === 0) {
-       startY = e.touches[0].clientY;
-     }
-   });
-   
-   document.addEventListener('touchmove', (e) => {
-     if (startY === 0) return;
-     currentY = e.touches[0].clientY;
-     const pullDistance = currentY - startY;
-     if (pullDistance > 100 && window.scrollY === 0) {
-       showToast('Refreshing...');
-       setTimeout(() => location.reload(), 500);
-       startY = 0;
-     }
-   });
-   
-   document.addEventListener('touchend', () => {
-     startY = 0;
-   });
- }
